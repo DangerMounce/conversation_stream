@@ -58,7 +58,7 @@ function formatTime(seconds) {
 // Sets delay
 async function delay(seconds) {
     const timeMessage = formatTime(seconds);
-    logger.silly(`ᕕ( ᐛ )ᕗ`)
+    logger.silly(`¯\_(ツ)_/¯`)
     logger.silly(`Waiting ${timeMessage}`);
     const ms = seconds * 1000;
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -221,7 +221,7 @@ async function startStreamLoop(apiKeyArray) {
             // Iterate over each API key object in the array
             for (const { name, key } of apiKeyArray) {
                 if (ticketStream) {
-                    logger.silly(`**********   Creating a new ticket for "${name}"  **********`)
+                    logger.silly(`********** d[ o_0 ]b  Creating a new ticket for "${name}" d[ o_0 ]b  **********`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
                     const ticketList = await getTicketList(ticketStreamDir)
@@ -239,7 +239,7 @@ async function startStreamLoop(apiKeyArray) {
                 }
 
                 if (callStream) {
-                    logger.silly(`**********   Creating a new call for "${name}"  **********`)
+                    logger.silly(`**********  |[●▪▪●]| Creating a new call for "${name}"  |[●▪▪●]| **********`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
                     const ticketList = await getTicketList(ticketStreamDir)
