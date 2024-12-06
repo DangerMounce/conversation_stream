@@ -8,6 +8,7 @@ import logger from "./logger.js";
 import { wayBackMachine, callStreamDir, ticketStreamDir } from "../../stream.js";
 import { subMinutes, addMinutes, formatISO } from "date-fns"; // To handle date manipulation
 import dump from "./dump.js";
+import { convertTicketToAudio } from "./ttsGenerator.js";
 
 export let chatTemplate = {
     data: {
@@ -129,8 +130,6 @@ export async function createChatTemplate(agentList, targetJSON) {
         throw err;
     }
 
-    const now = new Date();
-    const contactDate = subMinutes(now, 60); // 60 minutes earlier
     let currentTimestamp = contactDate;
 
     chatTemplate.data.reference = generateUUID();
@@ -160,18 +159,23 @@ export async function createChatTemplate(agentList, targetJSON) {
     return chatTemplate;
 }
 
-export async function createCallTemplate(agentList) {
+export async function createCallTemplate(agentList, targetJSON) {
+    
     const fsPromises = fs.promises;
     const selectedAgent = agentList[Math.floor(Math.random() * agentList.length)];
+    const now = new Date();
+    const contactDate = subMinutes(now, 60); // Set contact_date to 60 minutes earlier
 
-    // Select a ticket to convert to audio
-    const ticketList = await getTicketList();
-    if (ticketList.length === 0) {
-        logger.error(`No tickets found in ${ticketStreamDir}`);
-        throw new Error(`No tickets found`);
+    let ticketResponses = null;
+
+    try {
+        ticketResponses = await fsPromises.readFile(targetJSON, "utf-8");
+        chatTemplate.data.responses = JSON.parse(ticketResponses);
+        logger.info(`Got responses from JSON`);
+    } catch (err) {
+        logger.error(`An error occurred reading the file: ${targetJSON}: ${err.message}`);
+        throw err;
     }
-    const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
-    logger.info(`Target ticket set as "${targetJSON}"`);
 
     // Convert the ticket to audio
     const audioFilename = await convertTicketToAudio(targetJSON); // Returns the filename of the converted audio
@@ -192,8 +196,6 @@ export async function createCallTemplate(agentList) {
     callTemplate.data.agent_email = selectedAgent.email;
 
     // Adjust contact_date and timestamps
-    const now = new Date();
-    const contactDate = subMinutes(now, 60); // Set contact_date to 60 minutes earlier
     callTemplate.data.contact_date = formatISO(contactDate);
     callTemplate.data.assigned_at = formatISO(contactDate);
     callTemplate.data.solved_at = formatISO(contactDate);
@@ -204,23 +206,5 @@ export async function createCallTemplate(agentList) {
     // Calculate handling time (in seconds)
     const handlingTimeInSeconds = await getAudioLength(audioFilepath); // Returns handling time in seconds
     callTemplate.data.handling_time = handlingTimeInSeconds;
-
-    // Generate simulated responses based on handling time
-    const responseCount = Math.floor(handlingTimeInSeconds / 30); // Assume one response every 30 seconds
-    let currentTimestamp = contactDate;
-    callTemplate.data.responses = Array.from({ length: responseCount }, (_, index) => {
-        currentTimestamp = addSeconds(currentTimestamp, 30); // Increment by 30 seconds per response
-        return {
-            response_id: (index + 1).toString(),
-            speaker_email: index % 2 === 0 ? selectedAgent.email : "customer@unknown.com", // Alternate speakers
-            message: index % 2 === 0 ? "Agent's response text." : "Customer's response text.",
-            speaker_is_customer: index % 2 !== 0, // Alternate speaker flag
-            channel: "Telephony",
-            message_created_at: formatISO(currentTimestamp),
-        };
-    });
-
-    logger.info(`Handling time: ${handlingTimeInSeconds} seconds. Generated ${responseCount} responses.`);
-
     return callTemplate;
 }

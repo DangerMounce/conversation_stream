@@ -238,8 +238,21 @@ async function startStreamLoop(apiKeyArray) {
                 }
 
                 if (callStream) {
-                    logger.info(`Handling call stream for API key: ${key} (${name})`);
-                    console.log(`API Key in use: ${key} (${name})`);
+                    logger.silly(`**********   Creating a new call for "${name}"  **********`)
+                    // Run the specified code block for the current API key
+                    const agentList = await evaluagent.getAgents(key)
+                    const ticketList = await getTicketList()
+                    if (ticketList.length === 0) {
+                        logger.error(`No tickets found in ${ticketStreamDir}`);
+                        process.exit(1);
+                    }
+                
+                    const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
+                    logger.info(`Target ticket for audio conversion set as "${targetJSON}"`);
+                    const contactTemplate = await createCallTemplate(agentList, targetJSON);
+                    await dump(contactTemplate)
+                    await evaluagent.sendContactToEvaluagent(contactTemplate, key)
+                    await delay(5) // wait 5 seconds before moving to next api call
                 }
             }
         } catch (error) {
@@ -279,8 +292,19 @@ async function startInjection(apiKeyArray, selectedTopic) {
                 }
 
                 if (callStream) {
-                    logger.info(`Handling call stream for API key: ${key} (${name})`);
-                    console.log(`API Key in use: ${key} (${name})`);
+                    logger.silly(`**********   Creating a new call for "${name}"  **********`)
+                    // Run the specified code block for the current API key
+                    const agentList = await evaluagent.getAgents(key)                
+                    const targetJSON = ticketList[ticketNumber];
+                    logger.info(`Target ticket for audio conversation set as "${targetJSON}"`);
+                    const contactTemplate = await createChatTemplate(agentList, targetJSON);
+                    await evaluagent.sendContactToEvaluagent(contactTemplate, key)
+                    ticketNumber++
+                    if (ticketNumber === ticketList.length) {
+                        logger.info(`${ticketNumber} contacts processed.  Injection complete.`)
+                        return false
+                    }
+                    await delay(5) // wait 5 seconds before moving to next api call                
                 }
             }
         } catch (error) {
