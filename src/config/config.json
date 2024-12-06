@@ -1,4 +1,5 @@
 {
-    "ticketStream" : false,
-    "callStream" : true
+    "ticketStream" : true,
+    "callStream" : true,
+    "deleteGeneratedCalls" : true
 }

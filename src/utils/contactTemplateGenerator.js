@@ -11,6 +11,7 @@ import { subMinutes, addMinutes, formatISO } from "date-fns"; // To handle date 
 import dump from "./dump.js";
 import { convertTicketToAudio } from "./ttsGenerator.js";
 import { evaluagent } from "./apiUtils.js";
+import { deleteGeneratedCalls } from "./loadConfig.js";
 
 export let chatTemplate = {
     data: {
@@ -64,7 +65,9 @@ export async function getAudioLength(audioFilePath) {
 
             const duration = metadata.format.duration; // Duration in seconds
             if (duration) {
+                if (deleteGeneratedCalls) {
                 deleteAudioFile(audioFilePath)
+                }
                 // Round down to the nearest second
                 resolve(Math.floor(duration));
             } else {
