@@ -224,12 +224,13 @@ async function startStreamLoop(apiKeyArray) {
                     logger.silly(`**********   Creating a new ticket for "${name}"  **********`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
-                    const ticketList = await getTicketList()
+                    const ticketList = await getTicketList(ticketStreamDir)
                     if (ticketList.length === 0) {
                         logger.error(`No tickets found in ${ticketStreamDir}`);
+                        logger.debug(ticketStreamDir)
                         process.exit(1);
                     }
-                
+
                     const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
                     logger.info(`Target ticket set as "${targetJSON}"`);
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
@@ -241,16 +242,16 @@ async function startStreamLoop(apiKeyArray) {
                     logger.silly(`**********   Creating a new call for "${name}"  **********`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
-                    const ticketList = await getTicketList()
+                    const ticketList = await getTicketList(ticketStreamDir)
                     if (ticketList.length === 0) {
                         logger.error(`No tickets found in ${ticketStreamDir}`);
+                        logger.debug(ticketStreamDir)
                         process.exit(1);
                     }
-                
+
                     const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
                     logger.info(`Target ticket for audio conversion set as "${targetJSON}"`);
-                    const contactTemplate = await createCallTemplate(agentList, targetJSON);
-                    await dump(contactTemplate)
+                    const contactTemplate = await createCallTemplate(agentList, targetJSON, key);
                     await evaluagent.sendContactToEvaluagent(contactTemplate, key)
                     await delay(5) // wait 5 seconds before moving to next api call
                 }
@@ -278,7 +279,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                 if (ticketStream) {
                     logger.silly(`**********   Creating a new ticket for "${name}"  **********`)
                     // Run the specified code block for the current API key
-                    const agentList = await evaluagent.getAgents(key)                
+                    const agentList = await evaluagent.getAgents(key)
                     const targetJSON = ticketList[ticketNumber];
                     logger.info(`Target ticket set as "${targetJSON}"`);
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
@@ -294,7 +295,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                 if (callStream) {
                     logger.silly(`**********   Creating a new call for "${name}"  **********`)
                     // Run the specified code block for the current API key
-                    const agentList = await evaluagent.getAgents(key)                
+                    const agentList = await evaluagent.getAgents(key)
                     const targetJSON = ticketList[ticketNumber];
                     logger.info(`Target ticket for audio conversation set as "${targetJSON}"`);
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
@@ -325,10 +326,10 @@ async function main() {
 
     if (stream) {
         console.log('');
-        ticketStreamDir = "../../data/stream_tickets"
-        callStreamDir = "../../data/stream_calls"
-        logger.info(`Ticket Directory: ${ticketStreamDir}`);
-        logger.info(`Calls Directory: ${callStreamDir}`);
+        ticketStreamDir = path.resolve("data/stream_tickets"); // Updated to use path.resolve
+        callStreamDir = path.resolve("data/stream_calls");     // Updated to use path.resolve
+        logger.debug(`Resolved ticketStreamDir: ${ticketStreamDir}`);
+        logger.debug(`Resolved callStreamDir: ${callStreamDir}`);
         logger.warn(`Stream Tickets: ${ticketStream}`)
         logger.warn(`Stream Calls: ${callStream}`)
         logger.warn(`wayBackMachine set at ${wayBackMachine} days (${getDate(wayBackMachine)})`)
@@ -346,8 +347,8 @@ async function main() {
             importStream = true
         }
         // Set the directories based on the selected topic
-        ticketStreamDir = `../../data/${selectedTopic}_tickets`;
-        callStreamDir = `../../data/${selectedTopic}_calls`;
+        ticketStreamDir = path.resolve(`data/${selectedTopic}_tickets`); // Updated to use path.resolve
+        callStreamDir = path.resolve(`data/${selectedTopic}_calls`);     // Updated to use path.resolve
         logger.info(`Ticket Directory: ${ticketStreamDir}`);
         logger.info(`Calls Directory: ${callStreamDir}`);
         logger.warn(`Stream Tickets: ${ticketStream}`)

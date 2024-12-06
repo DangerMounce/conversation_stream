@@ -1,4 +1,5 @@
 import fs from "fs";
+import fsP from "fs/promises"
 import path from "path";
 import { fileURLToPath } from "url";
 import { v4 as uuidv4 } from 'uuid';
@@ -9,6 +10,7 @@ import { wayBackMachine, callStreamDir, ticketStreamDir } from "../../stream.js"
 import { subMinutes, addMinutes, formatISO } from "date-fns"; // To handle date manipulation
 import dump from "./dump.js";
 import { convertTicketToAudio } from "./ttsGenerator.js";
+import { evaluagent } from "./apiUtils.js";
 
 export let chatTemplate = {
     data: {
@@ -62,12 +64,25 @@ export async function getAudioLength(audioFilePath) {
 
             const duration = metadata.format.duration; // Duration in seconds
             if (duration) {
-                resolve(duration);
+                deleteAudioFile(audioFilePath)
+                // Round down to the nearest second
+                resolve(Math.floor(duration));
             } else {
                 reject('Unable to retrieve audio duration.');
             }
         });
     });
+    
+}
+
+export async function deleteAudioFile(audioFilePath) {
+    // Delete the local file after a successful upload
+    try {
+        await fsP.unlink(audioFilePath);
+        logger.info(`Successfully deleted audio file: ${audioFilePath}`);
+    } catch (deleteError) {
+        logger.warn(`Failed to delete audio file: ${audioFilePath}. Error: ${deleteError.message}`);
+    }
 }
 
 function generateUUID() {
@@ -85,9 +100,7 @@ async function fileNameOnly(filename) {
     return base;
 }
 
-export async function getTicketList() {
-    const __dirname = path.dirname(fileURLToPath(import.meta.url));
-    const ticketsDir = path.join(__dirname, ticketStreamDir);
+export async function getTicketList(ticketsDir) {
     let jsonFiles = [];
 
     try {
@@ -159,52 +172,67 @@ export async function createChatTemplate(agentList, targetJSON) {
     return chatTemplate;
 }
 
-export async function createCallTemplate(agentList, targetJSON) {
-    
+export async function createCallTemplate(agentList, targetJSON, key) {
     const fsPromises = fs.promises;
+
+    // Select an agent randomly from the list
     const selectedAgent = agentList[Math.floor(Math.random() * agentList.length)];
+
+    // Adjust contact date
     const now = new Date();
     const contactDate = subMinutes(now, 60); // Set contact_date to 60 minutes earlier
 
     let ticketResponses = null;
 
+    // Read the ticket JSON file
     try {
         ticketResponses = await fsPromises.readFile(targetJSON, "utf-8");
-        chatTemplate.data.responses = JSON.parse(ticketResponses);
-        logger.info(`Got responses from JSON`);
+        chatTemplate.data.responses = JSON.parse(ticketResponses); // Assuming the structure is similar to chatTemplate
+        logger.info(`Got responses from JSON: ${targetJSON}`);
     } catch (err) {
         logger.error(`An error occurred reading the file: ${targetJSON}: ${err.message}`);
         throw err;
     }
 
-    // Convert the ticket to audio
+    // Convert the ticket to an audio file
     const audioFilename = await convertTicketToAudio(targetJSON); // Returns the filename of the converted audio
-    const audioFilepath = `${callStreamDir}/${audioFilename}`;
-
-    // Verify the file exists before processing
+    const audioFilepath = path.resolve(callStreamDir, audioFilename); // Ensure absolute path
+    // Verify the generated audio file exists
     if (!fs.existsSync(audioFilepath)) {
-        logger.info(`Generated audio file not found - ${audioFilepath}`);
+        logger.error(`Generated audio file not found: ${audioFilepath}`);
         throw new Error("Audio file error");
     }
 
-    // Upload the audio to evaluagent
-    callTemplate.data.audio_file_path = await evaluagent.uploadAudioToEvaluagent(audioFilepath);
+    // Upload the audio file to Evaluagent
+    try {
+        logger.debug(`Passing through to uploadAudio... ${audioFilepath}`)
+        logger.debug(`Api key ${key}`)
+        callTemplate.data.audio_file_path = await evaluagent.uploadAudioToEvaluagent(audioFilepath, key);
+        logger.info(`Audio file uploaded successfully: ${callTemplate.data.audio_file_path}`);
+    } catch (uploadError) {
+        logger.error(`Error uploading audio file: ${uploadError.message}`);
+        throw uploadError;
+    }
 
-    // Create template
+    // Populate the call template
     callTemplate.data.reference = generateUUID();
     callTemplate.data.agent_id = selectedAgent.agent_id;
     callTemplate.data.agent_email = selectedAgent.email;
-
-    // Adjust contact_date and timestamps
     callTemplate.data.contact_date = formatISO(contactDate);
     callTemplate.data.assigned_at = formatISO(contactDate);
     callTemplate.data.solved_at = formatISO(contactDate);
-
     callTemplate.data.channel = "Telephony";
     callTemplate.data.metadata.Filename = await fileNameOnly(audioFilename);
 
-    // Calculate handling time (in seconds)
-    const handlingTimeInSeconds = await getAudioLength(audioFilepath); // Returns handling time in seconds
-    callTemplate.data.handling_time = handlingTimeInSeconds;
-    return callTemplate;
+    // Calculate and set handling time
+    try {
+        const handlingTimeInSeconds = await getAudioLength(audioFilepath); // Get duration of the audio file
+        callTemplate.data.handling_time = handlingTimeInSeconds;
+        logger.info(`Handling time set to ${handlingTimeInSeconds} seconds.`);
+    } catch (audioError) {
+        logger.error(`Error calculating audio length: ${audioError.message}`);
+        throw audioError;
+    }
+
+    return callTemplate; // Return the completed call template
 }
