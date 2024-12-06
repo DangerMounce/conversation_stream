@@ -4,10 +4,11 @@ import fs from 'fs';
 import path from 'path';
 import inquirer from 'inquirer';
 import AdmZip from 'adm-zip';
+import logger from './src/utils/logger.js';
 
 // Constants
 const REPO_OWNER = "DangerMounce";
-const REPO_NAME = "dummy-repo";
+const REPO_NAME = "conversation_stream";
 const LOCAL_VERSION_FILE = path.resolve('./version.json');
 const TEMP_UPDATE_DIR = path.resolve('./temp_update');
 const BACKUP_DIR = path.resolve('./backup');
@@ -28,7 +29,7 @@ async function fetchGitHubAPI(endpoint) {
 
 // Check for updates
 export async function checkForUpdates() {
-    console.log("Checking for updates...");
+    logger.info("Checking for updates...");
     try {
         const latestRelease = await fetchGitHubAPI('/releases/latest');
         const latestVersion = latestRelease.tag_name;
@@ -40,10 +41,10 @@ export async function checkForUpdates() {
             localVersion = versionData.version;
         }
 
-        console.log(`Local version: ${localVersion}, Latest version: ${latestVersion}`);
+        logger.info(`Local version: ${localVersion}, Latest version: ${latestVersion}`);
 
         if (localVersion === latestVersion) {
-            console.log("You are already up-to-date!");
+            logger.info("You are already up-to-date!");
             return;
         }
 
@@ -60,8 +61,10 @@ export async function checkForUpdates() {
             await backupCurrentFiles();
             await downloadAndInstall(latestRelease.zipball_url, latestVersion);
         }
+        logger.warn("Restart required")
+        process.exit(0)
     } catch (error) {
-        console.error("Error during update check:", error.message);
+        logger.error("Error during update check:", error.message);
     }
 }
 
