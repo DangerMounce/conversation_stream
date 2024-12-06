@@ -4,9 +4,5 @@ node_modules
 dump.json
 data
 logs
-<<<<<<< HEAD
-.DS_Store
-=======
 .DS_Store
 contact_reference_log.json
->>>>>>> origin/main
