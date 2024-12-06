@@ -265,7 +265,7 @@ async function startStreamLoop(apiKeyArray) {
 }
 
 async function startInjection(apiKeyArray, selectedTopic) {
-    const ticketList = await getTicketList()
+    const ticketList = await getTicketList(ticketStreamDir)
     if (ticketList.length === 0) {
         logger.error(`No tickets found in ${ticketStreamDir}`);
         process.exit(1);
@@ -298,7 +298,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                     const agentList = await evaluagent.getAgents(key)
                     const targetJSON = ticketList[ticketNumber];
                     logger.info(`Target ticket for audio conversation set as "${targetJSON}"`);
-                    const contactTemplate = await createChatTemplate(agentList, targetJSON);
+                    const contactTemplate = await createCallTemplate(agentList, targetJSON, key);
                     await evaluagent.sendContactToEvaluagent(contactTemplate, key)
                     ticketNumber++
                     if (ticketNumber === ticketList.length) {

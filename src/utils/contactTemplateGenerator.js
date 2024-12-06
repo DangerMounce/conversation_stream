@@ -72,7 +72,7 @@ export async function getAudioLength(audioFilePath) {
             }
         });
     });
-    
+
 }
 
 export async function deleteAudioFile(audioFilePath) {
@@ -142,7 +142,9 @@ export async function createChatTemplate(agentList, targetJSON) {
         logger.error(`An error occurred reading the file: ${targetJSON}: ${err.message}`);
         throw err;
     }
-
+    // Adjust contact date
+    const now = new Date();
+    const contactDate = subMinutes(now, 60); // Set contact_date to 60 minutes earlier
     let currentTimestamp = contactDate;
 
     chatTemplate.data.reference = generateUUID();

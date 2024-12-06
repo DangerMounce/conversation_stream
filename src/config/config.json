@@ -1,4 +1,4 @@
 {
-    "ticketStream" : true,
-    "callStream" : false
+    "ticketStream" : false,
+    "callStream" : true
 }
