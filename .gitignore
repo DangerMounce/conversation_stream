@@ -1,0 +1,6 @@
+# Ignore API keys file
+src/config/keyFile.json
+node_modules
+dump.json
+data
+logs
