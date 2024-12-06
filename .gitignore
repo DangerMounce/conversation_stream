@@ -4,3 +4,4 @@ node_modules
 dump.json
 data
 logs
+.DS_Store
