@@ -4,4 +4,5 @@ node_modules
 dump.json
 data
 logs
-contact-reference-log.json
+.DS_Store
+contact_reference_log.json
