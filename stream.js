@@ -317,9 +317,9 @@ async function startInjection(apiKeyArray, selectedTopic) {
 }
 
 async function main() {
-    console.clear('');
-    await clearLog();
+    console.clear('');    
     await checkForUpdates()
+    await clearLog();
     ensureDirectories();
     loadConfig();
     const stream = await streamSelection();
