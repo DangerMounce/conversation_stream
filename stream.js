@@ -4,7 +4,7 @@ import { checkForUpdates } from "./updateChecker.js";
 import logger from "./src/utils/logger.js";
 import inquirer from "inquirer";
 import chalk from "chalk";
-import apiKeysMenu from "./src/utils/apiKeyMenu.js";
+import apiKeysMenu from "./src/utils/apikeyMenu.js";
 import { ticketStream, callStream, loadConfig } from './src/utils/loadConfig.js';
 import { evaluagent } from "./src/utils/apiUtils.js";
 import dump from "./src/utils/dump.js";
