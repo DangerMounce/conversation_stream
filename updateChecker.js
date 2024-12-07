@@ -61,8 +61,8 @@ export async function checkForUpdates() {
             await backupCurrentFiles();
             await downloadAndInstall(latestRelease.zipball_url, latestVersion);
         }
-        logger.warn("Restart required")
-        process.exit(0)
+        logger.warn("Restart required");
+        process.exit(0);
     } catch (error) {
         logger.error("Error during update check:", error.message);
     }
@@ -162,6 +162,3 @@ function rollback() {
         console.error("Failed to rollback:", error.message);
     }
 }
-
-
-//Automate with GH actions
