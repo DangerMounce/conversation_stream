@@ -60,9 +60,10 @@ export async function checkForUpdates() {
         if (shouldUpdate) {
             await backupCurrentFiles();
             await downloadAndInstall(latestRelease.zipball_url, latestVersion);
+            logger.warn("Restart required");
+            process.exit(0);
         }
-        logger.warn("Restart required");
-        process.exit(0);
+
     } catch (error) {
         logger.error("Error during update check:", error.message);
     }
