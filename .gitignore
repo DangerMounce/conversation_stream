@@ -2,7 +2,6 @@
 src/config/keyFile.json
 node_modules
 dump.json
-data
 logs
 .DS_Store
 contact_reference_log.json

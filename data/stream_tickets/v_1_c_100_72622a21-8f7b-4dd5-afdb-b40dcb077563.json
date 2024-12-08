@@ -1,0 +1,162 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R1",
+    "message": "Hello. My name is John. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R2",
+    "message": "Hi John, I need some help understanding my policy's coverage.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:01:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:02:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R4",
+    "message": "Sure, my name is Jane Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:03:20Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R5",
+    "message": "Thank you Jane Doe. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:04:15Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R6",
+    "message": "Yes, it's jdoe@example.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:05:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R7",
+    "message": "Great, and finally, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:06:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R8",
+    "message": "It's the 1st of January, 1990.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:07:15Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R9",
+    "message": "Thank you for verifying. Now, can you explain what part of your policy's coverage is unclear?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:08:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R10",
+    "message": "I'm not sure if my current health insurance policy covers dental procedures.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:09:20Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R11",
+    "message": "I completely understand. Let's see, have there been any recent changes in your policy that might have affected this?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:10:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R12",
+    "message": "Not that I'm aware of.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:11:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R13",
+    "message": "Okay. Did you receive any notifications about changes to your policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:12:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R14",
+    "message": "No, I didn't receive anything.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:13:20Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R15",
+    "message": "Alright, let me recap. You're unsure if your current health insurance policy covers dental procedures, and you've not made any recent changes to your policy or received any notifications about changes. Would you like me to check the details of your policy and confirm this for you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:14:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R16",
+    "message": "Yes, please. That would be helpful.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:15:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R17",
+    "message": "Thank you for your patience. I'm glad to be able to help. Please give me a moment while I check your policy details.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:16:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R18",
+    "message": "I've checked your policy, and it does cover dental procedures. If you need detailed information, I can send it to your email.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:20:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R19",
+    "message": "That's great to know! Yes, please send the details to my email. Thanks for your help, John.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:21:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R20",
+    "message": "The pleasure was all mine in the conversation. I'll send the detailed information to your email shortly. Always happy to help, let us know if there's anything else. I appreciate your time. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-05-17T09:22:00Z"
+  }
+]
