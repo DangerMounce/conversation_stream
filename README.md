@@ -1,6 +1,5 @@
 # evaluAgent live Stream and Injection Management Tool
 
-**Version**: `v0.1.0`  
 **Author**: Chris Mounce
 
 ## Overview
