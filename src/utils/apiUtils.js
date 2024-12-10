@@ -6,6 +6,7 @@ import fs from 'fs';
 import fsP from 'fs/promises'
 import FormData from "form-data";
 import logger from "./logger.js";
+import { getDate } from "./contactTemplateGenerator.js";
 
 let agentRoleId
 let agentList
@@ -72,7 +73,7 @@ async function getAgents(apiKey) {
 async function sendContactToEvaluagent(contactTemplate, apiKey) {
     const targetedJSON = contactTemplate.data.metadata.Filename;
     const agentEmail = contactTemplate.data.agent_email;
-    const referenceLogFile = path.join(process.cwd(), 'contact-reference-log.json'); // Path for the reference log file
+    const referenceLogFile = path.join(process.cwd(), 'export_log.csv'); // Path for the reference log file
 
     logger.info(`Target file is ${targetedJSON}. Assigned agent is ${agentEmail}`);
 
@@ -103,7 +104,7 @@ async function sendContactToEvaluagent(contactTemplate, apiKey) {
         // Process the response and log contact reference
         if (result.message) {
             logger.http(`${contactTemplate.data.reference} - ${result.message}`);
-            await updateReferenceLog(referenceLogFile, contactTemplate.data.reference);
+            await updateReferenceLog(referenceLogFile, contactTemplate.data.reference, targetedJSON);
         } else if (result.errors) {
             logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
         }
@@ -113,23 +114,28 @@ async function sendContactToEvaluagent(contactTemplate, apiKey) {
 }
 
 // Helper function to update the contact reference log
-async function updateReferenceLog(filePath, reference) {
+async function updateReferenceLog(filePath, reference, filename) {
+    const csvHeader = 'Date,Filename,Contact Reference\n';
+    const date = getDate(); // Use your getDate function to get the current date in the desired format
+
     try {
-        let references = [];
+        // Check if the CSV file exists
+        const fileExists = fs.existsSync(filePath);
 
-        // Check if the file exists and read its content
-        if (fs.existsSync(filePath)) {
-            const fileContent = await fsP.readFile(filePath, 'utf8');
-            references = JSON.parse(fileContent);
+        // Prepare the new row to append
+        const newRow = `${date},${filename},${reference}\n`;
+
+        if (!fileExists) {
+            // Create the file and write the header followed by the new row
+            await fsP.writeFile(filePath, csvHeader + newRow, 'utf8');
+            logger.info(`Created new export log: ${filePath}`);
+        } else {
+            // Append the new row if the file already exists
+            await fsP.appendFile(filePath, newRow, 'utf8');
+            logger.info(`Appended new entry to export log: ${filePath}`);
         }
-
-        // Add the new reference
-        references.push(reference);
-
-        // Write back the updated array to the file
-        await fsP.writeFile(filePath, JSON.stringify(references, null, 2), 'utf8');
     } catch (error) {
-        logger.warn(`Error updating contact-reference-log.json: ${error.message}`);
+        logger.warn(`Error updating export log: ${error.message}`);
     }
 }
 

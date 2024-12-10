@@ -5,3 +5,4 @@ dump.json
 logs
 .DS_Store
 contact_reference_log.json
+export_log.csv
