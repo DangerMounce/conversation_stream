@@ -114,6 +114,7 @@ async function sendContactToEvaluagent(contactTemplate, apiKey) {
 
 // Helper function to update the contact reference log
 async function updateReferenceLog(filePath, reference) {
+    // Amend this to take in reference, date, filename, contact ref and add to csv
     try {
         let references = [];
 

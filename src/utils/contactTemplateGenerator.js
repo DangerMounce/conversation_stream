@@ -155,9 +155,9 @@ export async function createChatTemplate(agentList, targetJSON) {
     chatTemplate.data.agent_email = selectedAgent.email;
     chatTemplate.data.channel = "Chat";
 
-    chatTemplate.data.contact_date = formatISO(contactDate);
-    chatTemplate.data.assigned_at = formatISO(contactDate);
-    chatTemplate.data.solved_at = formatISO(contactDate);
+    chatTemplate.data.contact_date = getDate(wayBackMachine);
+    chatTemplate.data.assigned_at = getDate(wayBackMachine);
+    chatTemplate.data.solved_at = getDate(wayBackMachine);
 
     // Adjust each message's timestamp
     chatTemplate.data.responses.forEach((response, index) => {
@@ -223,9 +223,9 @@ export async function createCallTemplate(agentList, targetJSON, key) {
     callTemplate.data.reference = generateUUID();
     callTemplate.data.agent_id = selectedAgent.agent_id;
     callTemplate.data.agent_email = selectedAgent.email;
-    callTemplate.data.contact_date = formatISO(contactDate);
-    callTemplate.data.assigned_at = formatISO(contactDate);
-    callTemplate.data.solved_at = formatISO(contactDate);
+    callTemplate.data.contact_date = getDate(wayBackMachine);
+    callTemplate.data.assigned_at = getDate(wayBackMachine);
+    callTemplate.data.solved_at = getDate(wayBackMachine);
     callTemplate.data.channel = "Telephony";
     callTemplate.data.metadata.Filename = await fileNameOnly(audioFilename);
 
