@@ -1,6 +1,6 @@
 import path from "path";
 import fs from "fs";
-import { checkForUpdates } from "./updateChecker.js";
+import { checkForUpdate } from "./autoUpdate.js";
 import logger from "./src/utils/logger.js";
 import inquirer from "inquirer";
 import chalk from "chalk";
@@ -318,7 +318,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
 
 async function main() {
     console.clear('');    
-    await checkForUpdates()
+    await checkForUpdate()
     await clearLog();
     ensureDirectories();
     loadConfig();
