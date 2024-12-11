@@ -51,7 +51,7 @@ async function textToSpeech(text, outputFile, lang = 'en') {
 async function processTextArray(messages) {
     for (let i = 0; i < messages.length; i++) {
         const message = messages[i];
-        const isCustomer = i % 2 !== 0; // Odd indices for customer, even for agent
+        const isCustomer = i % 2 !== 0; 
         const voice = isCustomer ? customerVoice : agentVoice;
 
         const outputFile = path.join(

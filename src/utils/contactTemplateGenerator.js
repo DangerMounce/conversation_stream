@@ -23,7 +23,6 @@ export let chatTemplate = {
         assigned_at: "",
         solved_at: "",
         external_url: "https://www.evaluagent.com/platform/product-tours/",
-        responses_stored_externally: "true",
         responses: [],
         metadata: {
             Filename: "",
@@ -44,14 +43,14 @@ export let callTemplate = {
         assigned_at: "",
         solved_at: "",
         external_url: "https://www.evaluagent.com/platform/product-tours/",
-        responses_stored_externally: "true",
         handling_time: 120,
         customer_telephone_number: "01753 877212",
         audio_file_path: "",
         metadata: {
             Filename: "",
             Contact: "Call"
-        }
+        },
+            responses_stored_externally : true
     }
 };
 
