@@ -211,7 +211,6 @@ export async function createCallTemplate(agentList, targetJSON, key) {
     // Upload the audio file to Evaluagent
     try {
         logger.debug(`Passing through to uploadAudio... ${audioFilepath}`)
-        logger.debug(`Api key ${key}`)
         callTemplate.data.audio_file_path = await evaluagent.uploadAudioToEvaluagent(audioFilepath, key);
         logger.info(`Audio file uploaded successfully: ${callTemplate.data.audio_file_path}`);
     } catch (uploadError) {
