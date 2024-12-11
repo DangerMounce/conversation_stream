@@ -115,7 +115,7 @@ async function sendContactToEvaluagent(contactTemplate, apiKey) {
 
 // Helper function to update the contact reference log
 async function updateReferenceLog(filePath, reference, filename) {
-    const csvHeader = 'Date,Filename,Contact Reference\n';
+    const csvHeader = 'Contract Name, Date,Filename,Contact Reference\n';
     const date = getDate(); // Use your getDate function to get the current date in the desired format
 
     try {

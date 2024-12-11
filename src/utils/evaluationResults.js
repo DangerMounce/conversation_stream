@@ -1,5 +1,3 @@
-const apiKey = '33ac9e56-8a18-42d1-be45-9fb5a5f9ed27:51a2f75712fccd47a5e9dff77fee2f5066628cb8';
-
 import axios from 'axios';
 import { subHours, formatISO } from 'date-fns';
 import dump from './dump.js';
@@ -28,7 +26,6 @@ async function fetchEvaluationsLast24Hours() {
     });
 
     // Return the evaluation data
-    await dump(response.data);
     return response.data;
   } catch (error) {
     console.error('Error fetching evaluations from the last 24 hours:', error.response?.data || error.message);
@@ -36,12 +33,57 @@ async function fetchEvaluationsLast24Hours() {
   }
 }
 
+export async function findOutcomeByContactReference(targetContactReference) {
+  try {
+    // Fetch the data asynchronously
+    const data = await fetchEvaluationsLast24Hours();
+
+    // Validate the data structure
+    if (!data || !Array.isArray(data.included) || !Array.isArray(data.data)) {
+      throw new Error('Invalid data structure');
+    }
+
+    // Find the contact with the matching contact_reference
+    const contact = data.included.find(
+      (item) =>
+        item.type === 'contacts' &&
+        item.attributes?.contact_reference === targetContactReference
+    );
+
+    if (!contact) {
+      return `No contact found with reference: ${targetContactReference}`;
+    }
+
+    // Find the evaluation associated with the contact
+    const evaluationId = contact.relationships?.evaluation?.data?.id;
+
+    if (!evaluationId) {
+      return `No evaluation associated with the contact reference: ${targetContactReference}`;
+    }
+
+    // Find the evaluation details in the main data array
+    const evaluation = data.data.find(
+      (item) => item.type === 'evaluations' && item.id === evaluationId
+    );
+
+    if (!evaluation) {
+      return `No evaluation found for the contact reference: ${targetContactReference}`;
+    }
+
+    // Return the outcome from the evaluation attributes
+    return evaluation.attributes?.outcome || 'Outcome not available';
+  } catch (error) {
+    console.error(`Error finding outcome for contact reference ${targetContactReference}:`, error.message);
+    throw error;
+  }
+}
+
 // Example Usage
 (async () => {
   try {
-    const evaluations = await fetchEvaluationsLast24Hours();
-    console.log('Fetched Evaluations from Last 24 Hours:', evaluations);
+    const outcome = await findOutcomeByContactReference('a2c6d370-1f69-4bd9-8bb1-08738c30643c');
+    console.log(`Outcome: ${outcome}`);
   } catch (error) {
-    console.error('Failed to fetch evaluations:', error.message);
+    console.error('Failed to find outcome:', error.message);
   }
 })();
