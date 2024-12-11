@@ -128,8 +128,8 @@ async function remapStereoFiles() {
 
         try {
             const panFilter = file.includes('customer')
-                ? 'stereo|c0=FL'
-                : 'stereo|c1=FL';
+                ? 'stereo|c1=FL'
+                : 'stereo|c0=FL';
 
             await new Promise((resolve, reject) => {
                 ffmpeg(inputFilePath)
