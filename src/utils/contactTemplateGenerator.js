@@ -48,7 +48,8 @@ export let callTemplate = {
         audio_file_path: "",
         metadata: {
             Filename: "",
-            Contact: "Call"
+            Contact: "Call",
+            audio_length_seconds: 0
         },
             responses_stored_externally : true
     }
@@ -231,6 +232,7 @@ export async function createCallTemplate(agentList, targetJSON, key) {
     try {
         const handlingTimeInSeconds = await getAudioLength(audioFilepath); // Get duration of the audio file
         callTemplate.data.handling_time = handlingTimeInSeconds;
+        callTemplate.data.metadata.audio_length_seconds = handlingTimeInSeconds
         logger.info(`Handling time set to ${handlingTimeInSeconds} seconds.`);
     } catch (audioError) {
         logger.error(`Error calculating audio length: ${audioError.message}`);

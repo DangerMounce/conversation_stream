@@ -70,7 +70,7 @@ async function getAgents(apiKey) {
 }
 
 // Send the contact record to evaluagent
-async function sendContactToEvaluagent(contactTemplate, apiKey) {
+async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
     const targetedJSON = contactTemplate.data.metadata.Filename;
     const agentEmail = contactTemplate.data.agent_email;
     const referenceLogFile = path.join(process.cwd(), 'export_log.csv'); // Path for the reference log file
@@ -104,7 +104,7 @@ async function sendContactToEvaluagent(contactTemplate, apiKey) {
         // Process the response and log contact reference
         if (result.message) {
             logger.http(`${contactTemplate.data.reference} - ${result.message}`);
-            await updateReferenceLog(referenceLogFile, contactTemplate.data.reference, targetedJSON);
+            await updateReferenceLog(referenceLogFile, contactTemplate.data.reference, targetedJSON, name);
         } else if (result.errors) {
             logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
         }
@@ -114,8 +114,8 @@ async function sendContactToEvaluagent(contactTemplate, apiKey) {
 }
 
 // Helper function to update the contact reference log
-async function updateReferenceLog(filePath, reference, filename) {
-    const csvHeader = 'Contract Name, Date,Filename,Contact Reference\n';
+async function updateReferenceLog(filePath, reference, filename, name) {
+    const csvHeader = 'Contract Name, Date,Filename,Contact Reference, Outcome\n';
     const date = getDate(); // Use your getDate function to get the current date in the desired format
 
     try {
@@ -123,7 +123,7 @@ async function updateReferenceLog(filePath, reference, filename) {
         const fileExists = fs.existsSync(filePath);
 
         // Prepare the new row to append
-        const newRow = `${date},${filename},${reference}\n`;
+        const newRow = `${name},${date},${filename},${reference}\n`;
 
         if (!fileExists) {
             // Create the file and write the header followed by the new row

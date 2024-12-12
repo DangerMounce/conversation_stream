@@ -234,7 +234,7 @@ async function startStreamLoop(apiKeyArray) {
                     const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
                     logger.info(`Target ticket set as "${targetJSON}"`);
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
-                    await evaluagent.sendContactToEvaluagent(contactTemplate, key)
+                    await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     await delay(5) // wait 5 seconds before moving to next api call
                 }
 
@@ -252,7 +252,7 @@ async function startStreamLoop(apiKeyArray) {
                     const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
                     logger.info(`Target ticket for audio conversion set as "${targetJSON}"`);
                     const contactTemplate = await createCallTemplate(agentList, targetJSON, key);
-                    await evaluagent.sendContactToEvaluagent(contactTemplate, key)
+                    await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     await delay(5) // wait 5 seconds before moving to next api call
                 }
             }
@@ -283,7 +283,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                     const targetJSON = ticketList[ticketNumber];
                     logger.info(`Target ticket set as "${targetJSON}"`);
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
-                    await evaluagent.sendContactToEvaluagent(contactTemplate, key)
+                    await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     ticketNumber++
                     if (ticketNumber === ticketList.length) {
                         logger.info(`${ticketNumber} contacts processed.  Injection complete.`)
@@ -299,7 +299,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                     const targetJSON = ticketList[ticketNumber];
                     logger.info(`Target ticket for audio conversation set as "${targetJSON}"`);
                     const contactTemplate = await createCallTemplate(agentList, targetJSON, key);
-                    await evaluagent.sendContactToEvaluagent(contactTemplate, key)
+                    await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     ticketNumber++
                     if (ticketNumber === ticketList.length) {
                         logger.info(`${ticketNumber} contacts processed.  Injection complete.`)
