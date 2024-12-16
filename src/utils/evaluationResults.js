@@ -10,8 +10,6 @@ async function fetchEvaluationsLast24Hours() {
     const now = new Date();
     const yesterday = subHours(now, 24);
     const dateRange = `${formatISO(yesterday)},${formatISO(now)}`;
-
-    // Prepare query parameters
     const params = new URLSearchParams();
     params.append('filter[published_at;between]', dateRange);
     params.append('sort', '-published_at'); // Sort by published_at in descending order
