@@ -2,6 +2,7 @@ import axios from 'axios';
 import { subHours, formatISO } from 'date-fns';
 import dump from './dump.js';
 
+
 async function fetchEvaluationsLast24Hours() {
   try {
     const baseUrl = 'https://api.evaluagent.com/v1/quality/evaluations';
@@ -78,12 +79,3 @@ export async function findOutcomeByContactReference(targetContactReference) {
   }
 }
 
-// Example Usage
-(async () => {
-  try {
-    const outcome = await findOutcomeByContactReference('a2c6d370-1f69-4bd9-8bb1-08738c30643c');
-    console.log(`Outcome: ${outcome}`);
-  } catch (error) {
-    console.error('Failed to find outcome:', error.message);
-  }
-})();
