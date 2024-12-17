@@ -1,7 +1,13 @@
 import axios from 'axios';
 import { subHours, formatISO } from 'date-fns';
 import dump from './dump.js';
+import fs from 'fs/promises';
+import path from 'path';
+import csv from 'csv-parser';
+import { stringify } from 'csv-stringify/sync';
 
+const exportLogPath = path.resolve('./export_log.csv');
+const keyFilePath = path.resolve('./src/config/keyFile.json');
 
 async function fetchEvaluationsLast24Hours() {
   try {
@@ -78,4 +84,3 @@ export async function findOutcomeByContactReference(targetContactReference) {
     throw error;
   }
 }
-
