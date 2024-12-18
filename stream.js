@@ -320,13 +320,12 @@ async function startInjection(apiKeyArray, selectedTopic) {
 
 export async function ensureUserInConfig() {
     try {
-        // Read the config file
         const configContent = fs.readFileSync(configPath, 'utf-8');
         const config = JSON.parse(configContent);
 
         // Check if "user" exists
         if (!config.user) {
-            console.log(chalk.bold.yellow('\nNo user registraton found. Please provide your email address.\n'));
+            console.log(chalk.bold.yellow('\nNo user registration found. Please provide your email address.\n'));
 
             // Prompt user for their email
             const { email } = await inquirer.prompt([
@@ -346,15 +345,24 @@ export async function ensureUserInConfig() {
 
             // Write the updated config back to the file
             fs.writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf-8');
-            user = username
+
+            // Update the global user variable
+            user = username;
             logger.info(`${username} registered as a new user`);
         } else {
+            // Load the existing user into the global user variable
+            user = config.user;
             logger.info(`${config.user} config loaded`);
         }
     } catch (error) {
         logger.error(`Error updating config.json: ${error.message}`);
         process.exit(1);
     }
+}
+
+// Function to get the current user value
+export function getUser() {
+    return user; // Return the current value of user
 }
 
 async function main() {

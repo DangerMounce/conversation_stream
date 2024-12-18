@@ -8,6 +8,8 @@ import FormData from "form-data";
 import logger from "./logger.js";
 import { getDate } from "./contactTemplateGenerator.js";
 import { checkQualityOfStream } from "./exportLogUpdate.js"
+import { getUser } from "../../stream.js";
+import dump from "./dump.js";
 
 let agentRoleId
 let agentList
@@ -116,6 +118,15 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
 
 // Helper function to update the contact reference log
 async function updateReferenceLog(filePath, reference, filename, name) {
+    const currentUser = getUser()
+    const logData = {
+        timeStamp : getDate(),
+        registeredUser : currentUser,
+        contractName : name,
+        fileName : filename,
+        contactReference : reference
+    }
+    await dump(logData)
     const csvHeader = 'Contract Name,Date,Filename,Contact Reference,Outcome\n'; // CSV header
     const date = getDate(); // Use your getDate function for the current date
 
