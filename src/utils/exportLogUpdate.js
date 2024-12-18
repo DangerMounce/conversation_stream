@@ -1,62 +1,37 @@
 import path from 'path';
 import fs from 'fs/promises';
+import { parse } from 'csv-parse/sync';
 
 import { findOutcomeByContactReference } from './evaluationResults.js';
 import logger from './logger.js';
 
-const csvFilePath = path.resolve('export_log.csv'); // Path to your CSV file
+const csvFilePath = path.resolve('export_log.csv');
 const keyFilePath = path.resolve('./src/config/keyFile.json');
 
 async function processCsvRowsWithMissingOutcomes(csvFilePath) {
     try {
-        // Load the key file
         const keyFileContent = await fs.readFile(keyFilePath, 'utf8');
         const { keys } = JSON.parse(keyFileContent);
 
-        // Read the CSV content
         const csvContent = await fs.readFile(csvFilePath, 'utf8');
-        const rows = csvContent.split('\n').map(row => row.split(',').map(cell => cell.trim())); // Basic CSV parsing with trimming
 
-        // Extract headers and data
-        const headers = rows[0]; // First row as headers
-        const dataRows = rows.slice(1); // Remaining rows as data
+        const records = parse(csvContent, {
+            columns: true,
+            skip_empty_lines: true,
+            trim: true,
+            relax_column_count: true
+        });
 
-        // Ensure required headers are present
-        const requiredHeaders = ['Contract Name', 'Date', 'Filename', 'Contact Reference', 'Outcome'];
-        const missingHeaders = requiredHeaders.filter(header => !headers.includes(header));
-        if (missingHeaders.length > 0) {
-            logger.error(`Missing headers: ${missingHeaders.join(', ')}`)
-            throw new Error(`Missing headers: ${missingHeaders.join(', ')}`);
-        }
-
-        const contractNameIndex = headers.indexOf('Contract Name');
-        const outcomeIndex = headers.indexOf('Outcome');
-
-        // Filter rows with missing outcomes and construct objects
-        const rowsWithMissingOutcomes = dataRows
-            .filter(row => row.length > outcomeIndex && row[outcomeIndex] === '') // Check if Outcome column exists and is empty
+        const rowsWithMissingOutcomes = records
+            .filter(row => row['Contract Name'] && row['Contact Reference'] && !row['Outcome']?.trim())
             .map(row => {
-                const rowObject = {};
-                headers.forEach((header, index) => {
-                    rowObject[header] = row[index];
-                });
-
-                // Add the API key to the row object
-                const contractName = row[contractNameIndex];
-                const apiKeyEntry = keys.find(keyEntry => keyEntry.name === contractName);
-
-                if (apiKeyEntry) {
-                    rowObject.apiKey = apiKeyEntry.key; // Updated to match the correct property in keyFile.json
-                } else {
-                    logger.warn(`No API key found for contract name: "${contractName}"`);
-                    rowObject.apiKey = null; // Indicate missing API key
-                }
-
-                return rowObject;
+                const apiKeyEntry = keys.find(key => key.name === row['Contract Name']);
+                row.apiKey = apiKeyEntry ? apiKeyEntry.key : null;
+                return row;
             })
-            .filter(rowObject => rowObject.apiKey !== null); // Ensure Contract Name has a valid API key
+            .filter(row => row.apiKey !== null);
 
-        return { headers, dataRows, rowsWithMissingOutcomes };
+        return { rowsWithMissingOutcomes };
     } catch (error) {
         logger.error(`Error processing CSV: ${error.message}`);
         throw error;
@@ -64,79 +39,61 @@ async function processCsvRowsWithMissingOutcomes(csvFilePath) {
 }
 
 async function updateOutcomesForRows(rowsWithMissingOutcomes) {
-    try {
-        // Iterate over each row and update the outcome
-        for (const row of rowsWithMissingOutcomes) {
-            const { 'Contact Reference': contactReference, apiKey, Filename } = row;
+    for (const row of rowsWithMissingOutcomes) {
+        const { 'Contact Reference': contactReference, apiKey, Filename } = row;
 
-            if (!contactReference || !apiKey) {
-                logger.warn(`Skipping row due to missing Contact Reference or API Key:`, row);
-                continue; // Skip rows with missing essential data
-            }
-
-            try {
-                // Call findOutcomeByContactReference
-                let outcome = await findOutcomeByContactReference(contactReference, apiKey);
-
-                // Adjust outcome logic based on Filename
-                if (Filename.includes('_c_100')) {
-                    if (outcome === 'Pass') {
-                        row.Outcome = 'OK'; // Change PASS to OK for matching filenames
-                    } else if (outcome === 'Fail') {
-                        row.Outcome = 'Fail'; // Keep FAIL as it is
-                        logger.warn(`${contactReference} has failed.`)
-                    } else {
-                        logger.info(`${outcome}. Skipping row.`);
-                        continue;
-                    }
-                } else {
-                    row.Outcome = 'OK'; // Set outcome as OK for other filenames
-                }
-            } catch (error) {
-                logger.error(`Error fetching outcome for Contact Reference: ${contactReference}`, error.message);
-            }
+        if (!contactReference || !apiKey) {
+            logger.warn(`Skipping row due to missing data: ${JSON.stringify(row)}`);
+            continue;
         }
-        return rowsWithMissingOutcomes;
-    } catch (error) {
-        logger.error('Error updating rows with outcomes:', error.message);
+
+        try {
+            const outcome = await findOutcomeByContactReference(contactReference, apiKey);
+            if (!outcome) {
+                logger.warn(`No valid outcome for Contact Reference: ${contactReference}`);
+                continue;
+            }
+
+            row.Outcome = Filename.includes('_c_100') && outcome === 'Pass' ? 'OK' : outcome;
+            logger.info(`Updated Outcome for Contact Reference ${contactReference} to ${row.Outcome}`);
+        } catch (error) {
+            logger.error(`Error fetching outcome: ${error.message}`);
+        }
     }
+
+    return rowsWithMissingOutcomes.filter(row => row.Outcome);
 }
 
 async function updateCsvWithOutcomes(csvFilePath, rowsWithUpdatedOutcomes) {
-    try {
-        // Read the original CSV content
-        const csvContent = await fs.readFile(csvFilePath, 'utf8');
-        const rows = csvContent.split('\n').map(row => row.split(',').map(cell => cell.trim())); // Basic CSV parsing with trimming
+    const csvContent = await fs.readFile(csvFilePath, 'utf8');
+    const rows = csvContent.split('\n').map(row => row.split(','));
+    const headers = rows[0];
+    const dataRows = rows.slice(1);
 
-        const headers = rows[0]; // Extract headers
-        const dataRows = rows.slice(1); // Extract data rows
+    const outcomeIndex = headers.indexOf('Outcome');
 
-        // Update the original rows with the new outcomes
-        const outcomeIndex = headers.indexOf('Outcome');
-        for (const updatedRow of rowsWithUpdatedOutcomes) {
-            const rowToUpdate = dataRows.find(row => row.includes(updatedRow['Contact Reference']));
-            if (rowToUpdate) {
-                rowToUpdate[outcomeIndex] = updatedRow.Outcome; // Update the Outcome column
-            }
+    rowsWithUpdatedOutcomes.forEach(updatedRow => {
+        const rowToUpdate = dataRows.find(row => row[headers.indexOf('Contact Reference')] === updatedRow['Contact Reference']);
+        if (rowToUpdate) {
+            rowToUpdate[outcomeIndex] = updatedRow.Outcome;
+        } else {
+            logger.warn(`Row not found for Contact Reference: ${updatedRow['Contact Reference']}`);
         }
+    });
 
-        // Reconstruct the CSV
-        const updatedCsv = [headers.join(','), ...dataRows.map(row => row.join(','))].join('\n');
-        await fs.writeFile(csvFilePath, updatedCsv, 'utf8');
-        logger.info('export_log.csv updated successfully');
-    } catch (error) {
-        logger.error('Error updating export_log.csv with outcomes:', error.message);
-    }
+    const updatedCsv = [headers.join(','), ...dataRows.map(row => row.join(','))].join('\n');
+    await fs.writeFile(csvFilePath, updatedCsv, 'utf8');
+    logger.info('export_log.csv updated successfully');
 }
 
-
 export async function checkQualityOfStream() {
-    logger.info('Performing quality check on stream...')
     try {
-        const { headers, dataRows, rowsWithMissingOutcomes } = await processCsvRowsWithMissingOutcomes(csvFilePath);
+        const { rowsWithMissingOutcomes } = await processCsvRowsWithMissingOutcomes(csvFilePath);
         const updatedOutcomes = await updateOutcomesForRows(rowsWithMissingOutcomes);
         await updateCsvWithOutcomes(csvFilePath, updatedOutcomes);
     } catch (error) {
-        logger.error('Error:', error.message);
+        logger.error(`Error: ${error.message}`);
     }
 }
+
+checkQualityOfStream();
