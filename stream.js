@@ -34,7 +34,7 @@ export const wayBackMachine = (() => {
 const delaySetting = (() => {
     const intervalArg = process.argv[3];
     if (intervalArg && !isNaN(intervalArg)) {
-        return parseInt(intervalArg, 10);
+        return parseInt(intervalArg * 60, 10);
     }
     return 60; // Default value
 })();
