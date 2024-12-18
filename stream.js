@@ -221,7 +221,7 @@ async function startStreamLoop(apiKeyArray) {
             // Iterate over each API key object in the array
             for (const { name, key } of apiKeyArray) {
                 if (ticketStream) {
-                    logger.silly(`********** d[ o_0 ]b  Creating a new ticket for "${name}" d[ o_0 ]b  **********`)
+                    logger.silly(`****************************** d[ o_0 ]b  Creating a new ticket for "${name}" d[ o_0 ]b  ******************************`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
                     const ticketList = await getTicketList(ticketStreamDir)
@@ -239,7 +239,7 @@ async function startStreamLoop(apiKeyArray) {
                 }
 
                 if (callStream) {
-                    logger.silly(`**********  |[●▪▪●]| Creating a new call for "${name}"  |[●▪▪●]| **********`)
+                    logger.silly(`******************************************************************************************  |[●▪▪●]| Creating a new call for "${name}"  |[●▪▪●]| ******************************************************************************************`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
                     const ticketList = await getTicketList(ticketStreamDir)
