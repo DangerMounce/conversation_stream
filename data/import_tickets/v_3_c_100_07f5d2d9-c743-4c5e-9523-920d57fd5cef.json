@@ -1,0 +1,82 @@
+[
+  {
+    "speaker_email": "customer@playsure.com",
+    "response_id": "res_001",
+    "message": "Hi, I deposited some money earlier, but it’s not showing up in my account. Can you check this for me?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:00:00Z"
+  },
+  {
+    "speaker_email": "agent@playsure.com",
+    "response_id": "res_002",
+    "message": "Hello, and welcome to PlaySure Gaming! My name is David, and I’ll be happy to assist you today. Before we proceed, let’s quickly **run through security**. Could you please confirm your full name, email address, and the last four digits of the payment method used for the deposit?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:00:30Z"
+  },
+  {
+    "speaker_email": "customer@playsure.com",
+    "response_id": "res_003",
+    "message": "Sure. My name is Jessica Brown, email is jess.brown@email.com, and the last four digits are 1234.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:01:15Z"
+  },
+  {
+    "speaker_email": "agent@playsure.com",
+    "response_id": "res_004",
+    "message": "Thank you for completing security, Jessica. Let me **recap** what I’ve got so far: You deposited money earlier, but it’s not reflecting in your account. **Have there been** any issues with your bank or payment provider recently?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:01:45Z"
+  },
+  {
+    "speaker_email": "customer@playsure.com",
+    "response_id": "res_005",
+    "message": "No, everything seems fine on my end. I deposited $50 about an hour ago.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:02:15Z"
+  },
+  {
+    "speaker_email": "agent@playsure.com",
+    "response_id": "res_006",
+    "message": "I completely understand how concerning this can be, Jessica. I’ve checked your account, and the deposit is currently pending due to a slight delay with the payment gateway. **What would you consider** as a helpful resolution—would you like me to monitor this further, or would you prefer to wait for it to update in the next 30 minutes?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:03:00Z"
+  },
+  {
+    "speaker_email": "customer@playsure.com",
+    "response_id": "res_007",
+    "message": "I’ll wait for it to update. Thanks for checking.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:03:30Z"
+  },
+  {
+    "speaker_email": "agent@playsure.com",
+    "response_id": "res_008",
+    "message": "You’re very welcome, Jessica! I’m glad I could clarify this for you. Let me **recap** before we close: Your deposit is pending and should reflect within 30 minutes. Please let me know if you notice further delays, and we’ll resolve it immediately. **How can I help** with anything else today?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:04:00Z"
+  },
+  {
+    "speaker_email": "customer@playsure.com",
+    "response_id": "res_009",
+    "message": "No, that’s all for now. Thanks for your help.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:04:30Z"
+  },
+  {
+    "speaker_email": "agent@playsure.com",
+    "response_id": "res_010",
+    "message": "Thank you for contacting PlaySure Gaming, Jessica. It’s been a pleasure assisting you today! Have a great day, and take care.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2024-12-17T11:05:00Z"
+  }
+]

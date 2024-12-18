@@ -1,0 +1,99 @@
+[
+    {
+      "speaker_email": "customer@voyagequest.com",
+      "response_id": "res_001",
+      "message": "Hi, I need help changing my booking dates for a trip to Greece next month.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:00:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "res_002",
+      "message": "Hello! Thank you for contacting VoyageQuest. My name is Sarah, and I’ll be happy to help you with your booking today. To make sure I have the correct details, can you confirm your full name, date of birth, and email address, please?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:00:30Z"
+    },
+    {
+      "speaker_email": "customer@voyagequest.com",
+      "response_id": "res_003",
+      "message": "Sure, it’s John Smith, DOB 15th March 1985, and email is john.smith@gmail.com.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:01:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "res_004",
+      "message": "Thank you, John. That’s all correct! How can I assist you with your booking? You mentioned changing your travel dates to Greece—could you let me know the new preferred dates?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:01:30Z"
+    },
+    {
+      "speaker_email": "customer@voyagequest.com",
+      "response_id": "res_005",
+      "message": "Yes, I’d like to move it from July 15th-22nd to August 10th-17th, if possible.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:02:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "res_006",
+      "message": "Got it! Let me repeat that back to you: you’d like to change your booking from July 15th-22nd to August 10th-17th. Does that sound correct?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:02:30Z"
+    },
+    {
+      "speaker_email": "customer@voyagequest.com",
+      "response_id": "res_007",
+      "message": "Yes, that’s right.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "res_008",
+      "message": "Thank you for confirming. I’m confident that we can accommodate this change for you. A possible resolution could be to adjust your current booking with no additional fees, as this falls within the flexible date policy. Would you like me to proceed with this change?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:03:30Z"
+    },
+    {
+      "speaker_email": "customer@voyagequest.com",
+      "response_id": "res_009",
+      "message": "Yes, please go ahead.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:04:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "res_010",
+      "message": "Perfect! I’ve updated your booking, and you should receive a confirmation email shortly. Before you go, is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:04:30Z"
+    },
+    {
+      "speaker_email": "customer@voyagequest.com",
+      "response_id": "res_011",
+      "message": "No, that’s all. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:05:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "res_012",
+      "message": "You’re very welcome, John. I’m glad I could resolve your query today. If you need more help, don’t hesitate to contact us. Have a great day, and take care!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-06-17T08:05:30Z"
+    }
+  ]
+  

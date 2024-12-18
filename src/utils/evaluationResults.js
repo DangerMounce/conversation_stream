@@ -9,7 +9,7 @@ import { stringify } from 'csv-stringify/sync';
 const exportLogPath = path.resolve('./export_log.csv');
 const keyFilePath = path.resolve('./src/config/keyFile.json');
 
-async function fetchEvaluationsLast24Hours() {
+async function fetchEvaluationsLast24Hours(apiKey) {
   try {
     const baseUrl = 'https://api.evaluagent.com/v1/quality/evaluations';
 
@@ -40,10 +40,10 @@ async function fetchEvaluationsLast24Hours() {
   }
 }
 
-export async function findOutcomeByContactReference(targetContactReference) {
+export async function findOutcomeByContactReference(targetContactReference, apiKey) {
   try {
     // Fetch the data asynchronously
-    const data = await fetchEvaluationsLast24Hours();
+    const data = await fetchEvaluationsLast24Hours(apiKey);
 
     // Validate the data structure
     if (!data || !Array.isArray(data.included) || !Array.isArray(data.data)) {

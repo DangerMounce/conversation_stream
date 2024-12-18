@@ -1,88 +1,107 @@
-import fs from 'fs';
 import path from 'path';
-import { fileURLToPath } from 'url';
-import csv from 'csv-parser';
+import fs from 'fs/promises';
 
-// Resolve __dirname for ES modules
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+import { findOutcomeByContactReference } from './evaluationResults.js';
 
-// Resolve the absolute path to the CSV file in the project root directory
-const csvFilePath = path.resolve(__dirname, '../../export_log.csv');
+const csvFilePath = path.resolve('../../export_log.csv'); // Path to your CSV file
+const keyFilePath = path.resolve('../config/keyFile.json');
 
-async function getContractsWithMissingOutcomes(csvFilePath) {
-    const contractsWithMissingOutcomes = [];
-
-    return new Promise((resolve, reject) => {
-        fs.createReadStream(csvFilePath)
-            .pipe(csv())
-            .on('data', (row) => {
-                // Check if the 'Outcome' column is empty
-                if (!row['Outcome']) {
-                    contractsWithMissingOutcomes.push(row['Contract Name']);
-                }
-            })
-            .on('end', () => {
-                console.log('CSV file processed successfully.');
-                resolve(contractsWithMissingOutcomes);
-            })
-            .on('error', (error) => {
-                console.error('Error reading the CSV file:', error.message);
-                reject(error);
-            });
-    });
-}
-
-async function getContractApiKey(contractName) {
-    const keyFilePath = path.resolve('../config/keyFile.json');
-
+async function processCsvRowsWithMissingOutcomes(csvFilePath) {
     try {
-        // Read and parse the key file
-        const fileContent = await fs.promises.readFile(keyFilePath, 'utf8');
-        const { keys } = JSON.parse(fileContent);
+        // Load the key file
+        const keyFileContent = await fs.readFile(keyFilePath, 'utf8');
+        const { keys } = JSON.parse(keyFileContent);
 
-        // Find the key for the provided contract name
-        const contract = keys.find(keyEntry => keyEntry.name === contractName);
+        // Read the CSV content
+        const csvContent = await fs.readFile(csvFilePath, 'utf8');
+        const rows = csvContent.split('\n').map(row => row.split(',').map(cell => cell.trim())); // Basic CSV parsing with trimming
 
-        if (!contract) {
-            throw new Error(`API key not found for contract: ${contractName}`);
+        // Extract headers and data
+        const headers = rows[0]; // First row as headers
+        const dataRows = rows.slice(1); // Remaining rows as data
+
+        // Ensure required headers are present
+        const requiredHeaders = ['Contract Name', 'Date', 'Filename', 'Contact Reference', 'Outcome'];
+        const missingHeaders = requiredHeaders.filter(header => !headers.includes(header));
+        if (missingHeaders.length > 0) {
+            throw new Error(`Missing headers: ${missingHeaders.join(', ')}`);
         }
 
-        return contract.key;
+        const contractNameIndex = headers.indexOf('Contract Name');
+        const outcomeIndex = headers.indexOf('Outcome');
+
+        // Filter rows with missing outcomes and construct objects
+        const rowsWithMissingOutcomes = dataRows
+            .filter(row => row.length > outcomeIndex && row[outcomeIndex] === '') // Check if Outcome column exists and is empty
+            .map(row => {
+                const rowObject = {};
+                headers.forEach((header, index) => {
+                    rowObject[header] = row[index];
+                });
+
+                // Add the API key to the row object
+                const contractName = row[contractNameIndex];
+                const apiKeyEntry = keys.find(keyEntry => keyEntry.name === contractName);
+
+                if (apiKeyEntry) {
+                    rowObject.apiKey = apiKeyEntry.key; // Updated to match the correct property in keyFile.json
+                } else {
+                    console.warn(`No API key found for contract name: "${contractName}"`);
+                    rowObject.apiKey = null; // Indicate missing API key
+                }
+
+                return rowObject;
+            })
+            .filter(rowObject => rowObject.apiKey !== null); // Ensure Contract Name has a valid API key
+
+        return rowsWithMissingOutcomes;
     } catch (error) {
-        console.error(`Error retrieving API key for contract '${contractName}': ${error.message}`);
+        console.error(`Error processing CSV: ${error.message}`);
         throw error;
-    }    
-}
-
-// Function to process an array of contract names
-async function processContractNames(contractNames) {
-    const results = {};
-
-    for (const contractName of contractNames) {
-        try {
-            const apiKey = await getContractApiKey(contractName);
-            results[contractName] = apiKey;
-        } catch (error) {
-            results[contractName] = `Error: ${error.message}`;
-        }
     }
-
-    return results;
 }
 
-// Example usage
+async function updateOutcomesForRows(rowsWithMissingOutcomes) {
+    try {
+        // Iterate over each row and update the outcome
+        for (const row of rowsWithMissingOutcomes) {
+            const { 'Contact Reference': contactReference, apiKey } = row;
+
+            if (!contactReference || !apiKey) {
+                console.warn(`Skipping row due to missing Contact Reference or API Key:`, row);
+                continue; // Skip rows with missing essential data
+            }
+
+            try {
+                // Call findOutcomeByContactReference and add the result to the Outcome field
+                const outcome = await findOutcomeByContactReference(contactReference, apiKey);
+
+                if (outcome === 'Pass' || outcome === 'Fail') {
+                    row.Outcome = outcome; // Only update with valid results
+                } else {
+                    console.warn(`Skipping row due to invalid outcome for Contact Reference: ${contactReference}`);
+                }
+            } catch (error) {
+                console.error(`Error fetching outcome for Contact Reference: ${contactReference}`, error.message);
+            }
+        }
+
+        console.log('Updated rows with valid outcomes:', rowsWithMissingOutcomes);
+        return rowsWithMissingOutcomes;
+    } catch (error) {
+        console.error('Error updating rows with outcomes:', error.message);
+        throw error;
+    }
+}
+
+// Example Usage
 (async () => {
     try {
-        const contracts = await getContractsWithMissingOutcomes(csvFilePath);
-        
-        try {
-            const apiKeys = await processContractNames(contracts);
-            console.log('API Keys:', apiKeys);
-        } catch (error) {
-            console.error('Error processing contract names:', error.message);
-        }
+        const rowsWithMissingOutcomes = await processCsvRowsWithMissingOutcomes(csvFilePath);
+        console.log('Rows with Missing Outcomes and API Keys:', rowsWithMissingOutcomes);
+        await updateOutcomesForRows(rowsWithMissingOutcomes);
+        console.log('Rows with added Outcomes and API Keys:', rowsWithMissingOutcomes);
     } catch (error) {
-        console.error('Error processing the CSV file:', error.message);
+        console.error('Error:', error.message);
     }
 })();
