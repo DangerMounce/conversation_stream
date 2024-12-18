@@ -1,0 +1,83 @@
+[
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_001",
+      "message": "Hi, I tried to withdraw my winnings, but it’s been pending for two days. Can you look into this?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:00:00Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_002",
+      "message": "Hello, and welcome to PlaySure Gaming! My name is Sarah, and I’m here to help. Before we proceed, let’s quickly run through security. Could you please confirm your full name, email address, and the amount you attempted to withdraw?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:00:30Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_003",
+      "message": "Sure. It’s Michael Green, my email is michael.green@email.com, and I tried to withdraw $200.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:01:15Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_004",
+      "message": "Thank you for completing security, Michael. Let me quickly **recap**: you’ve attempted to withdraw $200, but it’s been pending for two days. Have there been any issues with your payment method in the past, such as delays or rejections?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:01:45Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_005",
+      "message": "No, this is the first time I’ve had this issue.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:02:15Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_006",
+      "message": "I completely understand how frustrating this can be, Michael. I’ve reviewed your account, and the delay appears to be due to an additional verification step. A possible resolution could be to resend the verification email to speed up the process. What would you consider as a preferred option—would you like me to resend it now?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:03:00Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_007",
+      "message": "Yes, please resend it. That works for me.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:03:30Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_008",
+      "message": "Thank you, Michael. I’ve resent the verification email to michael.green@email.com. Please take your time to complete the steps, and the withdrawal should process shortly after. How can I help with anything else while you’re here?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:04:00Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_009",
+      "message": "No, that’s all for now. I’ll check my email. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:04:30Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_010",
+      "message": "You’re very welcome, Michael! It’s been a pleasure assisting you today. If you need any further support, don’t hesitate to contact us. Have a great day, and take care!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T12:05:00Z"
+    }
+  ]
+  

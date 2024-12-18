@@ -7,6 +7,7 @@ import fsP from 'fs/promises'
 import FormData from "form-data";
 import logger from "./logger.js";
 import { getDate } from "./contactTemplateGenerator.js";
+import { checkQualityOfStream } from "./exportLogUpdate.js"
 
 let agentRoleId
 let agentList
@@ -115,25 +116,37 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
 
 // Helper function to update the contact reference log
 async function updateReferenceLog(filePath, reference, filename, name) {
-    const csvHeader = 'Contract Name, Date,Filename,Contact Reference, Outcome\n';
-    const date = getDate(); // Use your getDate function to get the current date in the desired format
+    const csvHeader = 'Contract Name,Date,Filename,Contact Reference,Outcome\n'; // CSV header
+    const date = getDate(); // Use your getDate function for the current date
 
     try {
         // Check if the CSV file exists
         const fileExists = fs.existsSync(filePath);
 
         // Prepare the new row to append
-        const newRow = `${name},${date},${filename},${reference}\n`;
+        const newRow = `"${name}","${date}","${filename}","${reference}",""\n`;
 
         if (!fileExists) {
-            // Create the file and write the header followed by the new row
+            // If the file does not exist, create it and write the header followed by the new row
             await fsP.writeFile(filePath, csvHeader + newRow, 'utf8');
             logger.info(`Created new export log: ${filePath}`);
         } else {
-            // Append the new row if the file already exists
-            await fsP.appendFile(filePath, newRow, 'utf8');
+            // If the file exists, read the file content to check for a trailing newline
+            const fileContent = await fsP.readFile(filePath, 'utf8');
+
+            if (!fileContent.endsWith('\n')) {
+                // Add a newline if the file does not end with one
+                await fsP.appendFile(filePath, `\n${newRow}`, 'utf8');
+            } else {
+                // Append directly if the file already has a trailing newline
+                await fsP.appendFile(filePath, newRow, 'utf8');
+            }
+
             logger.info(`Appended new entry to export log: ${filePath}`);
         }
+        
+        // Optionally call a quality check function
+        await checkQualityOfStream(); // Example: Check evaluation results against expected results
     } catch (error) {
         logger.warn(`Error updating export log: ${error.message}`);
     }

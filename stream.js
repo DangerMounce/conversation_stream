@@ -34,7 +34,7 @@ export const wayBackMachine = (() => {
 const delaySetting = (() => {
     const intervalArg = process.argv[3];
     if (intervalArg && !isNaN(intervalArg)) {
-        return parseInt(intervalArg, 10);
+        return parseInt(intervalArg * 60, 10);
     }
     return 60; // Default value
 })();
@@ -221,7 +221,7 @@ async function startStreamLoop(apiKeyArray) {
             // Iterate over each API key object in the array
             for (const { name, key } of apiKeyArray) {
                 if (ticketStream) {
-                    logger.silly(`********** d[ o_0 ]b  Creating a new ticket for "${name}" d[ o_0 ]b  **********`)
+                    logger.silly(`****************************** d[ o_0 ]b  Creating a new ticket for "${name}" d[ o_0 ]b  ******************************`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
                     const ticketList = await getTicketList(ticketStreamDir)
@@ -239,7 +239,7 @@ async function startStreamLoop(apiKeyArray) {
                 }
 
                 if (callStream) {
-                    logger.silly(`**********  |[●▪▪●]| Creating a new call for "${name}"  |[●▪▪●]| **********`)
+                    logger.silly(`******************************************************************************************  |[●▪▪●]| Creating a new call for "${name}"  |[●▪▪●]| ******************************************************************************************`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
                     const ticketList = await getTicketList(ticketStreamDir)
@@ -285,7 +285,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
                     await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     ticketNumber++
-                    if (ticketNumber === ticketList.length) {
+                    if (ticketNumber > ticketList.length) {
                         logger.info(`${ticketNumber} contacts processed.  Injection complete.`)
                         return false
                     }

@@ -1,0 +1,91 @@
+[
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_001",
+      "message": "I’m really frustrated right now. I placed a bet yesterday, and it’s showing as lost, even though the result was clearly in my favor. This isn’t acceptable.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:00:00Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_002",
+      "message": "Hello, and welcome to PlaySure Gaming. My name is Sarah, and I’m really sorry to hear about your frustration. Let’s quickly **run through security** so I can investigate this for you. Could you please confirm your full name, email address, and the bet reference number?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:00:30Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_003",
+      "message": "It’s Mark Johnson, mark.johnson@email.com, and the reference is BET-987654.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:01:00Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_004",
+      "message": "Thank you for **completing security**, Mark. I’m going to look into this right away. Could you confirm if you’ve checked the official result on the event page, just to rule out any discrepancies?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:01:45Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_005",
+      "message": "Yes, I’ve checked it multiple times. The result says I won, so I don’t understand why you’re showing it as lost.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_006",
+      "message": "I **completely understand** how this can be frustrating, Mark, and I appreciate your patience. Let me check with our results team for clarification. Please **allow me** a moment while I do this.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:03:00Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_007",
+      "message": "Thank you for your patience, Mark. After checking with our results team, it appears the official result has been updated due to a review of the event. Unfortunately, the outcome does stand as a loss. I’m really sorry for the inconvenience.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:05:00Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_008",
+      "message": "This is ridiculous. I’m absolutely certain I won, and now I feel like I’ve been cheated out of my money. I won’t be using this platform again.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:05:30Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_009",
+      "message": "I’m really sorry to hear that, Mark. I value your feedback, and I’ll make sure to pass this on to our results and platform team for further review. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:06:00Z"
+    },
+    {
+      "speaker_email": "customer@playsure.com",
+      "response_id": "res_010",
+      "message": "No, I’m done here. Thanks for nothing.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:06:30Z"
+    },
+    {
+      "speaker_email": "agent@playsure.com",
+      "response_id": "res_011",
+      "message": "I’m really sorry we couldn’t resolve this to your satisfaction, Mark. Thank you for contacting PlaySure Gaming today, and if you change your mind, we’ll always be here to help. Take care.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-17T13:07:00Z"
+    }
+  ]
+  

@@ -5,11 +5,12 @@ import fs from 'fs/promises';
 import path from 'path';
 import csv from 'csv-parser';
 import { stringify } from 'csv-stringify/sync';
+import logger from './logger.js';
 
 const exportLogPath = path.resolve('./export_log.csv');
 const keyFilePath = path.resolve('./src/config/keyFile.json');
 
-async function fetchEvaluationsLast24Hours() {
+async function fetchEvaluationsLast24Hours(apiKey) {
   try {
     const baseUrl = 'https://api.evaluagent.com/v1/quality/evaluations';
 
@@ -35,19 +36,18 @@ async function fetchEvaluationsLast24Hours() {
     // Return the evaluation data
     return response.data;
   } catch (error) {
-    console.error('Error fetching evaluations from the last 24 hours:', error.response?.data || error.message);
-    throw error;
+    // logger.error('Error fetching evaluations from the last 24 hours:', error.response?.data || error.message);
   }
 }
 
-export async function findOutcomeByContactReference(targetContactReference) {
+export async function findOutcomeByContactReference(targetContactReference, apiKey) {
   try {
     // Fetch the data asynchronously
-    const data = await fetchEvaluationsLast24Hours();
+    const data = await fetchEvaluationsLast24Hours(apiKey);
 
     // Validate the data structure
     if (!data || !Array.isArray(data.included) || !Array.isArray(data.data)) {
-      throw new Error('Invalid data structure');
+      logger.warn(`Invalid data structure - ${targetContactReference}`)
     }
 
     // Find the contact with the matching contact_reference
@@ -58,7 +58,7 @@ export async function findOutcomeByContactReference(targetContactReference) {
     );
 
     if (!contact) {
-      return `No contact found with reference: ${targetContactReference}`;
+      return `No evaluation result found with reference: ${targetContactReference}`;
     }
 
     // Find the evaluation associated with the contact
@@ -80,7 +80,7 @@ export async function findOutcomeByContactReference(targetContactReference) {
     // Return the outcome from the evaluation attributes
     return evaluation.attributes?.outcome || 'Outcome not available';
   } catch (error) {
-    console.error(`Error finding outcome for contact reference ${targetContactReference}:`, error.message);
+    // logger.error(`Error finding outcome for contact reference ${targetContactReference}:`, error.message);
     throw error;
   }
 }
