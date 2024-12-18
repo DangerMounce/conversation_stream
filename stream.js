@@ -14,6 +14,7 @@ import { getDate, createChatTemplate, createCallTemplate, getTicketList } from "
 
 const apiKeysPath = path.resolve("./src/config/keyFile.json");
 const logFilePath = path.resolve("./logs/app.log");
+const configPath = path.resolve('./src/config/config.json');
 
 const topicsFilePath = path.resolve("./src/config/topics.json");
 const baseDir = path.resolve("./data"); // Base directory for the topics
@@ -21,6 +22,7 @@ const baseDir = path.resolve("./data"); // Base directory for the topics
 export let ticketStreamDir = null
 export let callStreamDir = null
 export let importStream = false;
+export let user = null;
 
 // Retrieve the command-line argument for wayBackMachine
 export const wayBackMachine = (() => {
@@ -316,10 +318,50 @@ async function startInjection(apiKeyArray, selectedTopic) {
     }
 }
 
+export async function ensureUserInConfig() {
+    try {
+        // Read the config file
+        const configContent = fs.readFileSync(configPath, 'utf-8');
+        const config = JSON.parse(configContent);
+
+        // Check if "user" exists
+        if (!config.user) {
+            console.log(chalk.bold.yellow('\nNo user registraton found. Please provide your email address.\n'));
+
+            // Prompt user for their email
+            const { email } = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'email',
+                    message: 'Enter your email address:',
+                    validate: (input) => input.includes('@') ? true : 'Please enter a valid email address.',
+                },
+            ]);
+
+            // Extract the part before '@' in the email
+            const username = email.split('@')[0];
+
+            // Update the config with the "user" field
+            config.user = username;
+
+            // Write the updated config back to the file
+            fs.writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf-8');
+            user = username
+            logger.info(`${username} registered as a new user`);
+        } else {
+            logger.info(`${config.user} config loaded`);
+        }
+    } catch (error) {
+        logger.error(`Error updating config.json: ${error.message}`);
+        process.exit(1);
+    }
+}
+
 async function main() {
     console.clear('');    
     await checkForUpdate()
     await clearLog();
+    await ensureUserInConfig()
     ensureDirectories();
     loadConfig();
     const stream = await streamSelection();

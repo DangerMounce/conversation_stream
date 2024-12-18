@@ -1,5 +1,6 @@
 {
-    "ticketStream" : true,
-    "callStream" : false,
-    "deleteGeneratedCalls" : false
+    "ticketStream": true,
+    "callStream": false,
+    "deleteGeneratedCalls": false,
+    "user": "chris.mounce"
 }
