@@ -120,33 +120,29 @@ async function updateReferenceLog(filePath, reference, filename, name) {
     const date = getDate(); // Use your getDate function for the current date
 
     try {
-        // Check if the CSV file exists
+        // Prepare the new row to append
+        const newRow = `${name},${date},${filename},${reference},\n`;
+
+        // Check if the file exists
         const fileExists = fs.existsSync(filePath);
 
-        // Prepare the new row to append
-        const newRow = `"${name}","${date}","${filename}","${reference}",""\n`;
-
         if (!fileExists) {
-            // If the file does not exist, create it and write the header followed by the new row
+            // If the file does not exist, create it and write the header + row
             await fsP.writeFile(filePath, csvHeader + newRow, 'utf8');
             logger.info(`Created new export log: ${filePath}`);
         } else {
-            // If the file exists, read the file content to check for a trailing newline
+            // If the file exists, append the row cleanly
             const fileContent = await fsP.readFile(filePath, 'utf8');
 
-            if (!fileContent.endsWith('\n')) {
-                // Add a newline if the file does not end with one
-                await fsP.appendFile(filePath, `\n${newRow}`, 'utf8');
-            } else {
-                // Append directly if the file already has a trailing newline
-                await fsP.appendFile(filePath, newRow, 'utf8');
-            }
+            // Ensure a single trailing newline exists
+            const normalizedContent = fileContent.trimEnd() + '\n';
+            await fsP.writeFile(filePath, normalizedContent + newRow, 'utf8');
 
             logger.info(`Appended new entry to export log: ${filePath}`);
         }
-        
+
         // Optionally call a quality check function
-        await checkQualityOfStream(); // Example: Check evaluation results against expected results
+        await checkQualityOfStream(); // Example placeholder
     } catch (error) {
         logger.warn(`Error updating export log: ${error.message}`);
     }
