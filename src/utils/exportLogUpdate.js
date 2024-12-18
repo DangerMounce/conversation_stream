@@ -2,6 +2,7 @@ import path from 'path';
 import fs from 'fs/promises';
 
 import { findOutcomeByContactReference } from './evaluationResults.js';
+import logger from './logger.js';
 
 const csvFilePath = path.resolve('../../export_log.csv'); // Path to your CSV file
 const keyFilePath = path.resolve('../config/keyFile.json');
@@ -24,7 +25,7 @@ async function processCsvRowsWithMissingOutcomes(csvFilePath) {
         const requiredHeaders = ['Contract Name', 'Date', 'Filename', 'Contact Reference', 'Outcome'];
         const missingHeaders = requiredHeaders.filter(header => !headers.includes(header));
         if (missingHeaders.length > 0) {
-            throw new Error(`Missing headers: ${missingHeaders.join(', ')}`);
+            logger.error(`Missing headers: ${missingHeaders.join(', ')}`)
         }
 
         const contractNameIndex = headers.indexOf('Contract Name');
@@ -46,7 +47,7 @@ async function processCsvRowsWithMissingOutcomes(csvFilePath) {
                 if (apiKeyEntry) {
                     rowObject.apiKey = apiKeyEntry.key; // Updated to match the correct property in keyFile.json
                 } else {
-                    console.warn(`No API key found for contract name: "${contractName}"`);
+                    logger.warn(`No API key found for contract name: "${contractName}"`);
                     rowObject.apiKey = null; // Indicate missing API key
                 }
 
@@ -56,7 +57,7 @@ async function processCsvRowsWithMissingOutcomes(csvFilePath) {
 
         return rowsWithMissingOutcomes;
     } catch (error) {
-        console.error(`Error processing CSV: ${error.message}`);
+        logger.error(`Error processing CSV: ${error.message}`);
         throw error;
     }
 }
@@ -65,7 +66,7 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
     try {
         // Iterate over each row and update the outcome
         for (const row of rowsWithMissingOutcomes) {
-            const { 'Contact Reference': contactReference, apiKey } = row;
+            const { 'Contact Reference': contactReference, apiKey, Filename } = row;
 
             if (!contactReference || !apiKey) {
                 console.warn(`Skipping row due to missing Contact Reference or API Key:`, row);
@@ -74,22 +75,31 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
 
             try {
                 // Call findOutcomeByContactReference and add the result to the Outcome field
-                const outcome = await findOutcomeByContactReference(contactReference, apiKey);
+                let outcome = await findOutcomeByContactReference(contactReference, apiKey);
 
                 if (outcome === 'Pass' || outcome === 'Fail') {
-                    row.Outcome = outcome; // Only update with valid results
+                    // Modify the outcome based on the Filename logic
+                    if (Filename.includes('_c_100')) {
+                        if (outcome === 'Pass') {
+                            row.Outcome = 'OK'; // Change PASS to OK for matching filenames
+                        } else {
+                            row.Outcome = 'CHECK';
+                        }
+                    } else {
+                        row.Outcome = outcome; // For other filenames, use the raw outcome
+                    }
                 } else {
-                    console.warn(`Skipping row due to invalid outcome for Contact Reference: ${contactReference}`);
+                    logger.warn(`Skipping row due to no outcome for Contact Reference: ${contactReference}`);
                 }
             } catch (error) {
-                console.error(`Error fetching outcome for Contact Reference: ${contactReference}`, error.message);
+                logger.error(`Error fetching outcome for Contact Reference: ${contactReference}`, error.message);
             }
         }
 
-        console.log('Updated rows with valid outcomes:', rowsWithMissingOutcomes);
+        logger.info('Updated rows with valid outcomes:', rowsWithMissingOutcomes);
         return rowsWithMissingOutcomes;
     } catch (error) {
-        console.error('Error updating rows with outcomes:', error.message);
+        logger.error('Error updating rows with outcomes:', error.message);
         throw error;
     }
 }
@@ -98,10 +108,9 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
 (async () => {
     try {
         const rowsWithMissingOutcomes = await processCsvRowsWithMissingOutcomes(csvFilePath);
-        console.log('Rows with Missing Outcomes and API Keys:', rowsWithMissingOutcomes);
         await updateOutcomesForRows(rowsWithMissingOutcomes);
         console.log('Rows with added Outcomes and API Keys:', rowsWithMissingOutcomes);
     } catch (error) {
-        console.error('Error:', error.message);
+        logger.error('Error:', error.message);
     }
 })();
