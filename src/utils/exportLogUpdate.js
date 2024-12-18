@@ -44,25 +44,46 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
 
         if (!contactReference || !apiKey) {
             logger.warn(`Skipping row due to missing data: ${JSON.stringify(row)}`);
-            continue;
+            continue; // Skip rows with missing essential data
         }
 
         try {
+            // Call findOutcomeByContactReference
             const outcome = await findOutcomeByContactReference(contactReference, apiKey);
+
+            // If no valid outcome, skip updating this row
             if (!outcome) {
-                logger.warn(`No valid outcome for Contact Reference: ${contactReference}`);
-                continue;
+                logger.warn(`No valid evaluation result for Contact Reference: ${contactReference}. Outcome will remain unchanged.`);
+                continue; // Do not update the outcome
             }
 
-            row.Outcome = Filename.includes('_c_100') && outcome === 'Pass' ? 'OK' : outcome;
-            logger.info(`Updated Outcome for Contact Reference ${contactReference} to ${row.Outcome}`);
+            // Adjust outcome logic based on Filename
+            if (Filename.includes('_c_100')) {
+                if (outcome === 'Pass') {
+                    row.Outcome = 'OK'; // Change PASS to OK for matching filenames
+                    logger.info(`Contact Reference: ${contactReference}, Outcome set to OK`);
+                } else if (outcome === 'Fail') {
+                    row.Outcome = 'Fail'; // Keep FAIL as it is
+                    logger.warn(`Contact Reference: ${contactReference} has failed.`);
+                } else {
+                    logger.warn(`Unexpected outcome: ${outcome}. Skipping row update.`);
+                    continue; // Skip invalid outcomes
+                }
+            } else {
+                // For all other filenames, set outcome to OK
+                row.Outcome = 'OK';
+                logger.info(`Contact Reference: ${contactReference}, Outcome set to OK`);
+            }
         } catch (error) {
-            logger.error(`Error fetching outcome: ${error.message}`);
+            logger.error(`Error fetching outcome for Contact Reference: ${contactReference}: ${error.message}`);
         }
     }
 
-    return rowsWithMissingOutcomes.filter(row => row.Outcome);
+    // Return only rows where the Outcome has been updated
+    const updatedRows = rowsWithMissingOutcomes.filter(row => row.Outcome);
+    return updatedRows;
 }
+
 
 async function updateCsvWithOutcomes(csvFilePath, rowsWithUpdatedOutcomes) {
     const csvContent = await fs.readFile(csvFilePath, 'utf8');
