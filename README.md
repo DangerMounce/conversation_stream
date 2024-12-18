@@ -28,7 +28,7 @@ This project provides a tool for managing conversation streams in evaluagent con
 
 2. **Install dependencies**:
    ```bash
-   npm install axios chalk winston inquirer gtts fluent-ffmpeg uuid date-fns
+   npm install axios chalk winston inquirer gtts fluent-ffmpeg uuid date-fns csv-stringify csv-parse
    ```
 
 3. **Set up configuration**:
