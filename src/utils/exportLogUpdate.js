@@ -116,5 +116,3 @@ export async function checkQualityOfStream() {
         logger.error(`Error: ${error.message}`);
     }
 }
-
-checkQualityOfStream();
