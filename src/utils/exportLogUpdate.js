@@ -53,7 +53,7 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
 
             // If no valid outcome, skip updating this row
             if (!outcome) {
-                logger.warn(`No valid evaluation result for Contact Reference: ${contactReference}. Outcome will remain unchanged.`);
+                logger.warn(`No valid evaluation result for Contact Reference: ${contactReference}`);
                 continue; // Do not update the outcome
             }
 
@@ -61,18 +61,18 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
             if (Filename.includes('_c_100')) {
                 if (outcome === 'Pass') {
                     row.Outcome = 'OK'; // Change PASS to OK for matching filenames
-                    logger.info(`Contact Reference: ${contactReference}, Outcome set to OK`);
+                    logger.http(`Contact Reference: ${contactReference} has passed.`);
                 } else if (outcome === 'Fail') {
                     row.Outcome = 'Fail'; // Keep FAIL as it is
                     logger.warn(`Contact Reference: ${contactReference} has failed.`);
                 } else {
-                    logger.warn(`Unexpected outcome: ${outcome}. Skipping row update.`);
+                    logger.warn(`${outcome}`);
                     continue; // Skip invalid outcomes
                 }
             } else {
                 // For all other filenames, set outcome to OK
                 row.Outcome = 'OK';
-                logger.info(`Contact Reference: ${contactReference}, Outcome set to OK`);
+                logger.http(`Contact Reference: ${contactReference} has passed.`);
             }
         } catch (error) {
             logger.error(`Error fetching outcome for Contact Reference: ${contactReference}: ${error.message}`);
@@ -104,7 +104,7 @@ async function updateCsvWithOutcomes(csvFilePath, rowsWithUpdatedOutcomes) {
 
     const updatedCsv = [headers.join(','), ...dataRows.map(row => row.join(','))].join('\n');
     await fs.writeFile(csvFilePath, updatedCsv, 'utf8');
-    logger.info('export_log.csv updated successfully');
+    logger.info('export_log.csv updated');
 }
 
 export async function checkQualityOfStream() {
