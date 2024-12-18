@@ -84,6 +84,7 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
                         row.Outcome = 'OK'; // Change PASS to OK for matching filenames
                     } else if (outcome === 'Fail') {
                         row.Outcome = 'Fail'; // Keep FAIL as it is
+                        logger.warn(`${contactReference} has failed.`)
                     } else {
                         logger.info(`${outcome}. Skipping row.`);
                         continue;

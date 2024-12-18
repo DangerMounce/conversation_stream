@@ -285,7 +285,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
                     const contactTemplate = await createChatTemplate(agentList, targetJSON);
                     await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     ticketNumber++
-                    if (ticketNumber === ticketList.length) {
+                    if (ticketNumber > ticketList.length) {
                         logger.info(`${ticketNumber} contacts processed.  Injection complete.`)
                         return false
                     }

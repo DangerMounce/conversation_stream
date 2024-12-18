@@ -111,7 +111,7 @@ export async function checkForUpdate() {
             if (confirmUpdate) {
                 await downloadAndExtract();
                 updateLocalCommitHash(latestCommit);
-                console.log('Please restart the application to apply the update.');
+                console.log(chalk.bold.yellow(`Check README.md for any new dependencies following this update and restart the application.`))
                 process.exit(0);
             } else {
                 console.log('Update canceled.');
