@@ -15,6 +15,8 @@ import { getDate, createChatTemplate, createCallTemplate, getTicketList } from "
 const apiKeysPath = path.resolve("./src/config/keyFile.json");
 const logFilePath = path.resolve("./logs/app.log");
 const configPath = path.resolve('./src/config/config.json');
+const envPath = path.resolve('.env');
+
 
 const topicsFilePath = path.resolve("./src/config/topics.json");
 const baseDir = path.resolve("./data"); // Base directory for the topics
@@ -23,6 +25,7 @@ export let ticketStreamDir = null
 export let callStreamDir = null
 export let importStream = false;
 export let user = null;
+export let dbApiKey = null;
 
 // Retrieve the command-line argument for wayBackMachine
 export const wayBackMachine = (() => {
@@ -320,6 +323,7 @@ async function startInjection(apiKeyArray, selectedTopic) {
 
 export async function ensureUserInConfig() {
     try {
+        // Load config.json
         const configContent = fs.readFileSync(configPath, 'utf-8');
         const config = JSON.parse(configContent);
 
@@ -354,8 +358,55 @@ export async function ensureUserInConfig() {
             user = config.user;
             logger.info(`${config.user} config loaded`);
         }
+
+        // Check for .env file and API_KEY
+        if (!fs.existsSync(envPath)) {
+            console.log(chalk.bold.yellow('\nNo .env file found. Please provide your API key.\n'));
+
+            // Prompt user for their API key
+            const { apiKeyInput } = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'apiKeyInput',
+                    message: 'Enter your API key:',
+                    validate: (input) => input.trim() !== '' ? true : 'API key cannot be empty.',
+                },
+            ]);
+
+            // Write the API key to a new .env file
+            fs.writeFileSync(envPath, `API_KEY=${apiKeyInput}\n`, 'utf-8');
+            dbApiKey = apiKeyInput;
+            logger.info('API key saved to .env file.');
+        } else {
+            // Read the .env file
+            const envContent = fs.readFileSync(envPath, 'utf-8');
+            const match = envContent.match(/^API_KEY=(.*)$/m);
+
+            if (match && match[1]) {
+                // Assign the API key to the global variable
+                dbApiKey = match[1].trim();
+                logger.info('API key loaded from .env file.');
+            } else {
+                console.log(chalk.bold.yellow('\nNo API_KEY found in .env file. Please provide your API key.\n'));
+
+                // Prompt user for their API key
+                const { apiKeyInput } = await inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'apiKeyInput',
+                        message: 'Enter your API key:',
+                        validate: (input) => input.trim() !== '' ? true : 'API key cannot be empty.',
+                    },
+                ]);
+
+                // Append the API key to the .env file
+                fs.appendFileSync(envPath, `API_KEY=${apiKeyInput}\n`, 'utf-8');
+                dbApiKey = apiKeyInput;
+                logger.info('API key saved to .env file.');
+            }
+        }
     } catch (error) {
-        logger.error(`Error updating config.json: ${error.message}`);
+        logger.error(`Error updating config.json or .env: ${error.message}`);
         process.exit(1);
     }
 }
@@ -415,4 +466,4 @@ async function main() {
     }
 }
 
-main();
+main()

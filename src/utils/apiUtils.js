@@ -10,6 +10,7 @@ import { getDate } from "./contactTemplateGenerator.js";
 import { checkQualityOfStream } from "./exportLogUpdate.js"
 import { getUser } from "../../stream.js";
 import dump from "./dump.js";
+import { database } from "./dbRecording.js";
 
 let agentRoleId
 let agentList
@@ -107,56 +108,41 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
         // Process the response and log contact reference
         if (result.message) {
             logger.http(`${contactTemplate.data.reference} - ${result.message}`);
-            await updateReferenceLog(referenceLogFile, contactTemplate.data.reference, targetedJSON, name);
+            logger.debug(contactTemplate.data.reference)
+            logger.debug(targetedJSON)
+            logger.debug(name)
+            await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name);
         } else if (result.errors) {
             logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
         }
     } catch (error) {
         logger.error(`Error in sendContactsToEvaluagent: ${error.message}`);
+        logger.debug(error)
     }
 }
 
 // Helper function to update the contact reference log
 async function updateReferenceLog(filePath, reference, filename, name) {
     const currentUser = getUser()
-    const logData = {
-        timeStamp : getDate(),
-        registeredUser : currentUser,
-        contractName : name,
-        fileName : filename,
-        contactReference : reference
+    const payload = {
+        timestamp: getDate(),
+        user_name: currentUser,
+        contract_name: name,
+        filename: filename,
+        contact_reference: reference,
+        outcome: "NULL"
     }
-    await dump(logData)
-    const csvHeader = 'Contract Name,Date,Filename,Contact Reference,Outcome\n'; // CSV header
-    const date = getDate(); // Use your getDate function for the current date
 
     try {
-        // Prepare the new row to append
-        const newRow = `${name},${date},${filename},${reference},\n`;
-
-        // Check if the file exists
-        const fileExists = fs.existsSync(filePath);
-
-        if (!fileExists) {
-            // If the file does not exist, create it and write the header + row
-            await fsP.writeFile(filePath, csvHeader + newRow, 'utf8');
-            logger.info(`Created new export log: ${filePath}`);
-        } else {
-            // If the file exists, append the row cleanly
-            const fileContent = await fsP.readFile(filePath, 'utf8');
-
-            // Ensure a single trailing newline exists
-            const normalizedContent = fileContent.trimEnd() + '\n';
-            await fsP.writeFile(filePath, normalizedContent + newRow, 'utf8');
-
-            logger.info(`Appended new entry to export log: ${filePath}`);
-        }
-
-        // Optionally call a quality check function
-        await checkQualityOfStream(); // Example placeholder
+        logger.debug(`Updating database...`)
+        await database.sendData(payload)
     } catch (error) {
         logger.warn(`Error updating export log: ${error.message}`);
     }
+    // Optionally call a quality check function
+    // await checkQualityOfStream(); // Example placeholder
+    process.exit(1)
+
 }
 
 async function uploadAudioToEvaluagent(audioFile, apiKey) {

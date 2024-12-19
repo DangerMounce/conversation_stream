@@ -114,7 +114,7 @@ export async function checkForUpdate() {
                 console.log(`Check README.md for any new dependencies following this update and restart the application.`)
                 process.exit(0);
             } else {
-                console.log('Update canceled.');
+                console.log('Update declined.');
             }
         } else {
             console.log('You are already up-to-date.');
