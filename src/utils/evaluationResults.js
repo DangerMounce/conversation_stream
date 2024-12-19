@@ -3,13 +3,11 @@ import { subHours, formatISO } from 'date-fns';
 import dump from './dump.js';
 import fs from 'fs/promises';
 import path from 'path';
-import csv from 'csv-parser';
-import { stringify } from 'csv-stringify/sync';
 import logger from './logger.js';
 
-const exportLogPath = path.resolve('./export_log.csv');
 const keyFilePath = path.resolve('./src/config/keyFile.json');
 
+// Get evaluation results from last 24 hours with passed through 
 async function fetchEvaluationsLast24Hours(apiKey) {
   try {
     const baseUrl = 'https://api.evaluagent.com/v1/quality/evaluations';
@@ -40,6 +38,8 @@ async function fetchEvaluationsLast24Hours(apiKey) {
   }
 }
 
+
+// Get the outcome of the evaluation on target contact reference.  API key for that contact needs passed through.
 export async function findOutcomeByContactReference(targetContactReference, apiKey) {
   try {
     // Fetch the data asynchronously

@@ -56,7 +56,7 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
 }
 
 
-
+// Obtain results of quality evaluations done on contacts
 export async function checkQualityOfStream() {
 
     // Need to get the records of missing outcomes
@@ -67,14 +67,18 @@ export async function checkQualityOfStream() {
 // Function to load API keys from keyFile
 async function loadApiKey(contractName) {
     try {
-        const keyFileContent = fs.readFileSync(keyFilePath, 'utf-8');
+        // Read and parse the key file
+        const keyFileContent = await fs.readFile(keyFilePath, 'utf-8');
         const { keys } = JSON.parse(keyFileContent);
 
+        // Find the matching API key
         const keyEntry = keys.find((key) => key.name === contractName);
         if (!keyEntry) {
+            logger.error(`API key not found for contract_name: ${contractName}`);
             throw new Error(`API key not found for contract_name: ${contractName}`);
         }
 
+        logger.debug(`Loaded API key for contract_name: ${contractName}`);
         return keyEntry.key; // Return the API key
     } catch (error) {
         logger.error(`Error loading API key for contract_name ${contractName}: ${error.message}`);
@@ -82,10 +86,9 @@ async function loadApiKey(contractName) {
     }
 }
 
-// Function to update outcomes for all records
+
 export async function updateAllOutcomes(records) {
     try {
-        // Iterate over the dataset
         for (const record of records) {
             const { contact_reference, id, contract_name } = record;
 
@@ -94,28 +97,35 @@ export async function updateAllOutcomes(records) {
                 continue; // Skip invalid records
             }
 
-            // Load the API key for the current contract_name
-            let apiKey;
+            let ea_apiKey;
             try {
-                apiKey = loadApiKey(contract_name);
+                // Load the API key for the current contract_name
+                ea_apiKey = await loadApiKey(contract_name);
+                logger.debug(`Using API key for contract_name ${contract_name}: ${ea_apiKey}`);
             } catch (error) {
                 logger.warn(error.message);
                 continue; // Skip if no API key is found
             }
 
-            // Find the outcome using the existing function
-            const outcome = await findOutcomeByContactReference(contact_reference, apiKey);
+            try {
+                // Find the outcome using the existing function
+                const outcome = await findOutcomeByContactReference(contact_reference, ea_apiKey);
 
-            if (outcome.startsWith("No evaluation")) {
-                logger.warn(`No evaluation result for contact_reference: ${contact_reference}. Skipping update.`);
-                continue; // Skip if no outcome is found
+                if (outcome.startsWith('No evaluation')) {
+                    logger.warn(`No evaluation result for contact_reference: ${contact_reference}. Skipping update.`);
+                    continue;
+                }
+
+                // Update the record in the database
+                record.outcome = outcome; // Add outcome to the record
+                await database.updateOutcome(record);
+                logger.info(`Successfully updated outcome for contact_reference: ${contact_reference}`);
+            } catch (innerError) {
+                logger.error(`Error processing record with contact_reference: ${contact_reference} - ${innerError.message}`);
             }
-
-            // Update the record in the database
-            await database.updateOutcome(record)
-            logger.info(`Successfully updated outcome for contact_reference: ${contact_reference}`);
         }
-    } catch (error) {
-        logger.error('Error updating outcomes:', error.response ? error.response.data : error.message);
+    } catch (outerError) {
+        logger.error(`Error updating outcomes: ${outerError.message}`);
     }
 }
+
