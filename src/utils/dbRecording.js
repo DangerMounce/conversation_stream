@@ -42,7 +42,7 @@ async function sendData(payload) {
                 }
             }
         );
-        logger.info('Data inserted successfully:', response.data);
+        logger.http(`stream db updated`);
     } catch (error) {
         logger.error('Error inserting data:', error.response ? error.response.data : error.message);
     }

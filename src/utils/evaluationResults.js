@@ -14,7 +14,7 @@ async function fetchEvaluationsLast24Hours(apiKey) {
 
     // Calculate the date range for the last 24 hours
     const now = new Date();
-    const yesterday = subHours(now, 24);
+    const yesterday = subHours(now, 48);
     const dateRange = `${formatISO(yesterday)},${formatISO(now)}`;
 
     // Prepare query parameters

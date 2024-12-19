@@ -77,8 +77,6 @@ async function loadApiKey(contractName) {
             logger.error(`API key not found for contract_name: ${contractName}`);
             throw new Error(`API key not found for contract_name: ${contractName}`);
         }
-
-        logger.debug(`Loaded API key for contract_name: ${contractName}`);
         return keyEntry.key; // Return the API key
     } catch (error) {
         logger.error(`Error loading API key for contract_name ${contractName}: ${error.message}`);
@@ -101,7 +99,6 @@ export async function updateAllOutcomes(records) {
             try {
                 // Load the API key for the current contract_name
                 ea_apiKey = await loadApiKey(contract_name);
-                logger.debug(`Using API key for contract_name ${contract_name}: ${ea_apiKey}`);
             } catch (error) {
                 logger.warn(error.message);
                 continue; // Skip if no API key is found

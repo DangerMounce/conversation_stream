@@ -108,16 +108,12 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
         // Process the response and log contact reference
         if (result.message) {
             logger.http(`${contactTemplate.data.reference} - ${result.message}`);
-            logger.debug(contactTemplate.data.reference)
-            logger.debug(targetedJSON)
-            logger.debug(name)
             await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name);
         } else if (result.errors) {
             logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
         }
     } catch (error) {
         logger.error(`Error in sendContactsToEvaluagent: ${error.message}`);
-        logger.debug(error)
     }
 }
 
@@ -134,7 +130,6 @@ async function updateReferenceLog(reference, filename, name) {
     }
     
     try {
-        logger.debug(`Updating database...`)
         await database.sendData(payload)
     } catch (error) {
         logger.warn(`Error updating export log: ${error.message}`);
@@ -148,7 +143,6 @@ async function uploadAudioToEvaluagent(audioFile, apiKey) {
     const apiUrl = "https://api.evaluagent.com/v1";
     const url = `${apiUrl}/quality/imported-contacts/upload-audio`;
 
-    logger.debug(`Audio file being uploaded: ${audioFile}`);
 
     if (!audioFile || typeof audioFile !== "string") {
         logger.error("Audio file path is invalid or undefined");
@@ -157,32 +151,28 @@ async function uploadAudioToEvaluagent(audioFile, apiKey) {
 
     // Normalize and validate path
     const normalizedPath = path.resolve(audioFile);
-    logger.debug(`Normalized audio file path: ${normalizedPath}`);
 
     if (!fs.existsSync(normalizedPath)) {
         logger.error(`Audio file does not exist: ${normalizedPath}`);
         throw new Error("Audio file not found.");
     }
-    logger.debug("File exists and is accessible.");
 
     const headers = {
         Authorization: `Basic ${Buffer.from(apiKey).toString("base64")}`,
     };
 
     try {
-        logger.debug(`Creating file stream for: ${normalizedPath}`);
+
         const fileStream = fs.createReadStream(normalizedPath);
         if (!fileStream) {
             throw new Error(`File stream is undefined for path: ${normalizedPath}`);
         }
-        logger.debug("File stream created successfully");
+
 
         const formData = new FormData();
         formData.append("audio_file", fileStream);
-        logger.debug(`FormData object created and file stream appended.`);
 
-        // Debug FormData headers
-        logger.debug(`FormData headers: ${JSON.stringify(formData.getHeaders())}`);
+
 
         // Send POST request
         const response = await axios.post(url, formData, {
