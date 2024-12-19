@@ -122,17 +122,17 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
 }
 
 // Helper function to update the contact reference log
-async function updateReferenceLog(filePath, reference, filename, name) {
+async function updateReferenceLog(reference, filename, name) {
     const currentUser = getUser()
     const payload = {
-        timestamp: getDate(),
-        user_name: currentUser,
-        contract_name: name,
-        filename: filename,
-        contact_reference: reference,
-        outcome: "NULL"
+        "timestamp": getDate(),
+        "user_name": currentUser,
+        "contract_name": name,
+        "filename": filename,
+        "contact_reference": reference,
+        "outcome": null
     }
-
+    
     try {
         logger.debug(`Updating database...`)
         await database.sendData(payload)
@@ -140,8 +140,7 @@ async function updateReferenceLog(filePath, reference, filename, name) {
         logger.warn(`Error updating export log: ${error.message}`);
     }
     // Optionally call a quality check function
-    // await checkQualityOfStream(); // Example placeholder
-    process.exit(1)
+    await checkQualityOfStream(); 
 
 }
 

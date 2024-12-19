@@ -42,7 +42,7 @@ async function sendData(payload) {
                 }
             }
         );
-        logger.ingo('Data inserted successfully:', response.data);
+        logger.info('Data inserted successfully:', response.data);
     } catch (error) {
         logger.error('Error inserting data:', error.response ? error.response.data : error.message);
     }
@@ -66,7 +66,8 @@ async function fetchNullOutcomes() {
                 }
             }
         );
-        logger.debug('Records with null outcome:', response.data);
+        
+        return response.data
     } catch (error) {
         logger.error('Error fetching records with null outcomes:', error.response ? error.response.data : error.message);
     }
