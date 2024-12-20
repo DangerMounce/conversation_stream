@@ -58,7 +58,7 @@ async function updateOutcomesForRows(rowsWithMissingOutcomes) {
 
 // Obtain results of quality evaluations done on contacts
 export async function checkQualityOfStream() {
-    logger.info(`Running quality check on imported conversations.`)
+    logger.silly(`****************************** ᕦ(ò_óˇ)ᕤ Running quality check on imported conversations ᕦ(ò_óˇ)ᕤ ******************************`)
     // Need to get the records of missing outcomes
     const recordsToCheck = await database.fetchNullOutcomes()
     await updateAllOutcomes(recordsToCheck)
@@ -109,8 +109,6 @@ export async function updateAllOutcomes(records) {
                 let evaluationOutcome = null
                 const outcome = await findOutcomeByContactReference(contact_reference, ea_apiKey);
                 evaluationOutcome = outcome
-                logger.debug(`Getting outcomes`)
-                await dump(`${contact_reference}, ${evaluationOutcome}`)
                 if (outcome.startsWith('No evaluation')) {
                     logger.warn(`No evaluation result for contact_reference: ${contact_reference}. Skipping update.`);
                     continue;
@@ -118,8 +116,6 @@ export async function updateAllOutcomes(records) {
 
                 // Update the record in the database
                 record.outcome = outcome; // Add outcome to the record
-                logger.debug(`Dumping record`)
-                await dump(record)
                 await database.updateOutcome(record);
                 logger.info(`Successfully updated outcome for contact_reference: ${contact_reference}`);
             } catch (innerError) {

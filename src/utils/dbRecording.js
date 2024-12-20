@@ -98,8 +98,12 @@ async function updateOutcome(record) {
                 }
             }
         );
-
-        logger.debug(`Record with ID ${record.id} updated successfully with outcome: ${record.outcome}`);
+        if (record.outcome === "Pass") {
+            logger.info(`ID ${record.id} updated successfully with outcome: ${record.outcome}`);
+        } else {
+            logger.warn(`ID ${record.id} updated successfully with outcome: ${record.outcome}`);
+        }
+        
     } catch (error) {
         logger.error('Error updating record.', error.response ? error.response.data : error.message);
     }

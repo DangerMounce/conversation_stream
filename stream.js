@@ -41,7 +41,7 @@ const delaySetting = (() => {
     if (intervalArg && !isNaN(intervalArg)) {
         return parseInt(intervalArg * 60, 10);
     }
-    return 60; // Default value
+    return 1440; // Default value
 })();
 
 // Format the delay for the log
@@ -63,7 +63,7 @@ function formatTime(seconds) {
 // Sets delay
 async function delay(seconds) {
     const timeMessage = formatTime(seconds);
-    logger.silly(`¯\_(ツ)_/¯`)
+    logger.silly(`******************************  ¯\_(ツ)_/¯ Waiting for next run  ¯\_(ツ)_/¯ ****************************** `)
     logger.silly(`Waiting ${timeMessage}`);
     const ms = seconds * 1000;
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -106,14 +106,7 @@ const ensureDirectories = () => {
 
 // Menu to clear the app log
 async function clearLog() {
-    const { clearLog } = await inquirer.prompt([
-        {
-            type: "confirm",
-            name: "clearLog",
-            message: "Do you want to clear the log file?",
-        },
-    ]);
-
+const clearLog = true
     if (clearLog) {
         try {
             fs.writeFileSync(logFilePath, "");
