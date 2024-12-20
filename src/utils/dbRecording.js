@@ -42,7 +42,7 @@ async function sendData(payload) {
                 }
             }
         );
-        logger.http(`stream db updated`);
+        logger.http(`stream_db updated`);
     } catch (error) {
         logger.error('Error inserting data:', error.response ? error.response.data : error.message);
     }
@@ -81,13 +81,15 @@ async function updateOutcome(record) {
             throw new Error('The record must have an "id" property to identify it in the database.');
         }
 
-        // Update the outcome in the provided object
-        const updatedRecord = { ...record, outcome: 'Pass' };
+        // Ensure the record has an outcome
+        if (record.outcome === undefined) {
+            throw new Error('The record must have an "outcome" property to update it in the database.');
+        }
 
-        // Send a PATCH request to update the record in the database
+        // Send a PATCH request to update the record in the database with its existing outcome
         const response = await axios.patch(
             `${dbUrl}/rest/v1/contacts?id=eq.${record.id}`, // Update the record by ID
-            { outcome: updatedRecord.outcome }, // Only send fields that need updating
+            { outcome: record.outcome }, // Use the outcome from the record
             {
                 headers: {
                     'apikey': dbApiKey,
@@ -97,11 +99,12 @@ async function updateOutcome(record) {
             }
         );
 
-        logger.debug('Record updated successfully:', response.data);
+        logger.debug(`Record with ID ${record.id} updated successfully with outcome: ${record.outcome}`);
     } catch (error) {
-        logger.error('Error updating record:', error.response ? error.response.data : error.message);
+        logger.error('Error updating record.', error.response ? error.response.data : error.message);
     }
 }
+
 
 export const database = {
     updateOutcome,

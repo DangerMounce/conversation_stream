@@ -84,3 +84,7 @@ export async function findOutcomeByContactReference(targetContactReference, apiK
     throw error;
   }
 }
+
+
+// const data = await findOutcomeByContactReference("b2f0e605-9a55-4894-a0c7-e90d5f461bc9", "33ac9e56-8a18-42d1-be45-9fb5a5f9ed27:51a2f75712fccd47a5e9dff77fee2f5066628cb8")
+// console.log(data)

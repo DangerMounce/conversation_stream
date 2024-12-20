@@ -81,40 +81,42 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
 
     logger.info(`Target file is ${targetedJSON}. Assigned agent is ${agentEmail}`);
 
-    try {
+    // try {
         const apiUrl = "https://api.evaluagent.com/v1";
         const endpoint = `${apiUrl}/quality/imported-contacts`;
         logger.info('Sending contact to evaluagent');
+        logger.debug(`Skipping sending to evaluagent`)
+        await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name);
 
-        const response = await fetch(endpoint, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                Authorization: `Basic ${Buffer.from(apiKey).toString("base64")}`
-            },
-            body: JSON.stringify(contactTemplate)
-        });
+    //     const response = await fetch(endpoint, {
+    //         method: "POST",
+    //         headers: {
+    //             "Content-Type": "application/json",
+    //             Authorization: `Basic ${Buffer.from(apiKey).toString("base64")}`
+    //         },
+    //         body: JSON.stringify(contactTemplate)
+    //     });
 
-        // Check if the response is successful
-        if (!response.ok) {
-            const errorDetails = await response.json();
-            logger.error(`Error in sendContactsToEvaluagent: ${response.status} - ${response.statusText}`);
-            logger.http(`Response: ${JSON.stringify(errorDetails)}`);
-            return;
-        }
+    //     // Check if the response is successful
+    //     if (!response.ok) {
+    //         const errorDetails = await response.json();
+    //         logger.error(`Error in sendContactsToEvaluagent: ${response.status} - ${response.statusText}`);
+    //         logger.http(`Response: ${JSON.stringify(errorDetails)}`);
+    //         return;
+    //     }
 
-        const result = await response.json();
+    //     const result = await response.json();
 
-        // Process the response and log contact reference
-        if (result.message) {
-            logger.http(`${contactTemplate.data.reference} - ${result.message}`);
-            await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name);
-        } else if (result.errors) {
-            logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
-        }
-    } catch (error) {
-        logger.error(`Error in sendContactsToEvaluagent: ${error.message}`);
-    }
+    //     // Process the response and log contact reference
+    //     if (result.message) {
+    //         logger.http(`${contactTemplate.data.reference} - ${result.message}`);
+    //         await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name);
+    //     } else if (result.errors) {
+    //         logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
+    //     }
+    // } catch (error) {
+    //     logger.error(`Error in sendContactsToEvaluagent: ${error.message}`);
+    // }
 }
 
 // Helper function to update the contact reference log
@@ -130,7 +132,8 @@ async function updateReferenceLog(reference, filename, name) {
     }
     
     try {
-        await database.sendData(payload)
+        logger.debug('Skipping sending data to db')
+        // await database.sendData(payload)
     } catch (error) {
         logger.warn(`Error updating export log: ${error.message}`);
     }

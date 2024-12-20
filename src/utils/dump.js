@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import logger from "./logger.js";
 
 const dump = async (data) => {
   try {
@@ -13,7 +14,7 @@ const dump = async (data) => {
       fileContent = await fs.readFile(filePath, "utf-8");
     } catch (error) {
       if (error.code === "ENOENT") {
-        console.log("File not found. Initializing dump.json as an empty array.");
+        logger.warn("File not found. Initializing dump.json as an empty array.");
         fileContent = "[]"; // Initialize as an empty JSON array
       } else {
         throw error;
@@ -40,10 +41,9 @@ const dump = async (data) => {
     // Write the updated content back to dump.json
     await fs.writeFile(filePath, fileContent, "utf-8");
 
-    console.log(`Data has been successfully appended to ${filePath}`);
-    process.exit(0)
+    logger.debug(`Data has been successfully appended to ${filePath}`);
   } catch (error) {
-    console.error(`Failed to append data to dump.json: ${error.message}`);
+    logger.error(`Failed to append data to dump.json: ${error.message}`);
   }
 };
 

@@ -232,7 +232,6 @@ async function startStreamLoop(apiKeyArray) {
                     const ticketList = await getTicketList(ticketStreamDir)
                     if (ticketList.length === 0) {
                         logger.error(`No tickets found in ${ticketStreamDir}`);
-                        logger.debug(ticketStreamDir)
                         process.exit(1);
                     }
 
@@ -250,7 +249,6 @@ async function startStreamLoop(apiKeyArray) {
                     const ticketList = await getTicketList(ticketStreamDir)
                     if (ticketList.length === 0) {
                         logger.error(`No tickets found in ${ticketStreamDir}`);
-                        logger.debug(ticketStreamDir)
                         process.exit(1);
                     }
 
@@ -430,8 +428,6 @@ async function main() {
         console.log('');
         ticketStreamDir = path.resolve("data/stream_tickets"); // Updated to use path.resolve
         callStreamDir = path.resolve("data/stream_calls");     // Updated to use path.resolve
-        logger.debug(`Resolved ticketStreamDir: ${ticketStreamDir}`);
-        logger.debug(`Resolved callStreamDir: ${callStreamDir}`);
         logger.warn(`Stream Tickets: ${ticketStream}`)
         logger.warn(`Stream Calls: ${callStream}`)
         logger.warn(`wayBackMachine set at ${wayBackMachine} days (${getDate(wayBackMachine)})`)
