@@ -101,12 +101,11 @@ async function downloadAndExtract() {
 // Main function to check for updates and process them
 export async function checkForUpdate() {
     try {
-        console.log('Checking for updates...');
         const latestCommit = await fetchLatestCommit();
         const localCommit = getLocalCommitHash();
 
         if (latestCommit !== localCommit) {
-            console.log('New update available.');
+            console.log('Update available.');
             const confirmUpdate = await promptUpdate();
             if (confirmUpdate) {
                 await downloadAndExtract();
@@ -114,10 +113,10 @@ export async function checkForUpdate() {
                 console.log(`Check README.md for any new dependencies following this update and restart the application.`)
                 process.exit(0);
             } else {
-                console.log('Update canceled.');
+
             }
         } else {
-            console.log('You are already up-to-date.');
+            console.log('Running on most current version.');
         }
     } catch (error) {
         console.error('Error in auto-update process:', error.message);

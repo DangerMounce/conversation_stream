@@ -14,6 +14,9 @@ import { getDate, createChatTemplate, createCallTemplate, getTicketList } from "
 
 const apiKeysPath = path.resolve("./src/config/keyFile.json");
 const logFilePath = path.resolve("./logs/app.log");
+const configPath = path.resolve('./src/config/config.json');
+const envPath = path.resolve('.env');
+
 
 const topicsFilePath = path.resolve("./src/config/topics.json");
 const baseDir = path.resolve("./data"); // Base directory for the topics
@@ -21,6 +24,8 @@ const baseDir = path.resolve("./data"); // Base directory for the topics
 export let ticketStreamDir = null
 export let callStreamDir = null
 export let importStream = false;
+export let user = null;
+export let dbApiKey = null;
 
 // Retrieve the command-line argument for wayBackMachine
 export const wayBackMachine = (() => {
@@ -36,7 +41,7 @@ const delaySetting = (() => {
     if (intervalArg && !isNaN(intervalArg)) {
         return parseInt(intervalArg * 60, 10);
     }
-    return 60; // Default value
+    return 1440; // Default value
 })();
 
 // Format the delay for the log
@@ -58,7 +63,7 @@ function formatTime(seconds) {
 // Sets delay
 async function delay(seconds) {
     const timeMessage = formatTime(seconds);
-    logger.silly(`¯\_(ツ)_/¯`)
+    logger.silly(`******************************  ¯\_(ツ)_/¯ Waiting for next run  ¯\_(ツ)_/¯ ****************************** `)
     logger.silly(`Waiting ${timeMessage}`);
     const ms = seconds * 1000;
     return new Promise((resolve) => setTimeout(resolve, ms));
@@ -101,14 +106,7 @@ const ensureDirectories = () => {
 
 // Menu to clear the app log
 async function clearLog() {
-    const { clearLog } = await inquirer.prompt([
-        {
-            type: "confirm",
-            name: "clearLog",
-            message: "Do you want to clear the log file?",
-        },
-    ]);
-
+const clearLog = true
     if (clearLog) {
         try {
             fs.writeFileSync(logFilePath, "");
@@ -227,7 +225,6 @@ async function startStreamLoop(apiKeyArray) {
                     const ticketList = await getTicketList(ticketStreamDir)
                     if (ticketList.length === 0) {
                         logger.error(`No tickets found in ${ticketStreamDir}`);
-                        logger.debug(ticketStreamDir)
                         process.exit(1);
                     }
 
@@ -245,7 +242,6 @@ async function startStreamLoop(apiKeyArray) {
                     const ticketList = await getTicketList(ticketStreamDir)
                     if (ticketList.length === 0) {
                         logger.error(`No tickets found in ${ticketStreamDir}`);
-                        logger.debug(ticketStreamDir)
                         process.exit(1);
                     }
 
@@ -316,10 +312,106 @@ async function startInjection(apiKeyArray, selectedTopic) {
     }
 }
 
+export async function ensureUserInConfig() {
+    try {
+        // Load config.json
+        const configContent = fs.readFileSync(configPath, 'utf-8');
+        const config = JSON.parse(configContent);
+
+        // Check if "user" exists
+        if (!config.user) {
+            console.log(chalk.bold.yellow('\nNo user registration found. Please provide your email address.\n'));
+
+            // Prompt user for their email
+            const { email } = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'email',
+                    message: 'Enter your email address:',
+                    validate: (input) => input.includes('@') ? true : 'Please enter a valid email address.',
+                },
+            ]);
+
+            // Extract the part before '@' in the email
+            const username = email.split('@')[0];
+
+            // Update the config with the "user" field
+            config.user = username;
+
+            // Write the updated config back to the file
+            fs.writeFileSync(configPath, JSON.stringify(config, null, 4), 'utf-8');
+
+            // Update the global user variable
+            user = username;
+            logger.info(`${username} registered as a new user`);
+        } else {
+            // Load the existing user into the global user variable
+            user = config.user;
+            logger.info(`${config.user} config loaded`);
+        }
+
+        // Check for .env file and API_KEY
+        if (!fs.existsSync(envPath)) {
+            console.log(chalk.bold.yellow('\nNo .env file found. Please provide your API key.\n'));
+
+            // Prompt user for their API key
+            const { apiKeyInput } = await inquirer.prompt([
+                {
+                    type: 'input',
+                    name: 'apiKeyInput',
+                    message: 'Enter your API key:',
+                    validate: (input) => input.trim() !== '' ? true : 'API key cannot be empty.',
+                },
+            ]);
+
+            // Write the API key to a new .env file
+            fs.writeFileSync(envPath, `API_KEY=${apiKeyInput}\n`, 'utf-8');
+            dbApiKey = apiKeyInput;
+            logger.info('API key saved to .env file.');
+        } else {
+            // Read the .env file
+            const envContent = fs.readFileSync(envPath, 'utf-8');
+            const match = envContent.match(/^API_KEY=(.*)$/m);
+
+            if (match && match[1]) {
+                // Assign the API key to the global variable
+                dbApiKey = match[1].trim();
+                logger.info('API key loaded from .env file.');
+            } else {
+                console.log(chalk.bold.yellow('\nNo API_KEY found in .env file. Please provide your API key.\n'));
+
+                // Prompt user for their API key
+                const { apiKeyInput } = await inquirer.prompt([
+                    {
+                        type: 'input',
+                        name: 'apiKeyInput',
+                        message: 'Enter your API key:',
+                        validate: (input) => input.trim() !== '' ? true : 'API key cannot be empty.',
+                    },
+                ]);
+
+                // Append the API key to the .env file
+                fs.appendFileSync(envPath, `API_KEY=${apiKeyInput}\n`, 'utf-8');
+                dbApiKey = apiKeyInput;
+                logger.info('API key saved to .env file.');
+            }
+        }
+    } catch (error) {
+        logger.error(`Error updating config.json or .env: ${error.message}`);
+        process.exit(1);
+    }
+}
+
+// Function to get the current user value
+export function getUser() {
+    return user; // Return the current value of user
+}
+
 async function main() {
     console.clear('');    
     await checkForUpdate()
     await clearLog();
+    await ensureUserInConfig()
     ensureDirectories();
     loadConfig();
     const stream = await streamSelection();
@@ -329,8 +421,6 @@ async function main() {
         console.log('');
         ticketStreamDir = path.resolve("data/stream_tickets"); // Updated to use path.resolve
         callStreamDir = path.resolve("data/stream_calls");     // Updated to use path.resolve
-        logger.debug(`Resolved ticketStreamDir: ${ticketStreamDir}`);
-        logger.debug(`Resolved callStreamDir: ${callStreamDir}`);
         logger.warn(`Stream Tickets: ${ticketStream}`)
         logger.warn(`Stream Calls: ${callStream}`)
         logger.warn(`wayBackMachine set at ${wayBackMachine} days (${getDate(wayBackMachine)})`)
@@ -365,4 +455,4 @@ async function main() {
     }
 }
 
-main();
+main()
