@@ -15,12 +15,13 @@ const levelColors = {
 // Custom format for console logs (with Chalk)
 const consoleFormat = winston.format.printf(({ level, message, timestamp }) => {
   const colorize = levelColors[level] || ((text) => text); // Apply Chalk colors
-  return `[${timestamp}] ${colorize(level.toUpperCase())}: ${message}`;
+  return `${colorize(level.toUpperCase())}: ${message}`;
 });
 
 // Custom format for file logs (plain text)
 const fileFormat = winston.format.printf(({ level, message, timestamp }) => {
-  return `[${timestamp}] ${level.toUpperCase()}: ${message}`;
+  return `${level.toUpperCase()}: ${message}`;
+  // return `[${timestamp}] ${level.toUpperCase()}: ${message}`;
 });
 
 // Create the logger instance
