@@ -8,8 +8,8 @@ import { callStreamDir } from '../../stream.js';
 import logger from './logger.js';
 
 // Language/voice configurations
-const customerVoice = 'en-au'; // Customer voice (Australian English)
-const agentVoice = 'en-uk';    // Agent voice (British English)
+const customerVoice = 'en-uk'; // Customer voice (Australian English)
+const agentVoice = 'en-us';    // Agent voice (British English)
 
 let finalAudioFilename;
 
