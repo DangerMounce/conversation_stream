@@ -22,7 +22,7 @@ const topicsFilePath = path.resolve("./src/config/topics.json");
 const baseDir = path.resolve("./data"); // Base directory for the topics
 
 export let ticketStreamDir = null
-export let callStreamDir = path.resolve('./data/test_convos_calls'); 
+export let callStreamDir = null
 
 export let importStream = false;
 export let user = null;
@@ -240,15 +240,15 @@ async function startStreamLoop(apiKeyArray) {
                     logger.silly(`******************************************************************************************  |[●▪▪●]| Creating a new call for "${name}"  |[●▪▪●]| ******************************************************************************************`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
-                    const ticketList = await getTicketList(ticketStreamDir)
-                    if (ticketList.length === 0) {
-                        logger.error(`No tickets found in ${ticketStreamDir}`);
+                    const callList = await getCallList(callStreamDir)
+                    if (callList.length === 0) {
+                        logger.error(`No calls found in ${callStreamDir}`);
                         process.exit(1);
                     }
 
-                    const targetJSON = ticketList[Math.floor(Math.random() * ticketList.length)];
-                    logger.info(`Target ticket for audio conversion set as "${targetJSON}"`);
-                    const contactTemplate = await createCallTemplate(agentList, targetJSON, key);
+                    const targetCall = callList[Math.floor(Math.random() * callList.length)];
+                    logger.info(`Target call set as "${targetCall}"`);
+                    const contactTemplate = await createCallTemplate(agentList, targetCall, key);
                     await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     await delay(5) // wait 5 seconds before moving to next api call
                 }

@@ -110,7 +110,7 @@ export async function getCallList(ticketsDir) {
         if (fs.existsSync(ticketsDir) && fs.lstatSync(ticketsDir).isDirectory()) {
             const filesInTickets = fs.readdirSync(ticketsDir);
             jsonFiles = filesInTickets
-                .filter(file => path.extname(file) === '.json')
+                .filter(file => path.extname(file) === '.mp3')
                 .map(file => path.join(ticketsDir, file));
         } else {
             logger.error(`Directory not found: ${ticketsDir}`);
@@ -118,7 +118,7 @@ export async function getCallList(ticketsDir) {
     } catch (error) {
         logger.error(`Error reading directory: ${error.message}`);
     }
-    logger.info(`Got list of tickets`);
+    logger.info(`Got list of calls`);
     jsonFiles = reformatPaths(jsonFiles, ticketStreamDir);
     return jsonFiles;
 }
@@ -197,7 +197,7 @@ export async function createChatTemplate(agentList, targetJSON) {
     return chatTemplate;
 }
 
-export async function createCallTemplate(agentList, targetJSON, key) {
+export async function createCallTemplate(agentList, targetCall, key) {
     const fsPromises = fs.promises;
 
     // Select an agent randomly from the list
@@ -210,18 +210,18 @@ export async function createCallTemplate(agentList, targetJSON, key) {
     let ticketResponses = null;
 
     // Read the ticket JSON file
-    try {
-        ticketResponses = await fsPromises.readFile(targetJSON, "utf-8");
-        chatTemplate.data.responses = JSON.parse(ticketResponses); // Assuming the structure is similar to chatTemplate
-        logger.info(`Got responses from JSON: ${targetJSON}`);
-    } catch (err) {
-        logger.error(`An error occurred reading the file: ${targetJSON}: ${err.message}`);
-        throw err;
-    }
+    // try {
+    //     ticketResponses = await fsPromises.readFile(targetJSON, "utf-8");
+    //     chatTemplate.data.responses = JSON.parse(ticketResponses); // Assuming the structure is similar to chatTemplate
+    //     logger.info(`Got responses from JSON: ${targetJSON}`);
+    // } catch (err) {
+    //     logger.error(`An error occurred reading the file: ${targetJSON}: ${err.message}`);
+    //     throw err;
+    // }
 
     // Convert the ticket to an audio file
-    // const audioFilename = await convertTicketToAudio(targetJSON); // Returns the filename of the converted audio
-    // const audioFilepath = path.resolve(callStreamDir, audioFilename); // Ensure absolute path
+    const audioFilename = targetCall; // Returns the filename of the converted audio
+    const audioFilepath = path.resolve(callStreamDir, targetCall); // Ensure absolute path
     // Verify the generated audio file exists
     // if (!fs.existsSync(audioFilepath)) {
     //     logger.error(`Generated audio file not found: ${audioFilepath}`);
