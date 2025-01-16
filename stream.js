@@ -8,7 +8,7 @@ import apiKeysMenu from "./src/utils/apikeyMenu.js";
 import { ticketStream, callStream, loadConfig } from './src/utils/loadConfig.js';
 import { evaluagent } from "./src/utils/apiUtils.js";
 import dump from "./src/utils/dump.js";
-import { getDate, createChatTemplate, createCallTemplate, getTicketList } from "./src/utils/contactTemplateGenerator.js";
+import { getDate, createChatTemplate, createCallTemplate, getTicketList, getCallList } from "./src/utils/contactTemplateGenerator.js";
 
 
 
@@ -22,7 +22,8 @@ const topicsFilePath = path.resolve("./src/config/topics.json");
 const baseDir = path.resolve("./data"); // Base directory for the topics
 
 export let ticketStreamDir = null
-export let callStreamDir = null
+export let callStreamDir = path.resolve('./data/test_convos_calls'); 
+
 export let importStream = false;
 export let user = null;
 export let dbApiKey = null;
@@ -262,6 +263,7 @@ async function startStreamLoop(apiKeyArray) {
 
 async function startInjection(apiKeyArray, selectedTopic) {
     const ticketList = await getTicketList(ticketStreamDir)
+    const callList = await getCallList(callStreamDir)
     if (ticketList.length === 0) {
         logger.error(`No tickets found in ${ticketStreamDir}`);
         process.exit(1);
@@ -292,12 +294,12 @@ async function startInjection(apiKeyArray, selectedTopic) {
                     logger.silly(`**********   Creating a new call for "${name}"  **********`)
                     // Run the specified code block for the current API key
                     const agentList = await evaluagent.getAgents(key)
-                    const targetJSON = ticketList[ticketNumber];
-                    logger.info(`Target ticket for audio conversation set as "${targetJSON}"`);
-                    const contactTemplate = await createCallTemplate(agentList, targetJSON, key);
+                    const targetFile = callList[ticketNumber];
+                    logger.info(`Target file for audio conversation set as "${targetFile}"`);
+                    const contactTemplate = await createCallTemplate(agentList, targetFile, key);
                     await evaluagent.sendContactToEvaluagent(contactTemplate, key, name)
                     ticketNumber++
-                    if (ticketNumber === ticketList.length) {
+                    if (ticketNumber === callList.length) {
                         logger.info(`${ticketNumber} contacts processed.  Injection complete.`)
                         return false
                     }

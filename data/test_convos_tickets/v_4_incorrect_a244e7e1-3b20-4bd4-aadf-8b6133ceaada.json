@@ -1,0 +1,162 @@
+[
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_001",
+        "message": "Hi, I just received my sofa, and it’s the wrong color and fabric! I ordered gray fabric, but they sent me beige leather. This is really disappointing.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:00:00Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_002",
+        "message": "Hi. Welcome to SofaNest, my name is Chris. I’m so sorry to hear about this mix-up, and I completely understand how disappointing it must be. Let’s get this resolved for you right away.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:00:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_003",
+        "message": "Before we proceed, let’s run through security. Could you please confirm your reference number?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:00:45Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_004",
+        "message": "Sure, it’s 11223-4455.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:01:00Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_005",
+        "message": "Thank you for that. Could you also confirm your email address and name for me?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:01:30Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_006",
+        "message": "My email is sarah.brown@example.com, and my name is Sarah Brown.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:01:45Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_007",
+        "message": "Thank you, Sarah. That’s all correct. Let me recap: your reference number is 11223-4455, your email is sarah.brown@example.com, and your name is Sarah Brown. Is that right?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:02:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_008",
+        "message": "Yes, that’s right.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:02:15Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_009",
+        "message": "Thank you. Let’s talk about what works for you. Could you confirm the color and fabric you originally ordered, and what was delivered?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:02:30Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_010",
+        "message": "I ordered gray fabric, but they delivered beige leather. It’s not what I wanted at all.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:03:00Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_011",
+        "message": "I’m really sorry about this error, Sarah. Have there been any updates or communication from the delivery team about this issue?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:03:30Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_012",
+        "message": "No, no one’s contacted me about anything.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:03:45Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_013",
+        "message": "I completely understand how frustrating this must be, and I’m here to help. Let me contact our warehouse team to check the availability of your original order. Could you give me a moment?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:04:00Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_014",
+        "message": "Thank you for waiting. I’ve confirmed that your original gray fabric sofa is in stock, and we can arrange an exchange. Can you give me your availability for the pickup and redelivery?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:05:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_015",
+        "message": "I’m available on Monday afternoon.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:05:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_016",
+        "message": "Perfect! I’ve scheduled the pickup of the incorrect item and delivery of your gray fabric sofa for Monday afternoon. What would you consider a satisfactory resolution for this situation?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:06:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_017",
+        "message": "Just getting the right sofa delivered would be enough, honestly.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:06:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_018",
+        "message": "I completely understand, Sarah, and I truly appreciate your patience. I’ll personally follow up to ensure everything goes smoothly on Monday. Is there anything else I can assist you with today?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:07:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_019",
+        "message": "No, that’s all. Thanks for your help.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:07:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_020",
+        "message": "You’re very welcome, Sarah. I’m sorry again for the inconvenience, but I’m glad we could resolve this. Have a great day, and thank you for choosing SofaNest!",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T19:08:00Z"
+    }
+]

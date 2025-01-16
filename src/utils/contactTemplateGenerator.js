@@ -103,6 +103,26 @@ async function fileNameOnly(filename) {
     return base;
 }
 
+export async function getCallList(ticketsDir) {
+    let jsonFiles = [];
+
+    try {
+        if (fs.existsSync(ticketsDir) && fs.lstatSync(ticketsDir).isDirectory()) {
+            const filesInTickets = fs.readdirSync(ticketsDir);
+            jsonFiles = filesInTickets
+                .filter(file => path.extname(file) === '.json')
+                .map(file => path.join(ticketsDir, file));
+        } else {
+            logger.error(`Directory not found: ${ticketsDir}`);
+        }
+    } catch (error) {
+        logger.error(`Error reading directory: ${error.message}`);
+    }
+    logger.info(`Got list of tickets`);
+    jsonFiles = reformatPaths(jsonFiles, ticketStreamDir);
+    return jsonFiles;
+}
+
 export async function getTicketList(ticketsDir) {
     let jsonFiles = [];
 
@@ -200,13 +220,13 @@ export async function createCallTemplate(agentList, targetJSON, key) {
     }
 
     // Convert the ticket to an audio file
-    const audioFilename = await convertTicketToAudio(targetJSON); // Returns the filename of the converted audio
-    const audioFilepath = path.resolve(callStreamDir, audioFilename); // Ensure absolute path
+    // const audioFilename = await convertTicketToAudio(targetJSON); // Returns the filename of the converted audio
+    // const audioFilepath = path.resolve(callStreamDir, audioFilename); // Ensure absolute path
     // Verify the generated audio file exists
-    if (!fs.existsSync(audioFilepath)) {
-        logger.error(`Generated audio file not found: ${audioFilepath}`);
-        throw new Error("Audio file error");
-    }
+    // if (!fs.existsSync(audioFilepath)) {
+    //     logger.error(`Generated audio file not found: ${audioFilepath}`);
+    //     throw new Error("Audio file error");
+    // }
 
     // Upload the audio file to Evaluagent
     try {

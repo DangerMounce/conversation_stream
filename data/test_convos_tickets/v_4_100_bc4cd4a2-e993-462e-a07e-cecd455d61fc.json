@@ -1,0 +1,187 @@
+[
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_001",
+      "message": "Hi, I’m looking for a comfortable sofa for my living room. Can you help?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:00:00Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_002",
+      "message": "Hi. Welcome to SofaNest, my name is Chris. I’d be happy to help!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:00:30Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_003",
+      "message": "Before we proceed, let’s run through security. Could you please confirm your reference number?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:00:45Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_004",
+      "message": "Sure, it’s 12345-6789.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:01:00Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_005",
+      "message": "Thank you. Could you also confirm your email address, please?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:01:15Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_006",
+      "message": "It’s john.doe@example.com.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_007",
+      "message": "Thank you. And could you confirm your name for me?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:01:45Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_008",
+      "message": "It’s John Doe.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:02:00Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_009",
+      "message": "That’s all correct. Let me recap: your reference number is 12345-6789, your email is john.doe@example.com, and your name is John Doe. Does that sound right?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:02:30Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_010",
+      "message": "Yes, that’s correct.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:02:45Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_011",
+      "message": "Great! Let’s talk about what works for you. Could you share the size of your living room so I can recommend the perfect sofa?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:03:00Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_012",
+      "message": "The room is about 15 feet by 20 feet, and I’d like the sofa to be cozy but not overwhelm the space.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:03:30Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_013",
+      "message": "Thank you for that. Have there been any particular styles or materials you’ve been considering?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_014",
+      "message": "I’m thinking of a fabric sofa, preferably a corner unit.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:04:15Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_015",
+      "message": "That’s great to know. Can you give me an idea of the color palette in your living room? That way, I can recommend something that fits your space perfectly.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:04:30Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_016",
+      "message": "It’s mostly neutral—grays and whites with a few blue accents.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:05:00Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_017",
+      "message": "What would you consider to be the most important feature—comfort, style, or something else?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:05:15Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_018",
+      "message": "Comfort, definitely.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:05:45Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_019",
+      "message": "I completely understand. Based on your preferences, I’d recommend our 'Harmony' corner sofa. It’s a fabric sofa with memory foam cushions for ultimate comfort, available in soft gray. Would you like me to share more details or customization options?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:06:00Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_020",
+      "message": "That sounds perfect. Can you tell me about the warranty and delivery timeline?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:06:30Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_021",
+      "message": "Absolutely! The sofa comes with a 5-year warranty covering manufacturing defects. Delivery typically takes 4-6 weeks as it’s custom-built. Does that timeline work for you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:07:00Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_022",
+      "message": "Yes, that works. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:07:30Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_023",
+      "message": "You’re very welcome, John! I’ll follow up with the swatches and keep you updated. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-11-28T10:08:00Z"
+    }
+  ]
+  
