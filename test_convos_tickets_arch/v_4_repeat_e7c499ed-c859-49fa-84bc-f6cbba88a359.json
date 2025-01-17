@@ -1,0 +1,114 @@
+[
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_001",
+        "message": "Hi, I reported missing items from my sofa delivery last week, and nothing has been resolved. I’m still waiting for the cushions and legs. This is unacceptable.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:30:00Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_002",
+        "message": "Hi. Welcome to SofaNest, my name is Chris. What’s your order number?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:30:30Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_003",
+        "message": "It’s 98765-4321. I already gave this information last time. Why hasn’t anything been done?",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:31:00Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_004",
+        "message": "I’ll need your email address to check the details.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:31:30Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_005",
+        "message": "It’s alex.smith@example.com.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:31:45Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_006",
+        "message": "Thanks. Let me check your order… Okay, I see the case here. It looks like the warehouse hasn’t updated it yet.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:32:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_007",
+        "message": "That’s not good enough. I shouldn’t have to keep chasing you for this.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:32:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_008",
+        "message": "I understand you’re frustrated, but these things take time. I’ll send a reminder to the warehouse team for you.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:33:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_009",
+        "message": "A reminder? That’s all you’re going to do? What about getting my missing items delivered?",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:33:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_010",
+        "message": "I can’t confirm anything until the warehouse updates the case. You’ll just have to wait for them to respond.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:34:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_011",
+        "message": "This is ridiculous. I’ve been waiting over a week, and you’re telling me there’s still no resolution?",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:34:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_012",
+        "message": "Look, I’ve done what I can. It’s up to the warehouse team now. I’ll let you know if I hear anything.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:35:00Z"
+    },
+    {
+        "speaker_email": "customer@sofanest.com",
+        "response_id": "res_013",
+        "message": "This is the worst customer service experience I’ve had. I’ll be taking this further.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:35:30Z"
+    },
+    {
+        "speaker_email": "agent@sofanest.com",
+        "response_id": "res_014",
+        "message": "I’m sorry you feel that way. Like I said, I’ll follow up when the warehouse responds.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-11-28T20:36:00Z"
+    }
+]

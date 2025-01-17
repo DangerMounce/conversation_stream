@@ -3,7 +3,6 @@ import fs from 'fs';
 import path from 'path';
 import fsP from 'fs/promises';
 import ffmpeg from 'fluent-ffmpeg';
-import chalk from 'chalk';
 import { callStreamDir } from '../../stream.js';
 import logger from './logger.js';
 
@@ -11,12 +10,11 @@ import logger from './logger.js';
 const customerVoice = 'en-uk'; // Customer voice (Australian English)
 const agentVoice = 'en-us';    // Agent voice (British English)
 
-let finalAudioFilename;
-
 // Ensure the output directory exists
-let outputDir = path.join(process.cwd(), 'audio_processing');
+const outputDir = path.resolve('audio_processing');
 if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir);
+    fs.mkdirSync(outputDir, { recursive: true });
+    logger.info(`Created directory: ${outputDir}`);
 }
 
 // Function to extract messages from the JSON file
@@ -51,7 +49,7 @@ async function textToSpeech(text, outputFile, lang = 'en') {
 async function processTextArray(messages) {
     for (let i = 0; i < messages.length; i++) {
         const message = messages[i];
-        const isCustomer = i % 2 !== 0; 
+        const isCustomer = i % 2 !== 0;
         const voice = isCustomer ? customerVoice : agentVoice;
 
         const outputFile = path.join(
@@ -63,7 +61,7 @@ async function processTextArray(messages) {
         await textToSpeech(message, outputFile, voice);
     }
 
-    logger.info('All messages processed and audio files generated.')
+    logger.info('All messages processed and audio files generated.');
 }
 
 // Function to convert all audio files to stereo and delete originals
@@ -73,7 +71,7 @@ async function convertAllToStereo() {
         .filter(file => file.endsWith('.mp3') && !file.endsWith('_stereo.mp3'));
 
     if (audioFiles.length === 0) {
-        logger.warm('No audio files found in the output directory.');
+        logger.warn('No audio files found in the output directory.');
         return;
     }
 
@@ -93,7 +91,7 @@ async function convertAllToStereo() {
                         resolve();
                     })
                     .on('error', err => {
-                        logger.info(`Error converting file to stereo: ${inputFilePath}`);
+                        logger.error(`Error converting file to stereo: ${inputFilePath}`);
                         reject(err);
                     })
                     .run();
@@ -149,7 +147,7 @@ async function remapStereoFiles() {
             await fsP.unlink(inputFilePath);
             logger.info(`Stereo file deleted: ${inputFilePath}`);
         } catch (error) {
-            logger.info(`Failed to process file ${file}: ${error.message}`);
+            logger.error(`Failed to process file ${file}: ${error.message}`);
         }
     }
 
@@ -157,12 +155,13 @@ async function remapStereoFiles() {
 }
 
 // Function to concatenate all audio files sequentially
-async function concatenateAudioFiles() {
+async function concatenateAudioFiles(outputDir, callStreamDir, finalAudioFilename) {
+    logger.debug(outputDir,callStreamDir, finalAudioFilename)
     const audioFiles = fs
         .readdirSync(outputDir)
-        .filter((file) => file.endsWith("_remapped.mp3"))
+        .filter(file => file.endsWith('_remapped.mp3'))
         .sort((a, b) => {
-            const getMessageNumber = (file) => {
+            const getMessageNumber = file => {
                 const match = file.match(/message_(\d+)_/);
                 return match ? parseInt(match[1], 10) : 0;
             };
@@ -170,113 +169,54 @@ async function concatenateAudioFiles() {
         });
 
     if (audioFiles.length === 0) {
-        logger.error("No remapped audio files found in the output directory.");
-        throw new Error("No remapped audio files to concatenate.");
+        throw new Error('No remapped audio files to concatenate.');
     }
 
-    if (!fs.existsSync(callStreamDir)) {
-        fs.mkdirSync(callStreamDir, { recursive: true });
-        logger.info(`Created directory: ${callStreamDir}`);
-    }
-
-    const concatListPath = path.join(callStreamDir, "concat_list.txt");
-    const tempOutputFilePath = path.join(callStreamDir, "final_output.mp3");
+    const concatListPath = path.join(callStreamDir, 'concat_list.txt');
+    const tempOutputFilePath = path.join(callStreamDir, 'final_output.mp3');
     const finalOutputFilePath = path.join(callStreamDir, `${finalAudioFilename}.mp3`);
 
     try {
-        // Create the concat list file
         const concatFileContent = audioFiles
-            .map((file) => `file '${path.join(outputDir, file)}'`)
-            .join("\n");
+            .map(file => `file '${path.join(outputDir, file)}'`)
+            .join('\n');
         fs.writeFileSync(concatListPath, concatFileContent);
-        logger.info(`Created concat list: ${concatListPath}`);
 
-        // Concatenate audio files
         await new Promise((resolve, reject) => {
             ffmpeg()
                 .input(concatListPath)
-                .inputOptions(["-f", "concat", "-safe", "0"])
-                .outputOptions("-c", "copy")
+                .inputOptions(['-f', 'concat', '-safe', '0'])
+                .outputOptions('-c', 'copy')
                 .output(tempOutputFilePath)
-                .on("end", () => {
-                    logger.info(`Temporary concatenated audio created: ${tempOutputFilePath}`);
-                    resolve();
-                })
-                .on("error", (err) => {
-                    logger.error(`Error during concatenation: ${err.message}`);
-                    reject(err);
-                })
+                .on('end', resolve)
+                .on('error', reject)
                 .run();
         });
 
-        // Rename the temporary output file to the final output file
-        if (fs.existsSync(tempOutputFilePath)) {
-            fs.renameSync(tempOutputFilePath, finalOutputFilePath);
-            logger.info(`Final output file moved to: ${finalOutputFilePath}`);
-        } else {
-            logger.error(`Temporary file not found: ${tempOutputFilePath}`);
-            throw new Error("Temporary concatenated file missing.");
-        }
-
-        // Clean up temporary concat list
+        fs.renameSync(tempOutputFilePath, finalOutputFilePath);
         fs.unlinkSync(concatListPath);
-        logger.info(`Temporary concat list file deleted: ${concatListPath}`);
 
-        // Clean up remapped audio files
-        audioFiles.forEach((file) => {
-            const remappedFilePath = path.join(outputDir, file);
-            if (fs.existsSync(remappedFilePath)) {
-                fs.unlinkSync(remappedFilePath);
-                logger.info(`Deleted remapped audio file: ${remappedFilePath}`);
-            }
-        });
+        audioFiles.forEach(file => fs.unlinkSync(path.join(outputDir, file)));
+
+        logger.info(`Final output file created: ${finalOutputFilePath}`);
     } catch (error) {
-        logger.error(`Error during concatenation process: ${error.message}`);
-        throw error;
+        throw new Error(`Error during concatenation: ${error.message}`);
     }
-
-    // Final check to ensure the output file exists
-    if (!fs.existsSync(finalOutputFilePath)) {
-        throw new Error(`Final output file not found: ${finalOutputFilePath}`);
-    }
-
-    logger.info(`Audio processing completed successfully. Final file: ${finalOutputFilePath}`);
 }
 
-// Main function to convert ticket JSON to audio, process files, and concatenate
-export async function convertTicketToAudio(ticketFilename) {
-    // Resolve output directory to an absolute path
-    outputDir = path.resolve(callStreamDir);
-
-    // Ensure the output directory exists
-    if (!fs.existsSync(outputDir)) {
-        fs.mkdirSync(outputDir, { recursive: true });
-        logger.info(`Created directory: ${outputDir}`);
-    }
-
+// Main function to convert ticket JSON to audio
+export async function convertTicketToAudio(ticketFilename, callStreamDir) {
     try {
-        logger.warn("Starting audio conversion process.");
-        finalAudioFilename = path.basename(ticketFilename, path.extname(ticketFilename));
-        logger.debug(`Final audio filename: ${finalAudioFilename}`);
-        logger.debug(`Ticket filename: ${ticketFilename}`);
-
-        // Extract messages from the JSON ticket file
-        const messages = await extractMessagesFromFile(ticketFilename);
-
-        // Process the messages: Generate audio for each message
-        await processTextArray(messages);
-
-        // Convert audio files to stereo format
+        const finalAudioFilename = path.basename(ticketFilename, path.extname(ticketFilename));
+        await processTextArray(await extractMessagesFromFile(ticketFilename));
         await convertAllToStereo();
-
-        // Remap audio channels (agent left, customer right)
         await remapStereoFiles();
-
-        // Concatenate all processed audio files
-        await concatenateAudioFiles();
-        return `${finalAudioFilename}.mp3`; // Return the final concatenated file name
+        logger.debug(`outputDir ${outputDir}`)
+        logger.debug(`callStreamDir ${callStreamDir}`)
+        logger.debug(`finalAudioFilename ${finalAudioFilename}`)
+        await concatenateAudioFiles(outputDir, callStreamDir, finalAudioFilename);
+        return path.join(callStreamDir, `${finalAudioFilename}.mp3`);
     } catch (error) {
-        logger.error(`Error during conversion: ${error.message}`);
-        throw error;
+        throw new Error(`Conversion failed: ${error.message}`);
     }
 }

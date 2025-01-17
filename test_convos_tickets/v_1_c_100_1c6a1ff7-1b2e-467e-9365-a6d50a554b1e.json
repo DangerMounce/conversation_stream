@@ -1,0 +1,138 @@
+[
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "1",
+        "message": "Hello. My name is John. How can I help you?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:09:10Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "2",
+        "message": "Hi John, I have a query regarding my auto insurance policy.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:10:10Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "3",
+        "message": "Sure, I'd be more than happy to help you. But before that, Let's run through security for your data protection.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:11:10Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "4",
+        "message": "Can you confirm your name?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:11:30Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "5",
+        "message": "Yes, my name is Jane Doe.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:11:50Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "6",
+        "message": "Can you confirm your email address?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:12:10Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "7",
+        "message": "Sure, my email address is j.doe@safeguardassurance.com.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:12:30Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "8",
+        "message": "Can you confirm your date of birth?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:12:50Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "9",
+        "message": "Yes, it's on the 17th of July, 1980.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:13:10Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "10",
+        "message": "Thank you for verifying, Jane. Now, can you explain your query?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:13:30Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "11",
+        "message": "Yes, I want to know if there have been any changes in my auto policy's terms and conditions.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:14:10Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "12",
+        "message": "Did you receive any communication from our side regarding any changes?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:14:30Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "13",
+        "message": "No, I haven't received any email. That's why I am asking.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:15:10Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "14",
+        "message": "I completely understand your concern, Jane. Let me check it for you.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:15:30Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "15",
+        "message": "I've checked your policy. There have been no changes in your auto policy's terms and conditions. So, let me recap, you were concerned about possible changes in your auto policy, but there have been no changes. Is there anything else you would like to know?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:16:10Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "16",
+        "message": "No, that was it. Thank you for your help.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:16:30Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "17",
+        "message": "I'm glad to be able to help, Jane. The pleasure was all mine in the conversation. I appreciate your time. Always happy to help, so let us know if there's anything else you need. Have a great day!",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-07T15:17:10Z"
+    }
+]

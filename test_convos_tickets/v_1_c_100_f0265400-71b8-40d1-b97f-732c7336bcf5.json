@@ -1,0 +1,170 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is Tom. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi Tom, I'm having trouble understanding my policy coverage, can you help?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Of course, I'd be happy to assist you with that. Let's run through security first.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:02:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:03:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Sure, my name is John Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:04:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:05:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Yes, it's johndoe@email.com",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:06:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:07:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "9",
+    "message": "It's 12th March 1985",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:08:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Thank you for verifying, John. Now, let's address your query. Can you explain what aspects of your policy are causing confusion?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:09:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I am mostly confused about the coverage of my auto insurance policy. Did I opt for collision coverage?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:10:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "12",
+    "message": "I see. Have there been any recent changes to your vehicle or driving status that may have prompted this question?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:11:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "13",
+    "message": "No, not really. Just wanted to make sure I'm adequately covered.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:12:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "14",
+    "message": "I completely understand your concern, John. Let me check the details of your auto insurance policy.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:13:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "I'm glad to be able to help you with this, John. You do indeed have collision coverage included in your policy. Would you like me to explain the benefits and limitations of this coverage?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:15:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "16",
+    "message": "Yes, that would be great. Thanks.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:16:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "17",
+    "message": "Perfect, let me recap before we continue. You contacted me with a query about your auto insurance policy, specifically your collision coverage. I have confirmed that you do indeed have collision coverage as part of your policy and am now going to explain the benefits and limitations of this coverage. Is that correct?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:17:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "18",
+    "message": "Yes, that's correct.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:18:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "19",
+    "message": "Thank you for your patience, John. Collision coverage helps pay to repair or replace your vehicle if it's in an accident with another vehicle or object, such as a fence or a tree. If you're leasing or financing your car, collision coverage is typically required by the lender. If your car is paid off, collision is an optional coverage on your car insurance policy. Do you have any other questions regarding your policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:20:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "20",
+    "message": "No, that's all. Thank you for your help, Tom.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:21:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "21",
+    "message": "The pleasure was all mine in the conversation, John. Always happy to help and clarify your doubts. I appreciate your time. Don't hesitate to let us know if there's anything else we can assist you with. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:22:00Z"
+  }
+]
