@@ -10,7 +10,7 @@
     {
         "speaker_email": "customer@sofanest.com",
         "response_id": "res_001",
-        "message": "Hi, I need to make a complaint about the delivery person who brought my sofa today. They were really unprofessional and left without even setting it up properly.",
+        "message": "Hi, I need to make a complaint about the delivery person who brought my sofa today. They were really unprofessional and left without even setting it up properly. It's all marked too. The deliverer just shrugged.",
         "speaker_is_customer": true,
         "channel": "Chat",
         "message_created_at": "2024-11-28T22:00:00Z"

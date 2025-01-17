@@ -221,7 +221,7 @@ export async function createCallTemplate(agentList, targetCall, key) {
 
     // Convert the ticket to an audio file
     const audioFilename = targetCall; // Returns the filename of the converted audio
-    const audioFilepath = path.resolve(callStreamDir, targetCall); // Ensure absolute path
+    const audioFilepath = path.resolve(targetCall); // Ensure absolute path
     // Verify the generated audio file exists
     // if (!fs.existsSync(audioFilepath)) {
     //     logger.error(`Generated audio file not found: ${audioFilepath}`);

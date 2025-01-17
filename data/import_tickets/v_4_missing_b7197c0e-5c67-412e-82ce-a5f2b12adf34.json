@@ -10,7 +10,7 @@
     {
         "speaker_email": "customer@sofanest.com",
         "response_id": "res_001",
-        "message": "This is unacceptable! My sofa was delivered today, but the cushions and one of the legs are missing. I paid good money for this!",
+        "message": "This is unacceptable! My sofa was delivered today, but the cushions and one of the legs are missing. Where is the cushions and the leg? I paid good money for this!",
         "speaker_is_customer": true,
         "channel": "Chat",
         "message_created_at": "2024-11-28T18:30:00Z"
