@@ -2,7 +2,7 @@
     {
         "speaker_email": "customer@sofanest.com",
         "response_id": "res_001",
-        "message": "Hi, I just received my sofa, and it’s the wrong color and fabric! I ordered gray fabric, but they sent me beige leather. This is really frustrating.",
+        "message": "Hi, I just received my sofa, and it's the wrong shade! I ordered gray fabric, but they sent me beige leather. This is really frustrating.",
         "speaker_is_customer": true,
         "channel": "Chat",
         "message_created_at": "2024-11-28T19:30:00Z"
