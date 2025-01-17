@@ -1,0 +1,114 @@
+[
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_001",
+        "message": "Hi, I’d like to know if I can add another traveler to my booking for Spain next month.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:00:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_002",
+        "message": "Hi, welcome to VoyageQuest! My name is Daniel, and I’ll be happy to help you with this today. To get started, let me quickly run through security. Could you confirm your full name, date of birth, and booking reference number, please?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:00:30Z"
+    },
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_003",
+        "message": "Sure! My name is Sarah Clarke, my DOB is 10th April 1992, and my booking reference is VQ45678.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:01:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_004",
+        "message": "Thank you.  Could you also confirm your email address?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:01:30Z"
+    },
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_003",
+        "message": "It's sara.clarke@customer.com.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:01:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_004",
+        "message": "Thank you, Sarah. That’s all correct, and security is now complete! I completely understand the need to include another traveler. Let me check the availability and update your booking. Could you please provide the full name and date of birth of the additional traveler?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:01:30Z"
+    },
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_005a",
+        "message": "Yes, it’s James Clarke, and his DOB is 5th May 1990.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:02:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_006",
+        "message": "Thank you, Sarah. Let me repeat that back to you to confirm: you’d like to add James Clarke, born on May 5th, 1990, to your current booking for Spain. Does that sound correct?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:02:30Z"
+    },
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_007",
+        "message": "Yes, that’s right!",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:03:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_008",
+        "message": "Perfect. I’ve checked the availability, and we can add James to your booking for an additional £250, which includes flights and accommodation. Does this work for you?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:03:30Z"
+    },
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_009",
+        "message": "Yes, that’s fine. Let’s go ahead and add him.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:04:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_010",
+        "message": "Thank you, Sarah. I’ve updated your booking to include James Clarke, and a confirmation email will be sent to you shortly. Is there anything else I can assist you with today?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:04:30Z"
+    },
+    {
+        "speaker_email": "customer@voyagequest.com",
+        "response_id": "res_011",
+        "message": "No, that’s everything. Thank you so much for your help!",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:05:00Z"
+    },
+    {
+        "speaker_email": "agent@voyagequest.com",
+        "response_id": "res_012",
+        "message": "You’re very welcome, Sarah. I’m glad I could assist you today. If you have any more questions, don’t hesitate to contact us. Have a great day, and take care!",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-06-17T11:05:30Z"
+    }
+]

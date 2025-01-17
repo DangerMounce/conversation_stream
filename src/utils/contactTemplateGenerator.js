@@ -255,7 +255,7 @@ export async function createCallTemplate(agentList, targetCall, key) {
         callTemplate.data.metadata.audio_length_seconds = handlingTimeInSeconds
         logger.info(`Handling time set to ${handlingTimeInSeconds} seconds.`);
     } catch (audioError) {
-        logger.error(`Error calculating audio length: ${audioError.message}`);
+        callTemplate.data.handling_time = 156
         throw audioError;
     }
 

@@ -1,0 +1,91 @@
+[
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_001",
+      "message": "Hi, I’m upset that my sofa hasn’t been delivered yet. It was supposed to arrive two days ago.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:00:00Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_002",
+      "message": "Good afternoon, you’re through to SofaNest. My name is Alex, and I’m here to help. I’m sorry to hear about the delay in your delivery. Let me assist you in finding out what’s happened. Before I proceed, could you confirm your name, order reference number, and the delivery address for security purposes?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:00:30Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_004",
+      "message": "Sure, my name is Sarah Jones, my order reference is SN112233, and the delivery address is 456 Pine Street, Maplewood.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:01:30Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_005",
+      "message": "Thank you for verifying, Sarah. That’s security complete. Let me check on your order status right away.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:01:50Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_006",
+      "message": "It appears your delivery is delayed due to unforeseen logistical challenges with our courier partner. I sincerely apologize for the inconvenience this has caused. Unfortunately, I don’t have a confirmed update on the new delivery time yet.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:02:20Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_007",
+      "message": "This is really frustrating! I need to know when it will arrive—I have guests coming next week.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:02:50Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_008",
+      "message": "I completely understand how frustrating this must be for you, Sarah. I truly wish I had a confirmed update to share. I’ve flagged this issue with our delivery team and requested urgent follow-up. Once they provide me with more information, I’ll notify you immediately. Is there a preferred way I can reach you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:03:20Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_009",
+      "message": "Please email me at sarah.jones@example.com. I expect to hear back soon.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:03:50Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_010",
+      "message": "Thank you for providing your email, Sarah. I’ll keep a close eye on this and ensure you receive updates as soon as I have them. I truly appreciate your patience during this time. If there’s anything else I can assist with while we wait for an update, please let me know.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:04:20Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_011",
+      "message": "No, just let me know when you have news. Thanks.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:04:50Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_012",
+      "message": "Understood, Sarah. Thank you for your time and understanding. I’ll be in touch as soon as I have an update. Thank you for choosing SofaNest, and I hope we can resolve this quickly for you. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-15T16:05:20Z"
+    }
+  ]
+  

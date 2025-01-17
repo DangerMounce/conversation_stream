@@ -156,6 +156,7 @@ async function remapStereoFiles() {
 
 // Function to concatenate all audio files sequentially
 async function concatenateAudioFiles(outputDir, callStreamDir, finalAudioFilename) {
+    logger.debug(outputDir,callStreamDir, finalAudioFilename)
     const audioFiles = fs
         .readdirSync(outputDir)
         .filter(file => file.endsWith('_remapped.mp3'))
@@ -204,12 +205,15 @@ async function concatenateAudioFiles(outputDir, callStreamDir, finalAudioFilenam
 }
 
 // Main function to convert ticket JSON to audio
-export async function convertTicketToAudio(ticketFilename) {
+export async function convertTicketToAudio(ticketFilename, callStreamDir) {
     try {
         const finalAudioFilename = path.basename(ticketFilename, path.extname(ticketFilename));
         await processTextArray(await extractMessagesFromFile(ticketFilename));
         await convertAllToStereo();
         await remapStereoFiles();
+        logger.debug(`outputDir ${outputDir}`)
+        logger.debug(`callStreamDir ${callStreamDir}`)
+        logger.debug(`finalAudioFilename ${finalAudioFilename}`)
         await concatenateAudioFiles(outputDir, callStreamDir, finalAudioFilename);
         return path.join(callStreamDir, `${finalAudioFilename}.mp3`);
     } catch (error) {
