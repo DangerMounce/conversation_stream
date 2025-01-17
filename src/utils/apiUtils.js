@@ -109,7 +109,7 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
         // Process the response and log contact reference
         if (result.message) {
             logger.http(`${contactTemplate.data.reference} - ${result.message}`);
-            await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name);
+            await updateReferenceLog(contactTemplate.data.reference, targetedJSON, name, contactTemplate.data.channel);
         } else if (result.errors) {
             logger.error(`${contactTemplate.data.reference} - ${result.errors}`);
         }
@@ -119,7 +119,7 @@ async function sendContactToEvaluagent(contactTemplate, apiKey, name) {
 }
 
 // Helper function to update the contact reference log
-async function updateReferenceLog(reference, filename, name) {
+async function updateReferenceLog(reference, filename, name, channel) {
     const currentUser = getUser()
     const payload = {
         "timestamp": getDate(),
@@ -127,7 +127,9 @@ async function updateReferenceLog(reference, filename, name) {
         "contract_name": name,
         "filename": filename,
         "contact_reference": reference,
-        "outcome": null
+        "outcome": null,
+        "contact_type": channel
+        
     }
     
     try {
@@ -136,7 +138,8 @@ async function updateReferenceLog(reference, filename, name) {
         logger.warn(`Error updating export log: ${error.message}`);
     }
     // Optionally call a quality check function
-    await checkQualityOfStream(); 
+    // streamQA
+    //await checkQualityOfStream(); 
 
 }
 
