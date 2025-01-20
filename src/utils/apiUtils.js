@@ -139,7 +139,7 @@ async function updateReferenceLog(reference, filename, name, channel) {
     }
     // Optionally call a quality check function
     // streamQA
-    //await checkQualityOfStream(); 
+    await checkQualityOfStream(); 
 
 }
 
