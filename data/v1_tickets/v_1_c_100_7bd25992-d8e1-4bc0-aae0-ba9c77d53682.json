@@ -1,0 +1,138 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R1",
+    "message": "Hello. My name is John. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:30:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R2",
+    "message": "Hi John. I have a question regarding my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:31:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R3",
+    "message": "Let's run through security before we proceed. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:32:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R4",
+    "message": "Sure, my name is Jane Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:33:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R5",
+    "message": "Thank you Jane. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:34:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R6",
+    "message": "Yes, my email is janedoe@example.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:35:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R7",
+    "message": "Great. Lastly, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:36:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R8",
+    "message": "Sure, it's March 12, 1985.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:37:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R9",
+    "message": "Thank you for verifying, Jane. Now, can you explain what your question is about your auto insurance policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:38:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R10",
+    "message": "Yes, I noticed an increase in my premium this month. Did you change the pricing?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:39:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R11",
+    "message": "I completely understand your concern. Let me check your policy details. Have there been any changes in your policy or circumstances recently?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:40:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R12",
+    "message": "No, nothing has changed on my end.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:41:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R13",
+    "message": "Thank you for your patience, Jane. The increase in your premium has been due to an overall increase in our rates. However, would you be interested in reviewing your policy options to possibly make some adjustments and save on your premium?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:42:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R14",
+    "message": "Yes, that would be helpful.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:43:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R15",
+    "message": "I'm glad to be able to help. Let me recap: Your premium has increased due to a general rate hike, but I'll assist you in reviewing your policy to identify potential savings. I'll send you an email with the details and next steps.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:44:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "R16",
+    "message": "Thank you for your assistance, John.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:45:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "R17",
+    "message": "The pleasure was all mine in the conversation, Jane. Always happy to help. I appreciate your time, and let us know if there's anything else we can assist you with. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:46:00Z"
+  }
+]

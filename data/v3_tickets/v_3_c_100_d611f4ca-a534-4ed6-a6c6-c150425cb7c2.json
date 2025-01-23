@@ -10,7 +10,7 @@
     {
       "speaker_email": "agent@playsure.com",
       "response_id": "res_002",
-      "message": "Hello, and welcome to PlaySure Gaming! My name is Sarah, and I’m here to help. Before we proceed, let’s quickly run through security. Could you please confirm your full name, email address, and the amount you attempted to withdraw?",
+      "message": "Hello, and welcome to PlaySure Gaming! My name is Sarah, and I’m here to help. I completely understand your concern. Before we proceed, let’s quickly run through security. Could you please confirm your full name, email address, and the amount you attempted to withdraw?",
       "speaker_is_customer": false,
       "channel": "Chat",
       "message_created_at": "2024-12-17T12:00:30Z"
@@ -74,7 +74,7 @@
     {
       "speaker_email": "agent@playsure.com",
       "response_id": "res_010",
-      "message": "You’re very welcome, Michael! It’s been a pleasure assisting you today. If you need any further support, don’t hesitate to contact us. Have a great day, and take care!",
+      "message": "You’re very welcome, Michael! I'm glad I was able to help. It’s been a pleasure assisting you today. If you need any further support, don’t hesitate to contact us. Have a great day, and take care!",
       "speaker_is_customer": false,
       "channel": "Chat",
       "message_created_at": "2024-12-17T12:05:00Z"

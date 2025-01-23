@@ -1,0 +1,154 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res1",
+    "message": "Hello. My name is Mike. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:15:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res2",
+    "message": "Hi Mike, I'm having some issues with my auto insurance policy. I need some help understanding it.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:16:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res3",
+    "message": "Let's run through security",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:17:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res4",
+    "message": "Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:18:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res5",
+    "message": "Sure, my name is John Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:19:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res6",
+    "message": "Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:20:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res7",
+    "message": "Yes, it's johndoe@example.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:21:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res8",
+    "message": "Can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:22:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res9",
+    "message": "My birth date is 25th of June, 1985",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:23:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res10",
+    "message": "Thank you for verifying",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:24:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res11",
+    "message": "I see you have concerns about your auto insurance policy. Can you explain what exactly you are having difficulty understanding?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:25:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res12",
+    "message": "Well, I'm confused about the claim process. I'm not sure what documents I need and how to go about it.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:26:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res13",
+    "message": "I completely understand. It's essential to know this process. Have there been any accidents or incidents that prompted this question?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:27:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res14",
+    "message": "No, not at all. I just want to be prepared and know what to do in case of any unfortunate incident.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:28:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res15",
+    "message": "That's really a proactive approach, John. I'm glad to be able to help you with this. Let me recap: You need information about the claim process for your auto insurance, including the documentation required. Is that correct?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:29:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res16",
+    "message": "Yes, that's right.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:30:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res17",
+    "message": "I'll provide you with the necessary information right away. Did you know that you can also find this information in the 'Claims' section of our website?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:31:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "res18",
+    "message": "No, I didn't. I'll check that out. Thanks for the help, Mike!",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:32:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "res19",
+    "message": "The pleasure was all mine in the conversation, John. Always happy to help. Let us know if there's anything else. I appreciate your time and have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2023-02-04T09:33:00Z"
+  }
+]
