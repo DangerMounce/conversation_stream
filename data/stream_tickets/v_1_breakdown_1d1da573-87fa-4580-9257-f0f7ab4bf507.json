@@ -1,0 +1,171 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg001",
+      "message": "Hello, my name is Jessica. How can I help you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg002",
+      "message": "Hi Jessica, I'm thinking about adding breakdown coverage to my car insurance. Can you tell me what options are available?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg003",
+      "message": "I'd be happy to help with that. Before we continue, can you confirm your full name for security purposes?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg004",
+      "message": "Sure, it's Daniel Evans.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg005",
+      "message": "Thanks, Daniel. Can you confirm your email address?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:02:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg006",
+      "message": "daniel.evans@email.com",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg007",
+      "message": "Can you confirm your postal code?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg008",
+      "message": "It's AB12 3XY.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg009",
+      "message": "Thank you for verifying your details. Regarding breakdown coverage, we offer three options: roadside assistance, nationwide recovery, and home start. Would you like more details on these?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:04:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg010",
+      "message": "Yes, what does roadside assistance cover?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:05:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg011",
+      "message": "Roadside assistance provides help if your car breaks down more than a quarter-mile from your home. A recovery team will attempt to fix your vehicle on the spot or tow it to a nearby garage if necessary.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:05:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg012",
+      "message": "And what if I break down at home?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:06:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg013",
+      "message": "Our home start option covers breakdowns at your registered home address, providing assistance to get your car running or arrange for it to be taken to a garage.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:06:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg014",
+      "message": "Got it. Does breakdown coverage include a courtesy car?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:07:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg015",
+      "message": "Yes, with our nationwide recovery plan, you'll receive a courtesy car if your vehicle cannot be repaired on the same day. Would you like to include this option?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:07:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg016",
+      "message": "Yes, that sounds useful. How much would that cost?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:08:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg017",
+      "message": "Adding roadside assistance with nationwide recovery and courtesy car will cost an additional $80 per year. Would you like to proceed with this option?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:08:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg018",
+      "message": "Yes, let's add it to my policy.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:09:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg019",
+      "message": "Great! I've added breakdown coverage to your policy, and your updated documents will be sent to your email shortly. Is there anything else I can assist you with?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:09:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg020",
+      "message": "No, that's all for now. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:10:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg021",
+      "message": "You're very welcome, Daniel. If you need any further assistance, feel free to reach out. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-19T10:10:30Z"
+    }
+  ]
+  

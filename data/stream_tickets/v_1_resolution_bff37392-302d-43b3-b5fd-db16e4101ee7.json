@@ -1,0 +1,90 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_001",
+      "message": "Good afternoon, this is Sarah from SafeGuard Assurance. I’m reaching out regarding the complaint you raised about your auto insurance claim. Is this a good time to speak?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_002",
+      "message": "I guess so. But honestly, I’m not expecting much. You haven’t been helpful so far.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:00:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_003",
+      "message": "I understand how you’re feeling, and I’m deeply sorry for the frustration caused. I’ve reviewed your file thoroughly and have a resolution ready for you. If I may, let’s go over the details together.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:01:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_004",
+      "message": "Alright. Let’s hear it.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:01:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_005",
+      "message": "Thank you. After reviewing your claim, we identified a processing error that caused the delay. I’m happy to confirm that your claim has now been approved, and the payment of $3,500 has been issued to your account. You should see it within 2-3 business days.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:02:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_006",
+      "message": "Wait, it’s been approved? And the payment is on its way? That’s a relief to hear, finally.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:02:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_007",
+      "message": "Yes, that’s correct. I’ve also added a note to your account to ensure this doesn’t happen again. Additionally, as an apology for the inconvenience, we’re offering a $50 account credit to thank you for your patience.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:03:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_008",
+      "message": "Wow, I didn’t expect that. I really appreciate you fixing this and the credit. This changes things—thank you for actually taking the time to resolve this.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:03:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_009",
+      "message": "You’re very welcome. I’m glad I could resolve this for you, and I truly appreciate your understanding. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:04:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_010",
+      "message": "No, you’ve covered everything. I feel much better now. Thank you again, Sarah.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:04:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_011",
+      "message": "It’s been my pleasure to assist you, James. Thank you for allowing me to address your concerns. If you ever need help in the future, don’t hesitate to reach out. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:05:00Z"
+    }
+]

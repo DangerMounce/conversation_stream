@@ -1,0 +1,211 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg001",
+      "message": "Good morning, my name is Jessica. How can I help you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg002",
+      "message": "Hi Jessica, I’m looking to buy car insurance but I’m unsure about the different types of coverage. Can you explain the differences?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg003",
+      "message": "I'd be happy to help. I just need to take you through security first. Can you confirm your full name?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg004",
+      "message": "Sure, it’s Michael Adams.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg005",
+      "message": "Thank you, Michael. Can you confirm your email address?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:02:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg006",
+      "message": "michael.adams@email.com",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:03:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg007",
+      "message": "Can you confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg008",
+      "message": "It's April 5, 1986.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg009",
+      "message": "Thank you for verifying. We offer three main types of car insurance coverage: third-party, third-party fire and theft, and fully comprehensive. Would you like an overview of each?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:04:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg010",
+      "message": "Yes, please explain the differences.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:05:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg011",
+      "message": "Sure! Third-party insurance is the most basic coverage. It covers damages to other vehicles, property, and injuries to others, but it doesn’t cover your own vehicle.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:05:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg012",
+      "message": "Okay, what about third-party fire and theft?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:06:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg013",
+      "message": "Third-party fire and theft covers the same as third-party but also protects your vehicle in case of fire or theft.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:06:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg014",
+      "message": "Got it. And what does fully comprehensive cover?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:07:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg015",
+      "message": "Fully comprehensive covers everything included in third-party fire and theft, plus damage to your own vehicle, even if you're at fault. It may also include benefits like personal accident cover and breakdown assistance.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:07:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg016",
+      "message": "Thanks for the info! Is comprehensive cover usually more expensive?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:08:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg017",
+      "message": "Not always! Comprehensive coverage can sometimes offer better value, as it provides more protection. Factors such as your driving history and vehicle type will affect the cost. Would you like me to provide a quote?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:08:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg018",
+      "message": "Yes, that would be helpful.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:09:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg019",
+      "message": "Great! I'll need a few more details to generate an accurate quote for you. Shall we continue?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:09:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg020",
+      "message": "Yes, let's proceed.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:10:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg021",
+      "message": "Excellent. I’ll start with your vehicle details. What is the make and model of your car?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-14T09:10:30Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "msg022",
+        "message": "Thanks for that. Based on your preferences, I’ll generate a quote for comprehensive coverage and send it to your email shortly. Does that work for you?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-12-14T09:11:00Z"
+      },
+      {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "msg023",
+        "message": "Yes, that would be great. Thanks!",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-12-14T09:11:30Z"
+      },
+      {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "msg024",
+        "message": "You're very welcome, Michael. Is there anything else I can assist you with today?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-12-14T09:12:00Z"
+      },
+      {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "msg025",
+        "message": "No, that's everything for now. Thanks again for your help!",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2024-12-14T09:12:30Z"
+      },
+      {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "msg026",
+        "message": "The pleasure was all mine, Michael. If you have any more questions, feel free to reach out. Have a great day!",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2024-12-14T09:13:00Z"
+      }
+    ]
+  

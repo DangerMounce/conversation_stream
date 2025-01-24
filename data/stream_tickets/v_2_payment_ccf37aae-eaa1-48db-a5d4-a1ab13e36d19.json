@@ -1,0 +1,131 @@
+[
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "1",
+      "message": "Hello. My name is Chris. Thank you for reaching out to VoyageQuest. How can I assist you with your travel plans today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "2",
+      "message": "Hi, I'm trying to book a trip and use a promo voucher, but the voucher code doesn't work. Can you help?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "3",
+      "message": "I'm sorry to hear that, John. Let's just run through security so I can access your booking and assist you. Can you confirm your name? Can you also confirm your address? Finally, please confirm your reference number.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:02:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "4",
+      "message": "Sure, my name is John Smith, my address is 124 Main Street, and my account number is 123456.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "5",
+      "message": "Thank you, John. That's all correct! Could you please provide me with the voucher code you're trying to use so I can check its status?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "6",
+      "message": "Sure, the code is TRAVEL50 for $50 off, but I keep getting an error saying it's invalid.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "7",
+      "message": "Thanks for that, John. Let me check the voucher details. Please bear with me a moment.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:05:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "8",
+      "message": "I've checked the code, and it appears that TRAVEL50 is valid for bookings over $500 and must be used before January 31st. Your booking total is currently $450, which is below the minimum requirement. Would you like to add an extra service to meet the threshold?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:06:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "9",
+      "message": "Oh, I didn’t realize that. What kind of extra services could I add?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "10",
+      "message": "You could add travel insurance, airport transfers, or an excursion to reach the minimum. Would you like me to go through some options with you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:50Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "11",
+      "message": "Yes, please. If I add travel insurance, would that work?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "12",
+      "message": "Yes, John! Adding travel insurance for $75 would bring your total to $525, making the voucher code valid. Would you like me to proceed with the changes?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:09:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "13",
+      "message": "Yes, please do that. Thanks for helping me figure it out!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:09:50Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "14",
+      "message": "You're very welcome, John! I've applied the insurance and the discount code. Your new total is $475, and you'll receive a confirmation email shortly. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:10:30Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "15",
+      "message": "No, that’s all. Thanks again, Chris!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:11:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "16",
+      "message": "You're very welcome! Have a great trip, and feel free to reach out if you need anything else. Goodbye!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:11:30Z"
+    }
+  ]
+  

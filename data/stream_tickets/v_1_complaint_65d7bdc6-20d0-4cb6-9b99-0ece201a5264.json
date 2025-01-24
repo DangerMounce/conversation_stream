@@ -1,0 +1,90 @@
+[
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_001",
+      "message": "I’m tired of waiting for a response about my auto insurance refund. This has been going on for over a month!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:00:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_002",
+      "message": "Well, I can’t speed things up if there’s a backlog. What exactly do you want me to do about it now?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:00:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_003",
+      "message": "Excuse me? I expect you to do your job and provide some answers. This is unacceptable.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_004",
+      "message": "Alright, let me pull up your account, but I can’t promise anything will change. Can you confirm your name, policy number, and date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_005",
+      "message": "Fine. My name is John Smith, policy number 654321, and my date of birth is May 10, 1980. But you should already have this information.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_006",
+      "message": "Well, I don’t memorize customer details. Give me a moment to check.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:02:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_007",
+      "message": "Looks like your refund is still in process. There’s nothing more I can do until the finance team clears it. You’ll just have to wait.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_008",
+      "message": "This is ridiculous. I’ve been more than patient, and now you’re telling me to wait even longer? I want to make a complaint about this entire process.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_009",
+      "message": "Sure, you can file a complaint. But like I said, it won’t change the processing time. Is there anything else?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:04:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_010",
+      "message": "No, I’m done wasting my time with this company. Expect to hear from me again soon, but not in a good way.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:05:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_011",
+      "message": "Alright then. Goodbye.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T17:05:30Z"
+    }
+]
