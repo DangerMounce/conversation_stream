@@ -1,0 +1,146 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is Jane. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi Jane, I have a question about my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:00:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:01:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "4",
+    "message": "My name is John Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:01:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Thanks John. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:02:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Sure, it's johndoe@email.com",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:02:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Perfect John. Finally, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:03:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Yes, it's April 1, 1980.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:03:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "9",
+    "message": "Thank you for verifying, John. Now, can you explain what your question is about your auto insurance policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:04:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "10",
+    "message": "I'm not sure if my policy covers damage from a flood. Could you check that for me?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:04:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I completely understand your concern, John. Let me check that for you. Have there been any recent incidents that prompted this question?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:05:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "No, but I live in a flood-prone area and I just want to be sure.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:05:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "I see, John. I'm glad to be able to help. Let me recap: You're inquiring about whether your auto insurance policy covers flood damage, correct?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:06:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "14",
+    "message": "Yes, that's correct.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:06:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "Thank you for your patience while I checked your policy. It seems that your current policy does not include flood coverage. However, you can add it. Would you like to do that?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:07:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "16",
+    "message": "Yes, please. I would like to add flood coverage to my policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:07:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "17",
+    "message": "Great, John. I have initiated the process to add flood coverage to your policy. You will receive an email with the details shortly. The pleasure was all mine in the conversation. I appreciate your time. Always happy to help, John. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:08:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "18",
+    "message": "Thank you, Jane. I appreciate your help. Have a great day!",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T08:08:30Z"
+  }
+]

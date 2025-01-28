@@ -1,0 +1,154 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is Sam. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi Sam, I have some queries regarding my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:01:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Sure, my name is John Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:02:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Thank you, John. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:02:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "6",
+    "message": "My email is johndoe@email.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:03:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Great, John. Lastly, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:03:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "8",
+    "message": "It's 12th January 1980.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:04:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "9",
+    "message": "Thank you for verifying. Now, can you explain your query about your auto insurance policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:04:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Yes, I recently had an accident and I would like to know the claim process.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:05:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I completely understand your situation. Firstly, sorry to hear about your accident. Now, have there been any severe damages to your vehicle?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:05:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "Yes, the front of the car is badly damaged.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:06:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "I see. Did you report the accident to the police and get a copy of the accident report?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:06:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "14",
+    "message": "Yes, I have done that.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:07:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "Great! That's an important step. Would you be able to provide images of the damage and the accident report? This will help us process your claim faster.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:07:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "16",
+    "message": "Sure, I can do that. Where should I send them?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:08:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "17",
+    "message": "You can upload them directly in your online account under the 'Claims' section. Let me recap: you will need to upload the accident report and images of the damage. I'm glad to be able to help you with this process.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:08:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "18",
+    "message": "Okay, I will do that. Thank you for your help.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:09:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "19",
+    "message": "The pleasure was all mine in the conversation. I appreciate your time and patience. Always happy to help, let us know if there's anything else. Have a great day, John.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:09:30Z"
+  }
+]

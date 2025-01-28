@@ -1,0 +1,90 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_001",
+      "message": "Good afternoon, this is Emily from SafeGuard Assurance. I’m reaching out regarding the home insurance claim you reported an issue with. Is this a good time to speak?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_002",
+      "message": "Well, I suppose I have to make time since no one else seems to care about resolving this properly.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:00:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_003",
+      "message": "I understand your frustration, and I’m truly sorry for the delay. I’ve reviewed your case, and I have a resolution ready to discuss with you now.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:01:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_004",
+      "message": "I’ll believe it when I see it. Go ahead, what’s the solution this time?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:01:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_005",
+      "message": "After reviewing your file, I can confirm that your claim for the roof repairs has been approved. A payment of $4,200 has been issued and should appear in your account within 2-3 business days.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:02:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_006",
+      "message": "Finally. But honestly, this should have been done weeks ago. You’ve caused so much unnecessary stress.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:02:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_007",
+      "message": "I completely understand how the delay could have caused stress, and I sincerely apologize for the inconvenience. To make up for this, we’re covering the next month of your home insurance premium as a goodwill gesture.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:03:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_008",
+      "message": "A waived premium doesn’t undo the frustration I’ve been through. This entire process has been exhausting, and it’s hard to trust you’ll get anything right going forward.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:03:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_009",
+      "message": "I’m truly sorry to hear that you feel this way. I’ll ensure a follow-up is conducted to confirm the payment has been received and that there are no further issues. We value your feedback and will work to improve.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:04:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_010",
+      "message": "I hope so, but I’m not holding my breath. This has been a terrible experience overall.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:04:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_011",
+      "message": "I understand your concerns, and I deeply regret the inconvenience caused. Thank you for your time today, and please don’t hesitate to reach out if you have any further questions or need additional assistance.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:05:00Z"
+    }
+]

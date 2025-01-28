@@ -1,0 +1,114 @@
+[
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_001",
+      "message": "Hi, I’ve been trying many times but couldn’t get through. I need help with a claim I filed last month.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:30:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_002",
+      "message": "Hello, my name is Alex. I’m so sorry to hear that you had trouble reaching us, and I really appreciate your persistence. Let me help you with your claim right away.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:30:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_003",
+      "message": "Thank you. I’ve been waiting for updates about my home insurance claim for water damage, but I haven’t heard back.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:31:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_004",
+      "message": "I understand how frustrating that must be, and I’m truly sorry for any inconvenience caused. Let’s resolve this for you. Before we proceed, can we complete security? Could you confirm your full name, date of birth, and claim reference number?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:31:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_005",
+      "message": "Sure. My name is Brian Jones, my date of birth is 14/02/1982, and my claim reference number is 31001-2312313.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:32:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_006",
+      "message": "Thank you for completing security. I see your claim here—it was filed on [Date Filed] for water damage to your property. Let me review the status and provide you with an update. Could you hold for a moment while I check?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:32:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_007",
+      "message": "Yes, I can wait. Thank you.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:33:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_008",
+      "message": "Thank you for your patience. After reviewing your claim, I can see it’s currently under assessment by our claims team, but there was a delay due to missing documents. I’ll email you a list of what’s needed to move things forward. Would you like me to go over it now as well?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:33:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_009",
+      "message": "Yes, please. I want to make sure I get everything sorted quickly.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:34:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_010",
+      "message": "Certainly. To proceed, we need a detailed estimate of the repair costs from a certified contractor and photos of the affected area. If you could provide those, we’ll be able to finalize the assessment. Does that work for you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:34:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_011",
+      "message": "Yes, I’ll send those as soon as possible. Thank you for explaining.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:35:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_012",
+      "message": "You’re very welcome. Once we receive the documents, I’ll personally follow up to ensure your claim progresses smoothly. I’ll also send you my contact details for any further questions. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:35:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_013",
+      "message": "No, that’s all. Thanks again for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:36:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_014",
+      "message": "It’s been a pleasure assisting you. Don’t hesitate to reach out if you need anything further. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T14:36:30Z"
+    }
+  ]

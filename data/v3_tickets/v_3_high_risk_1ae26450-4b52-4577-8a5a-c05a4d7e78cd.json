@@ -1,0 +1,91 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_001",
+      "message": "Hello, my name is Alex, how can I help you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_002",
+      "message": "This is the second time I’m contacting you. My withdrawal is too slow, and I’m getting really frustrated! Where's my money?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:00:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_003",
+      "message": "I completely understand how frustrating delays can be, and I sincerely apologize for any inconvenience caused. Let’s check the status of your withdrawal now.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:01:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_004",
+      "message": "Before we proceed, I need to take you through security. Can you confirm your date of birth, registered email address, and postal code?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:01:20Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_005",
+      "message": "Sure, my date of birth is 12/05/1985, email is user@example.com, and postal code is 12345.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:02:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_006",
+      "message": "Thank you for verifying. Let me check your withdrawal details.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_007",
+      "message": "Just to confirm, your withdrawal of $500 is currently being processed and should be completed within the next 24 hours. I sincerely apologize for the delay.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:03:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_008",
+      "message": "It’s taking way too long. I needed that money sooner.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:03:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_009",
+      "message": "I completely understand, and I truly apologize for any inconvenience. As a possible resolution, I’ll escalate this to our payments team to see if we can speed it up for you.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:04:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_010",
+      "message": "Alright, I hope you can sort this out quickly.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_011",
+      "message": "We’ll do our best to resolve this promptly. Thank you for your patience, and feel free to reach out if you need any further assistance.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:05:00Z"
+    }
+  ]
+  

@@ -1,0 +1,146 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg1",
+    "message": "Hello. My name is Jane. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg2",
+    "message": "Hi Jane. I have a query regarding my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:02:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg4",
+    "message": "Yes, my name is John Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:03:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg5",
+    "message": "Thank you, John. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:04:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg6",
+    "message": "Sure, it's johndoe@safeguardassurance.com",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:05:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg7",
+    "message": "Perfect, and finally, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:06:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg8",
+    "message": "My date of birth is 5th May 1980.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:07:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg9",
+    "message": "Thank you for verifying, John. So, you have a query about your auto insurance policy. Can you explain what exactly you'd like to know?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:08:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg10",
+    "message": "Yes, I recently had an accident and I am not sure how to initiate the claim process.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:09:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg11",
+    "message": "I'm sorry to hear about your accident, John. I completely understand this can be a confusing time. Have there been any injuries or significant damage to your car?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:10:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg12",
+    "message": "No injuries, thankfully. But there is significant damage to the car.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:11:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg13",
+    "message": "Glad to hear that no one was injured. Would you be able to provide some pictures? This would aid in the process.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:12:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg14",
+    "message": "Yes, I can provide the pictures.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:13:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg15",
+    "message": "Great, John. So, let me recap our conversation. Your auto insurance query is regarding how to initiate the claim process after a recent accident. There were no injuries but there has been significant damage to your car and you can provide pictures. Did I get everything right?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:14:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "msg16",
+    "message": "Yes, that's correct.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:15:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg17",
+    "message": "Excellent, John. I'm glad to be able to help. I'll guide you through the claim process and let you know the next steps.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:16:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "msg18",
+    "message": "John, I appreciate your time and thank you for your patience. The pleasure was all mine in the conversation. Always happy to help. Let us know if there's anything else we can assist you with. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-04T09:17:00Z"
+  }
+]

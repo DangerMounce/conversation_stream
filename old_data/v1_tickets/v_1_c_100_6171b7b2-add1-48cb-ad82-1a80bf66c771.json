@@ -1,0 +1,138 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is Alex. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi Alex. I have a question about my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:01:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Sure, my name is John Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:02:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Thank you, John. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:02:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Yes, it's johndoe@example.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:03:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Great, and finally, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:03:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Sure, it's April 10, 1985.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:04:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "9",
+    "message": "Thank you for verifying. Now, what question do you have about your auto insurance policy? Have there been any changes or incidents?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:04:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Well, I just bought a new car and I'm not sure how to add it to my policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:05:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I completely understand. Did you purchase the car recently or would you be adding it at a later date?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:05:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "I purchased it recently and I want to add it immediately.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:06:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "That's great, John. Can you explain the make, model, and year of your new car?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:06:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "14",
+    "message": "It's a 2022 Tesla Model 3.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:07:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "That's a great car, John. So let me recap: you want to add your new 2022 Tesla Model 3 to your current auto insurance policy. I'm glad to be able to help with that. I will proceed with the updates and will let you know once it's done. Thank you for your patience.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:07:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "16",
+    "message": "That sounds perfect. Thank you for your help, Alex.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:08:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "17",
+    "message": "The pleasure was all mine in the conversation, John. Always happy to help. If there's anything else you need, please let us know. I appreciate your time and hope you have a great day.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-03-01T14:08:30Z"
+  }
+]

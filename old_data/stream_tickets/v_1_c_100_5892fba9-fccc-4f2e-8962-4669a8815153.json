@@ -1,0 +1,162 @@
+[
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R1",
+        "message": "Hello. My name is John. How can I help you?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:00:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R2",
+        "message": "Hi John, I'm having some issues with my auto insurance claim.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:01:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R3",
+        "message": "Let's run through security. Can you confirm your name?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:02:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R4",
+        "message": "Sure, my name is Emma Watson.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:03:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R5",
+        "message": "Nice to meet you, Emma. Can you confirm your email address?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:04:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R6",
+        "message": "Yes, it's emma.watson@example.com",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:05:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R7",
+        "message": "Thank you, Emma. Can you confirm your date of birth?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:06:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R8",
+        "message": "I was born on April 15, 1980.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:07:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R9",
+        "message": "Thank you for verifying, Emma. Now, can you explain what issues you're having with your auto insurance claim?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:08:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R10",
+        "message": "I submitted a claim last week for a minor accident, but I have not received any updates yet.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:09:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R11",
+        "message": "I completely understand your concern, Emma. Did you receive any confirmation email when you initially submitted the claim?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:10:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R12",
+        "message": "Yes, I did receive a confirmation email.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:11:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R13",
+        "message": "That's good. Have there been any changes in your situation since you submitted the claim?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:12:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R14",
+        "message": "No, there haven't been any changes.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:13:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R15",
+        "message": "Alright, let me recap before I look into this: You submitted a claim for a minor accident last week, received a confirmation email but haven't heard anything since. Is that correct?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:14:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R16",
+        "message": "Yes, that's correct.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:15:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R17",
+        "message": "Thank you for your patience, Emma. I'll check on your claim status right now.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:16:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R18",
+        "message": "I've found your claim, Emma. It's still in process and should be finalized within the next 48 hours. I'm glad to be able to help clarify this for you.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:20:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "R19",
+        "message": "That's a relief! Thank you for your help, John.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:21:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "R20",
+        "message": "The pleasure was all mine in the conversation, Emma. Always happy to help. I appreciate your time and please, let us know if there's anything else we can assist you with. Have a great day!",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-02-14T09:22:00Z"
+    }
+]
