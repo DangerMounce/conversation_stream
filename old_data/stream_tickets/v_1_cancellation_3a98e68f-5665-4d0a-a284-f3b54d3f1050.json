@@ -1,0 +1,163 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg001",
+      "message": "Good afternoon, my name is Jessica. How can I help you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg002",
+      "message": "Hi Jessica, I'd like to cancel my car insurance policy, please.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg003",
+      "message": "I need to run through security. Can you confirm your name?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg004",
+      "message": "Sure, it's Robert Jenkins.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg005",
+      "message": "Can you confirm your email address?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:02:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg006",
+      "message": "robert.jenkins@email.com",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:03:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg007",
+      "message": "Can you confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg008",
+      "message": "It's October 12, 1980.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg009",
+      "message": "Thank you for verifying.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:04:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg010",
+      "message": "I'm sorry to hear you want to cancel your policy. May I ask the reason for your cancellation?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:05:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg011",
+      "message": "I've found a cheaper option with another provider.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:05:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg012",
+      "message": "I completely understand. We value your business and would love to explore ways to offer you a better rate. Would you be open to reviewing our available options?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:06:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg013",
+      "message": "No, I've already made up my mind.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:06:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg014",
+      "message": "Thank you for letting me know. Just to confirm, you'd like to cancel your auto insurance policy effective immediately?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:07:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg015",
+      "message": "Yes, that's correct.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:07:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg016",
+      "message": "Let me confirm: You're requesting to cancel your auto insurance policy effective today. Is that right?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:08:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg017",
+      "message": "Yes, that's correct.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:08:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg018",
+      "message": "Thank you for confirming. I'll process your cancellation and you'll receive a confirmation email shortly. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:09:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg019",
+      "message": "No, that's all. Thanks for your help.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:09:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg020",
+      "message": "Always happy to help. Feel free to reach out if you need anything in the future. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-05T14:10:00Z"
+    }
+  ]
+  

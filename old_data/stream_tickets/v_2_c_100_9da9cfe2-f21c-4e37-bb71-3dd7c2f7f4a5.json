@@ -1,0 +1,107 @@
+[
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "1",
+      "message": "Hello. My name is Chris. Thank you for reaching out to VoyageQuest. How can I assist you with your travel plans today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "2",
+      "message": "Hi, I'm looking at the Bali holiday package on your website and I wanted to ask a question.  What's included in this package?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "3",
+      "message": "I'd be happy to provide the details! Let's just run through security. Can you confirm your name? Can you also confirm your address? Finally, please confirm your reference number.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:02:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "4",
+      "message": "Sure, my name is John Smith, my address is 124 Main Street, and my account number is 123456.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "5",
+      "message": "Thank you, John. That's all correct! To summarize, the Bali holiday package includes round-trip flights, a 7-night stay at a 4-star beachfront resort, daily breakfast, airport transfers, and one complimentary guided tour. It also includes access to the hotel's spa and fitness facilities. Would you like me to provide details on optional add-ons?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "6",
+      "message": "That sounds great! What about meals—are lunches and dinners included?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "7",
+      "message": "Currently, the package includes daily breakfast only. However, we offer an all-inclusive meal upgrade that covers lunch and dinner for an additional $250 per person. Could you let me know if you would like me to add that to your booking?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:05:20Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "8",
+      "message": "I'll think about it. Can you send me all the package details by email so I can review them?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:06:10Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "9",
+      "message": "Of course, John, I completely understand! I'll send you a detailed breakdown of the package, including the optional add-ons, to your registered email address right away. Let me know if you need any further assistance.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "10",
+      "message": "Thanks, that would be helpful. I'll review it and get back to you.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "11",
+      "message": "You're very welcome, John! I'll follow up with you in a couple of days. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:50Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "12",
+      "message": "No, that's all for now. Thanks again, Chris!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:09:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "13",
+      "message": "You're very welcome! Have a great day, and feel free to reach out if you have any questions in the future. Goodbye!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:10:00Z"
+    }
+  ]
+  

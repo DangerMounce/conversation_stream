@@ -1,0 +1,90 @@
+[
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_001",
+      "message": "I’m at my wit’s end with your company. I’ve been waiting over a month for my business insurance certificate, and it’s affecting my operations.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:00:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_002",
+      "message": "Good afternoon, my name is Sarah. I’m truly sorry to hear about the delay with your certificate. I completely understand how important this is, and I’ll do everything I can to resolve this for you today.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:00:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_003",
+      "message": "I’ve heard this before. This isn’t the first time I’ve contacted you, and nothing’s changed.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_004",
+      "message": "I completely understand your frustration. To help resolve this, I’ll need to verify your details so I can access your account. Could you please confirm your business name, policy number, and the registered contact email address?  I'll also need your name and your date of birth",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_005",
+      "message": "Fine. My name is Alex.  My date of birth is 13/02/1981.  The business name is Elite Landscaping, the policy number is 456789, and the email is elite.landscaping@example.com.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_006",
+      "message": "Thank you for confirming. Let me review your account. Please bear with me for a moment while I check the details.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:02:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_007",
+      "message": "I can see that your certificate was delayed due to an internal processing error. I’ve escalated this to our compliance team, and your certificate will be issued within 24 hours. I sincerely apologize for the inconvenience caused.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_008",
+      "message": "This should have been done weeks ago. I want to make a formal complaint about how this has been handled.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_009",
+      "message": "I’m very sorry to hear that, and I completely understand your frustration. I’ll file your complaint immediately and ensure it’s reviewed by our complaints team. You’ll receive a confirmation and further details within two business days. Is there anything else I can assist you with in the meantime?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:04:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_010",
+      "message": "No, I just want to see some action this time. I’ve had enough of excuses.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:05:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_011",
+      "message": "I completely understand, and I assure you this matter is being prioritized. Thank you for bringing this to our attention, and I apologize again for the inconvenience. Please don’t hesitate to reach out if you need any updates.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T16:05:30Z"
+    }
+]

@@ -1,0 +1,106 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "1",
+      "message": "Hello. My name is Alex. Thank you for reaching out to PlaySure Gaming. How can I assist you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "2",
+      "message": "Hi, I’ve heard about live betting but I’m not sure how it works. Can you explain?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:01:20Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "3",
+      "message": "I completely understand the confusion. I’d be happy to explain! Let’s run through security so I can check your account and provide accurate information. Can you confirm your name, email, and also confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:01:50Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "4",
+      "message": "Sure, my name is Chris Miller, my email is chris.m@example.com, and my date of birth is February 15, 1991.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "5",
+      "message": "Thanks, Chris. That's all correct! Live betting, also known as in-play betting, allows you to place bets on sporting events while they are ongoing. Odds are updated in real time based on the current state of play.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:03:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "6",
+      "message": "That sounds exciting! How often do the odds change?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:04:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "7",
+      "message": "The odds can change frequently, often within seconds, depending on factors such as goals scored, injuries, or momentum shifts in the game. This allows you to take advantage of fluctuating opportunities.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:04:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "8",
+      "message": "Got it. Are there any specific sports that offer live betting?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:05:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "9",
+      "message": "Yes, live betting is available on a wide range of sports, including football, basketball, tennis, and esports. You can check the 'Live Betting' section on our website to see all available events.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:05:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "10",
+      "message": "Nice! Can I cash out my bet early during a live game?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:06:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "11",
+      "message": "Absolutely! The cash-out option allows you to settle your bet before the event ends, either to secure profits or minimize losses. You can check if cash-out is available under the 'My Bets' section of your account.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:06:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "12",
+      "message": "Sounds great! I’ll check it out now. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:07:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "13",
+      "message": "You're very welcome, Chris! I'm glad I was able to help. If you have any further questions, feel free to reach out. Enjoy your live betting experience!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T15:07:40Z"
+    }
+  ]

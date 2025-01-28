@@ -1,0 +1,107 @@
+[
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "1",
+      "message": "Hello. My name is Chris. Thank you for reaching out to VoyageQuest. How can I assist you with your travel plans today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "2",
+      "message": "Hi, I’m planning a trip to Thailand next month. Do I need a visa?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "3",
+      "message": "I'd be happy to check that for you, John! Let's just go through security quickly. Can you confirm your name, address, and reference number?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:02:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "4",
+      "message": "Sure, my name is John Smith, my address is 124 Main Street, and my account number is 123456.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "5",
+      "message": "Thank you, John. That's all correct! As a U.S. citizen traveling to Thailand for tourism purposes, you can stay visa-free for up to 30 days if arriving by air. If your stay exceeds 30 days, you will need to apply for a visa in advance. Would you like me to provide details on how to apply if needed?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "6",
+      "message": "No visa for 30 days sounds good. What if I decide to extend my stay once I'm there?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "7",
+      "message": "Great question, John! You can apply for a 30-day extension at a Thai immigration office while you're there. The extension fee is approximately 1,900 THB. Would you like me to send you the list of immigration offices near your destination?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:05:20Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "8",
+      "message": "Yes, that would be helpful. Also, do I need any other documents for entry besides my passport?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:06:10Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "9",
+      "message": "Along with your passport, you may be asked to provide proof of onward travel and sufficient funds for your stay. Additionally, it's recommended to have travel insurance that covers medical expenses. Would you like me to send details on travel insurance options?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "10",
+      "message": "Yes, please. I want to make sure I'm fully prepared.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "11",
+      "message": "You're all set, John! I'll email you the visa extension details and travel insurance options shortly. Let me know if there's anything else you need assistance with.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:50Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "12",
+      "message": "No, that’s all for now. Thanks so much for your help, Chris!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:09:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "13",
+      "message": "You're very welcome, John! Have a great trip, and feel free to reach out if you need anything else. Goodbye!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:10:00Z"
+    }
+  ]
+  

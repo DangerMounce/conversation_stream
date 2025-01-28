@@ -1,0 +1,91 @@
+[
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_001",
+      "message": "Hello, my name is Emily, how can I help you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_002",
+      "message": "This is the third time I'm contacting you. Where is the order? It was supposed to arrive last week!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:00:20Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_003",
+      "message": "I completely understand your frustration, and I sincerely apologize for the delay. Before we proceed, can you confirm your order number and delivery address for security purposes?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:00:45Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_004",
+      "message": "Order number is SN123456, address is 123 Elm Street.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:01:10Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_005",
+      "message": "Thank you for verifying. Just to confirm, your order for the Aspen 3-seater sofa was scheduled for delivery last week, and you have not received it. Is that correct?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:01:30Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_006",
+      "message": "Yes, that's right. I'm really not happy with this service.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:01:50Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_007",
+      "message": "I sincerely apologize for any inconvenience caused. I’ve checked the system, and it appears there was an unexpected delay with the courier. A possible resolution could be to expedite the delivery and offer a goodwill discount. Would that be acceptable for you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:02:15Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_008",
+      "message": "Fine, but I need it as soon as possible.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:02:35Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_009",
+      "message": "I completely understand, and I’ll make sure we prioritize your delivery. You should expect an update within 24 hours. Thank you for your patience.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:03:00Z"
+    },
+    {
+      "speaker_email": "customer@sofanest.com",
+      "response_id": "res_010",
+      "message": "Okay. I hope this gets sorted.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:03:20Z"
+    },
+    {
+      "speaker_email": "agent@sofanest.com",
+      "response_id": "res_011",
+      "message": "I appreciate your time today. If there's nothing else, stay safe and thank you for choosing SofaNest.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T10:03:40Z"
+    }
+  ]
+  

@@ -1,0 +1,107 @@
+[
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "1",
+      "message": "Hello. My name is Chris. Thank you for reaching out to VoyageQuest. How can I assist you with your travel plans today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "2",
+      "message": "Hi, I just realized I made a mistake when booking my flight. I need to correct a passenger name. Can you help?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "3",
+      "message": "I'd be happy to assist with that! Let's just run through security first. Can you confirm your name? Can you also confirm your address? Finally, please confirm your reference number.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:02:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "4",
+      "message": "Sure, my name is John Smith, my address is 124 Main Street, and my account number is 123456.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "5",
+      "message": "Thank you, John. That's all correct! I can see your booking for the flight to New York on April 15th. Can you please confirm the correct spelling of the passenger's name and what needs to be updated?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "6",
+      "message": "The name should be 'Michael Johnson' but I accidentally entered it as 'Michel Johnson' without the 'a'.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "7",
+      "message": "Thanks for confirming, John. I’ll check with the airline regarding their name correction policy. Some airlines allow minor corrections for free, while others may charge a fee. Let me look into it for you.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:05:20Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "8",
+      "message": "Okay, please let me know what I need to do.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:06:10Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "9",
+      "message": "Good news! The airline allows minor spelling corrections free of charge if requested within 24 hours of booking. Since your booking falls within that period, I can proceed with the correction now. Would you like me to go ahead?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "10",
+      "message": "Yes, please go ahead and correct it. That’s a relief!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "11",
+      "message": "The correction has been made, John! You’ll receive an updated confirmation email shortly. Is there anything else I can assist you with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:50Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "12",
+      "message": "No, that’s all for now. Thanks so much for your help, Chris.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:09:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "13",
+      "message": "You're very welcome, John! Have a great day, and feel free to reach out if you need any further assistance. Goodbye!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:10:00Z"
+    }
+  ]
+  

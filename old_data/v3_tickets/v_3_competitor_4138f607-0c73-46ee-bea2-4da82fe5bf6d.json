@@ -1,0 +1,106 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "1",
+      "message": "Hello. My name is Alex. Thank you for reaching out to PlaySure Gaming. How can I assist you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "2",
+      "message": "Hi, I noticed that other sites like Bet365 offer better odds on some football matches compared to PlaySure Gaming. Why is that?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:01:20Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "3",
+      "message": "I completely understand your concern. Let’s run through security so I can access your account and provide the most accurate information. Can you confirm your name, email, and also confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:01:50Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "4",
+      "message": "Sure, my name is David Lee, my email is david.l@example.com, and my date of birth is March 15, 1990.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "5",
+      "message": "Thanks, David. That's all correct! Odds can vary between platforms due to several factors, such as market demand, risk management strategies, and real-time data analysis. While some sites may offer slightly higher odds on certain events, PlaySure Gaming provides competitive odds across a wide range of sports with additional promotions and loyalty rewards to enhance your experience.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:03:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "6",
+      "message": "Okay, but I saw that for the same match, Bet365 is offering 2.50 while you have 2.40. Why should I stay with PlaySure?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:04:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "7",
+      "message": "I see where you're coming from, David. While odds may differ slightly, PlaySure Gaming offers a range of exclusive benefits such as free bets, cash-out options, and loyalty rewards that provide added value beyond just the odds. We also ensure fair and transparent odds across all markets with regular audits and compliance with industry regulations.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:04:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "8",
+      "message": "Got it. Do you have any promotions that might help balance the odds difference?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:05:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "9",
+      "message": "Yes! You may be eligible for our 'Boosted Odds' promotion or risk-free bet offers. I can check your account for any active promotions that could help maximize your winnings.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:05:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "10",
+      "message": "Sure, please check if I have any offers.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:06:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "11",
+      "message": "I've checked your account, and you're eligible for a 10% odds boost on your next football bet, which could help increase your potential returns. Would you like me to apply it for you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:06:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "12",
+      "message": "Yes, please apply it. That sounds like a good deal.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:07:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "13",
+      "message": "You're all set, David! I'm glad I was able to help. The odds boost has been applied to your account. If you need further assistance, feel free to reach out. Enjoy your betting experience!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T17:07:40Z"
+    }
+  ]

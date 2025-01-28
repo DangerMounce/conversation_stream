@@ -1,0 +1,107 @@
+[
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "1",
+      "message": "Hello. My name is Chris. Thank you for reaching out to VoyageQuest. How can I assist you with your travel plans today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "2",
+      "message": "Hi, I’m currently staying at the Ocean View Resort, and I was wondering. Can I upgrade my room? The one I’m in feels a bit small for my needs.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "3",
+      "message": "I'd be happy to check that for you, John! Let's just go through security quickly. Can you confirm your name? Can you also confirm your address? Finally, please confirm your reference number.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:02:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "4",
+      "message": "Sure, my name is John Smith, my address is 124 Main Street, and my account number is 123456.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "5",
+      "message": "Thank you, John. That's all correct! Let me check the availability for an upgrade at the Ocean View Resort. Are you looking for a larger room or perhaps a suite with additional amenities?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "6",
+      "message": "I’d prefer a suite if possible, something with more space and an ocean view.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "7",
+      "message": "Great choice, John! I see there’s availability for an Ocean View Suite, which includes a larger living space, a private balcony, and complimentary spa access. The additional cost would be $150 per night. Would you like to proceed with the upgrade?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:05:20Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "8",
+      "message": "That sounds perfect! Can you go ahead and upgrade my booking?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:06:10Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "9",
+      "message": "Absolutely, John! I’ve processed the upgrade for you. Your new suite will be ready within the next hour, and I’ll send you an updated confirmation email shortly. Would you like any assistance with luggage transfer?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "10",
+      "message": "Yes, that would be great. Thanks for arranging everything so quickly!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "11",
+      "message": "You're very welcome, John! I've informed the hotel staff, and they will assist with your luggage. Enjoy your upgraded stay, and let me know if you need anything else.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:50Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "12",
+      "message": "No, that’s all for now. I appreciate your help, Chris.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:09:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "13",
+      "message": "You're very welcome! Have a wonderful stay, and feel free to reach out if you need further assistance. Goodbye!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:10:00Z"
+    }
+  ]
+  

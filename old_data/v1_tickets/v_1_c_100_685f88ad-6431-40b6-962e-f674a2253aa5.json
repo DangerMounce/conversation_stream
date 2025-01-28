@@ -1,0 +1,114 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is John. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi John. I have a question about my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:02:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Yes, my name is Sarah Thompson.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:03:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Thank you, Sarah. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:04:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Sure, it's sarah.thompson@example.com",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:05:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Great, and finally, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:06:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "8",
+    "message": "It's 03/04/1980",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:07:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "9",
+    "message": "Thank you for verifying, Sarah. Now, can you explain what your question is about your auto insurance policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:08:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Yes, I would like to add another vehicle to my policy. But first, did you have any recent changes in pricing?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:09:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I completely understand your concerns. To answer your question, have there been any recent changes in our pricing? Yes, we have slightly adjusted our rates due to market changes. However, we continue to offer competitive pricing. Would you like me to provide more details?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:10:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "Yes, please. I would like to know more about it.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:11:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "Glad to be able to help, Sarah. Let me recap: you want to add another vehicle to your policy and are interested in learning more about our recent rate changes. I'll pull up the information for you right away.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:12:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "14",
+    "message": "The pleasure was all mine in the conversation. I appreciate your time, Sarah. Always happy to help. Let us know if there's anything else you need. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-02-01T10:13:00Z"
+  }
+]

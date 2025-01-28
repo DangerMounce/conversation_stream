@@ -1,0 +1,90 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "1",
+      "message": "Hello. My name is Alex. Thank you for reaching out to PlaySure Gaming. How can I assist you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "2",
+      "message": "Hi, I received a bonus offer, but I'm not sure if I qualify for it. Can you check for me?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:01:20Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "3",
+      "message": "I completely understand your concern. Let’s run through security so I can take a look at your account and confirm your eligibility. Can you confirm your name, email, and also confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:01:50Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "4",
+      "message": "Sure, my name is Emily Parker, my email is emily.p@example.com, and my date of birth is July 19, 1995.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "5",
+      "message": "Thanks, Emily. That's all correct! I can see that you are eligible for the 50% deposit match bonus up to $100. To qualify, you need to deposit a minimum of $20 and meet the wagering requirements.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:03:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "6",
+      "message": "Okay, and what are the wagering requirements?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:04:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "7",
+      "message": "The wagering requirement for this bonus is 30 times the bonus amount. This means if you receive a $50 bonus, you’ll need to wager $1,500 before you can withdraw any winnings.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:04:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "8",
+      "message": "Got it. Do all games count towards the wagering requirements?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:05:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "9",
+      "message": "Good question! Slots contribute 100% towards the wagering requirements, while table games like blackjack and roulette contribute 10%. Live dealer games do not count toward the requirement.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:05:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "10",
+      "message": "Thanks for clarifying. I think I’ll go ahead and deposit now.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:06:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "11",
+      "message": "You're very welcome, Emily! I'm glad I was able to help. Once you've made your deposit, the bonus will be applied automatically. If you need any further assistance, feel free to reach out. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T17:06:40Z"
+    }
+  ]

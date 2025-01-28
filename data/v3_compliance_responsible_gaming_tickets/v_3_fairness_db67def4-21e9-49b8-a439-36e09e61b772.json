@@ -1,0 +1,90 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "1",
+      "message": "Hello. My name is Alex. Thank you for reaching out to PlaySure Gaming. How can I assist you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "2",
+      "message": "Hi, I’ve been playing for a while, but I feel like the games are unfair. How can you prove fair play please?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:01:20Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "3",
+      "message": "I completely understand your concern, and I’d be happy to provide more information. Let’s run through security so I can take a look at your account and address your concerns. Can you confirm your name, email, and also confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:01:50Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "4",
+      "message": "Sure, my name is Emily Roberts, my email is emily.r@example.com, and my date of birth is May 18, 1992.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "5",
+      "message": "Thanks, Emily. That's all correct! At PlaySure Gaming, we use industry-standard Random Number Generators (RNGs) to ensure fair gameplay. RNGs produce completely random results for each game outcome, and they are regularly tested by independent auditors.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:03:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "6",
+      "message": "But how can I be sure they’re actually fair? Is there any certification?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:04:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "7",
+      "message": "Great question! Our games are certified by eCOGRA, an internationally recognized testing agency that ensures fairness and transparency. eCOGRA conducts regular audits to verify that our games meet regulatory standards and provide fair outcomes.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:04:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "8",
+      "message": "I see. Where can I find more details about this certification?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:05:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "9",
+      "message": "You can find more details about eCOGRA certification on our website under the 'Fair Play' section. Additionally, you can visit eCOGRA's official website to view their certification and audit reports for PlaySure Gaming.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:05:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "10",
+      "message": "Thanks for the information. That makes me feel more confident about playing here.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:06:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "11",
+      "message": "You're very welcome, Emily! I'm glad I was able to help. We want to ensure you have a fun and fair gaming experience. If you need any further assistance, feel free to reach out. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-21T11:06:40Z"
+    }
+  ]

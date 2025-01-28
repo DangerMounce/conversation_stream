@@ -1,0 +1,130 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is James. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi James. I'm having a bit of trouble understanding the terms of my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "I completely understand. It's important to know your coverage. Let's run through security first, then I'd be happy to explain your policy terms.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:02:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:03:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Yes, my name is John Smith.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:04:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:05:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Sure, it's johnsmith@example.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:06:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:07:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "9",
+    "message": "My date of birth is January 1, 1980.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:08:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Thank you for verifying, John. Now, can you explain what specifically about your auto insurance policy you're finding difficult to understand?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:09:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I'm not sure how my deductible works. And did you mention something about a premium?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:10:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "12",
+    "message": "I see. Your deductible is the amount you pay out of pocket before your insurance coverage kicks in. Your premium is the amount you pay for your policy. Would you like more information on this? Also, have there been any recent changes to your driving record that we should know about?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:11:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "13",
+    "message": "Oh, I see. That makes more sense now. And no, there have been no changes to my driving record.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:12:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "14",
+    "message": "I'm glad to be able to help, John. Let me recap: Your deductible is what you pay before your insurance coverage begins. Your premium is the cost of your insurance policy. And since there have been no changes to your driving record, your policy should remain the same. Thank you for your patience and for allowing me to clarify these terms for you.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:13:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "15",
+    "message": "Thanks for the explanation, James. I understand it much better now.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:14:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "16",
+    "message": "The pleasure was all mine in the conversation, John. Always happy to help. I appreciate your time and if there's anything else you need, please don't hesitate to let us know. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-26T09:15:00Z"
+  }
+]

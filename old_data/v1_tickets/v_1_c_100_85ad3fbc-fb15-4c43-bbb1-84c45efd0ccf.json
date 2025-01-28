@@ -1,0 +1,178 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is John. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:00:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi John, I need help with my auto insurance claim.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:01:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:02:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:02:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Sure, my name is Jane Doe.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:03:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:03:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Yes, it's janedoe@gmail.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:04:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:04:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "9",
+    "message": "My date of birth is 01/01/1985.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:05:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Thank you for verifying",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:05:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "Now, can you explain the nature of your auto insurance claim?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:06:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "My car was involved in an accident last week. I filed a claim but haven't received any updates yet.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:07:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "I completely understand your concern. Did you receive a claim number when you filed the claim?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:08:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "14",
+    "message": "Yes, I did. It's A123456.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:09:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "Thank you. Have there been any changes to your situation since you filed the claim?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:10:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "16",
+    "message": "No, there haven't been any changes.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:11:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "17",
+    "message": "Would you like me to check the status of the claim for you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:12:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "18",
+    "message": "Yes, please do.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:13:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "19",
+    "message": "I see that your claim is currently under review and you should receive an update within the next 48 hours. I'm glad to be able to help with this information.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:14:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "20",
+    "message": "Let me recap: you contacted us to inquire about your auto insurance claim. I confirmed that your claim is under review and you should receive an update within the next 48 hours. Thank you for your patience.",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:15:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "21",
+    "message": "Thank you, John, for your help and patience.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:16:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "22",
+    "message": "The pleasure was all mine in the conversation. Always happy to help and I appreciate your time. Let us know if there's anything else you need. Have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-05T09:17:00Z"
+  }
+]

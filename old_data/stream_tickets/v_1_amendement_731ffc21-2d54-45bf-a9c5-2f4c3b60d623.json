@@ -1,0 +1,163 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg001",
+      "message": "Hello, my name is Jessica. How can I help you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg002",
+      "message": "Hi Jessica, I’d like to add my son as a learner driver to my auto insurance policy.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg003",
+      "message": "Let's run through security. Can you confirm your name?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg004",
+      "message": "Sure, it's Sarah Thompson.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg005",
+      "message": "Can you confirm your email address?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:02:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg006",
+      "message": "sarah.thompson@email.com",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:03:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg007",
+      "message": "Can you confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg008",
+      "message": "It's July 20, 1978.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg009",
+      "message": "Thank you for verifying.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:04:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg010",
+      "message": "Could you please provide your policy number?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:05:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg011",
+      "message": "Sure, it's 123456789.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:05:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg012",
+      "message": "Thanks for that. To add a learner driver, we'll need their full name, date of birth, and learner's permit number. Could you provide those details?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:06:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg013",
+      "message": "Sure. His name is Jack Thompson, date of birth is May 15, 2006, and his permit number is L1234567.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:06:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg014",
+      "message": "Let me recap: You want to add your son Jack Thompson, born on May 15, 2006, with learner's permit number L1234567 to your policy 123456789. Is that correct?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:07:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg015",
+      "message": "Yes, that's correct.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:07:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg016",
+      "message": "Thanks for confirming. I'll process this for you now. Adding a learner driver may slightly adjust your premium, but I’ll provide the updated details shortly.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:08:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg017",
+      "message": "Sounds good, thank you.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:08:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg018",
+      "message": "That's all sorted. Your policy has been updated, and you’ll receive a confirmation email shortly. Is there anything else I can assist with today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:09:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg019",
+      "message": "No, that's everything. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:09:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg020",
+      "message": "The pleasure was all mine. Always happy to help. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-03T09:10:00Z"
+    }
+  ]
+  

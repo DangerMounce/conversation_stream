@@ -1,0 +1,83 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_001",
+      "message": "Good afternoon, my name is Mark, welcome to SafeGuard Assurance. How may I assist you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_002",
+      "message": "Hi Mark, I'm following up on my car insurance claim. I’ve been waiting for weeks, and there’s been no progress.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:00:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_003",
+      "message": "I completely understand your frustration, and I sincerely apologize for the delay. Let me check the current status of your claim for you right now.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:01:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_004",
+      "message": "The claim process is too slow. I need my car fixed, and I can't keep waiting.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:01:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_005",
+      "message": "I completely understand how important this is for you. I can see that your claim is currently awaiting approval from our review team. I will escalate this and ensure you receive an update within 48 hours.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:02:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_006",
+      "message": "I've already been told that before. I just need this resolved now.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:02:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_007",
+      "message": "I truly apologize for the repeated delays. I understand how this impacts you, and I will personally follow up with the claims team to prioritize your case.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:03:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_008",
+      "message": "I really hope you do, because this is getting frustrating.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:03:30Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "res_009",
+      "message": "I appreciate your patience. Please rest assured that I will monitor this closely and get back to you with any updates as soon as possible.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:04:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "res_010",
+      "message": "Alright, I'll wait for now.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:04:30Z"
+    }
+  ]
+  

@@ -1,0 +1,106 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "1",
+      "message": "Hello. My name is Alex. Thank you for reaching out to PlaySure Gaming. How can I assist you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "2",
+      "message": "Hi, I was placing a bet on the tennis match, and right before I confirmed, the odds changed unfairly. Why did that happen?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:01:20Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "3",
+      "message": "I completely understand your concern. Let’s run through security so I can take a look at your account and investigate the issue. Can you confirm your name, email, and also confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:01:50Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "4",
+      "message": "Sure, my name is Lisa Green, my email is lisa.g@example.com, and my date of birth is November 25, 1991.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:02:30Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "5",
+      "message": "Thanks, Lisa. That's all correct! I completely understand how this can be frustrating. Odds can change frequently due to live market updates, player performance, and betting trends.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:03:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "6",
+      "message": "But I feel like it changed the moment I clicked the button. That doesn't seem right.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:04:00Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "7",
+      "message": "I understand how that might seem, Lisa. The odds are updated in real-time and can change at any second based on market conditions. This ensures that bets reflect the most accurate data available. However, I can review the details of your bet placement for you.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:04:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "8",
+      "message": "Yes, please check if there was an issue with my bet.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:05:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "9",
+      "message": "I've checked your bet history, and the odds did adjust just before confirmation due to a change in betting volume and live game developments. Unfortunately, these changes are automatic and outside our control.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:05:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "10",
+      "message": "Okay, I get it now. Is there any way to lock in odds sooner?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:06:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "11",
+      "message": "Great question! To secure odds more effectively, we recommend enabling the 'Accept Odds Changes' option in your bet settings. This allows you to accept small fluctuations automatically and avoid delays.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:06:40Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "12",
+      "message": "That’s helpful, thanks. I'll give that a try.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:07:10Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "13",
+      "message": "You're very welcome, Lisa! I'm glad I was able to help. If you need any further assistance, feel free to reach out. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T22:07:40Z"
+    }
+  ]

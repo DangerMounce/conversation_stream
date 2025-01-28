@@ -1,0 +1,91 @@
+[
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "1",
+      "message": "Hello. My name is Chris. Thank you for reaching out to VoyageQuest. How can I assist you with your travel plans today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:00:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "2",
+      "message": "Hi, I’m currently staying at a hotel I booked through my account, and I have an issue. The room is dirty, and it's not what I expected. Can you help?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:01:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "3",
+      "message": "I'm really sorry to hear that you're experiencing this issue. Let's just run through security. Can you confirm your name? Can you also confirm your address? Finally, please confirm your reference number.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:02:10Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "4",
+      "message": "Sure, my name is John Smith, my address is 124 Main Street and my account number is 123456.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "5",
+      "message": "Thank you, John. That's all correct! I can see your current booking details. I completely understand how frustrating this must be. Could you please provide more details about the cleanliness issues you've encountered?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:03:45Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "6",
+      "message": "Well, the room dirty issue is quite bad. There’s dust everywhere, the bathroom isn't clean, and I even found some used towels left behind.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:04:30Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "7",
+      "message": "I'm so sorry to hear that, John. That’s definitely not the experience we want you to have. I’ll reach out to the hotel immediately to address the issue and request a thorough cleaning or a room change. Would that be acceptable to you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:05:20Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "8",
+      "message": "A room change would be great if possible. I don’t feel comfortable staying here like this.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:06:10Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "9",
+      "message": "Absolutely, John. I'll coordinate with the hotel to arrange a new room for you as soon as possible. I’ll keep you updated via email and text. Is there anything else I can assist you with in the meantime?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:07:00Z"
+    },
+    {
+      "speaker_email": "customer@email.com",
+      "response_id": "10",
+      "message": "No, that’s all for now. Thanks for your help, Chris.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:00Z"
+    },
+    {
+      "speaker_email": "agent@voyagequest.com",
+      "response_id": "11",
+      "message": "You're very welcome, John! I’ll follow up with you shortly to ensure everything is resolved to your satisfaction. Please let me know if anything else comes up. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-20T10:08:50Z"
+    }
+  ]
+  

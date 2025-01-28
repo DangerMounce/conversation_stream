@@ -1,0 +1,122 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is John. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:30:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi John, I have a query about my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:31:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security. Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:32:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Sure, my name is Michael Smith.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:33:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Thank you, Michael. Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:34:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "6",
+    "message": "My email address is michael.smith@example.com",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:35:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Thanks. Lastly, can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:36:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Sure, it's 10th June 1980.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:37:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "9",
+    "message": "Thank you for verifying. Now, have there been any changes in your auto insurance policy that you are concerned about?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:38:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Yes, I noticed an increase in my premium. Can you explain why this has happened?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:39:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "I completely understand your concern, Michael. Did you recently add a new vehicle or driver to your policy?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:40:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "Yes, I added my daughter to the policy. She just got her license.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:41:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "That's likely the reason for the increase. Adding a new driver, especially a young one, can increase the premium. I'm glad to be able to help clarify this for you. So, let me recap: your premium increased because you added your daughter to the policy. Is there anything else you'd like to know?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:42:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "14",
+    "message": "No, that's all. Thank you for your help, John.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:43:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "The pleasure was all mine in the conversation, Michael. Always happy to help. I appreciate your time, have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-01T09:44:00Z"
+  }
+]

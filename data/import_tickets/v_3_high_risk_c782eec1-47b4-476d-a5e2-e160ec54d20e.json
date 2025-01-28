@@ -1,0 +1,83 @@
+[
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_101",
+      "message": "Good afternoon, my name is Jamie. How can I help you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:00:00Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_102",
+      "message": "I'm really disappointed. This is the second time I’ve reached out because my withdrawal is too slow. Why is it taking so long?  Where's my money?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:00:20Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_103",
+      "message": "I'm truly sorry to hear you're experiencing delays. I completely understand how frustrating this must be. Let me look into it right away.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:00:50Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_104",
+      "message": "Before we continue, can you confirm your registered email address, date of birth, and the last four digits of your payment method for security purposes?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:01:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_105",
+      "message": "Sure, it's user@example.com, 15/08/1990, and 6789.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:01:40Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_106",
+      "message": "Thank you for verifying. Just to confirm, your withdrawal request of $250 is currently in the processing stage and should be finalized within 48 hours.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:02:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_107",
+      "message": "I was told 24 hours last time. This is getting ridiculous!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:02:40Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_108",
+      "message": "I sincerely apologize for any confusion and understand how important this is to you. To help resolve this, I'll escalate your case to our finance team for urgent review.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:03:10Z"
+    },
+    {
+      "speaker_email": "customer@playsuregaming.com",
+      "response_id": "res_109",
+      "message": "Alright, I hope this gets sorted soon.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:03:40Z"
+    },
+    {
+      "speaker_email": "agent@playsuregaming.com",
+      "response_id": "res_110",
+      "message": "Absolutely, we’ll do our best to speed things up for you. Thank you for your patience, and please don’t hesitate to reach out if you need further assistance.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2025-01-24T14:04:10Z"
+    }
+  ]
+  

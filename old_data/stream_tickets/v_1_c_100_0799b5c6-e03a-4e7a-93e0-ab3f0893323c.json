@@ -1,0 +1,154 @@
+[
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "1",
+    "message": "Hello. My name is John. How can I help you?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:15:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "2",
+    "message": "Hi John. I have some questions about my auto insurance policy.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:15:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "3",
+    "message": "Let's run through security",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:16:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "4",
+    "message": "Can you confirm your name?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:16:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "5",
+    "message": "Sure, my name is Peter Johnson.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:17:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "6",
+    "message": "Can you confirm your email address?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:17:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "7",
+    "message": "Yes, it's peterjohnson@email.com.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:18:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "8",
+    "message": "Can you confirm your date of birth?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:18:30Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "9",
+    "message": "My birth date is 24th February 1985.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:19:00Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "10",
+    "message": "Thank you for verifying",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:19:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "11",
+    "message": "Let's address your questions about your auto insurance policy. Did you receive your policy document?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:20:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "12",
+    "message": "Yes, I did. But I'm confused about some of the terms in it. Can you explain them?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:20:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "13",
+    "message": "Of course, I would be glad to be able to help. Can you tell me which terms you're having trouble with?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:21:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "14",
+    "message": "I'm not sure about the 'deductible' and 'premium'. What do these mean?",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:21:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "15",
+    "message": "I completely understand how these terms can be confusing. The 'deductible' is the amount you will pay out of pocket before your insurance coverage begins. And the 'premium' is the amount you pay to the insurance company for your coverage, usually monthly. Have there been any changes in your driving habits that would affect your premium?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:22:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "16",
+    "message": "No, nothing has changed. Thank you for explaining those terms.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:22:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "17",
+    "message": "You're welcome. Let me recap: we've clarified what 'deductible' and 'premium' mean in your auto insurance policy, and confirmed that there have been no changes in your driving habits. Thank you for your patience. Is there anything else I can assist you with?",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:23:00Z"
+  },
+  {
+    "speaker_email": "customer@safeguardassurance.com",
+    "response_id": "18",
+    "message": "No, I think that covers it. Thank you for your help.",
+    "speaker_is_customer": true,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:23:30Z"
+  },
+  {
+    "speaker_email": "agent@safeguardassurance.com",
+    "response_id": "19",
+    "message": "The pleasure was all mine in the conversation. Always happy to help. I appreciate your time and have a great day!",
+    "speaker_is_customer": false,
+    "channel": "Chat",
+    "message_created_at": "2022-04-03T10:24:00Z"
+  }
+]

@@ -1,0 +1,187 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg001",
+      "message": "Good morning, my name is Jessica. How can I help you?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg002",
+      "message": "Hi Jessica, I’d like to get a quote for car insurance, please.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg003",
+      "message": "Let's run through security. Can you confirm your name?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg004",
+      "message": "Sure, it's Daniel Foster.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg005",
+      "message": "Can you confirm your email address?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:02:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg006",
+      "message": "daniel.foster@email.com",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:03:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg007",
+      "message": "Can you confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg008",
+      "message": "It's May 22, 1990.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg009",
+      "message": "Thank you for verifying. To provide an accurate quote, I'll need a few details about your car and driving history. Can we proceed?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:04:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg010",
+      "message": "Yes, sure.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:05:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg011",
+      "message": "Can you provide the make and model of your car?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:05:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg012",
+      "message": "Yes, it's a 2021 Toyota Corolla.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:06:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg013",
+      "message": "Thanks for that. Do you have any no-claims discount?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:06:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg014",
+      "message": "Yes, I have 3 years of no-claims.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:07:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg015",
+      "message": "Got it. How many miles do you expect to drive annually?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:07:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg016",
+      "message": "Around 12,000 miles a year.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:08:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg017",
+      "message": "Thank you. Based on the details provided, I’ll generate a quote for you now. Would you mind holding for a moment?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:08:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg018",
+      "message": "No problem.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:09:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg019",
+      "message": "Thanks for holding, Daniel. Your estimated premium is $850 per year, based on the details provided. The no-claims discount and mileage you mentioned have been factored in.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:09:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg020",
+      "message": "Sounds good. Can I get this in writing?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:10:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg021",
+      "message": "Of course. I’ll send the quote details to your email shortly. Is there anything else I can assist with?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:10:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg022",
+      "message": "No, that's all. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:11:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg023",
+      "message": "You're very welcome. Feel free to contact us if you need further assistance. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-08T09:11:30Z"
+    }
+  ]
+  

@@ -1,0 +1,146 @@
+[
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "01",
+        "message": "Hello. My name is Sam. How can I help you?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:00:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "02",
+        "message": "Hi Sam, I have a query about my auto insurance policy.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:01:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "03",
+        "message": "Let's run through security. Can you confirm your name?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:02:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "04",
+        "message": "Sure, my name is John Smith.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:03:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "05",
+        "message": "Thank you, John. Can you confirm your email address?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:04:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "06",
+        "message": "It's johnsmith@example.com.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:05:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "07",
+        "message": "Thanks, John. And finally, can you confirm your date of birth?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:06:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "08",
+        "message": "My date of birth is August 15, 1975.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:07:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "09",
+        "message": "Thank you for verifying, John. Now, can you explain what the issue with your auto insurance policy is?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:08:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "10",
+        "message": "I'm not sure if I'm covered for any damages caused by natural calamities. Can you confirm?",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:09:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "11",
+        "message": "I completely understand your concern, John. Have there been any changes to your policy recently?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:10:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "12",
+        "message": "No, I haven't made any changes.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:11:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "13",
+        "message": "Did you purchase comprehensive coverage when you bought your policy?",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:12:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "14",
+        "message": "Yes, I did.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:13:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "15",
+        "message": "Great. Comprehensive coverage typically includes damages caused by natural disasters. However, I will confirm this for you. Just a moment.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:14:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "16",
+        "message": "I have verified your policy and yes, your comprehensive coverage includes damages caused by natural disasters such as floods, earthquakes, and hurricanes. So, let me recap: You were concerned about whether your auto insurance policy covers damages caused by natural calamities. I confirmed that as long as you have comprehensive coverage, which you do, you are indeed covered for such events. I'm glad to be able to help with your query, John.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:16:00Z"
+    },
+    {
+        "speaker_email": "customer@safeguardassurance.com",
+        "response_id": "17",
+        "message": "Thank you, Sam, for clarifying that for me. I appreciate your help.",
+        "speaker_is_customer": true,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:17:00Z"
+    },
+    {
+        "speaker_email": "agent@safeguardassurance.com",
+        "response_id": "18",
+        "message": "The pleasure was all mine in the conversation, John. Always happy to help. I appreciate your time. Have a great day and let us know if there's anything else you need.",
+        "speaker_is_customer": false,
+        "channel": "Chat",
+        "message_created_at": "2022-04-01T09:18:00Z"
+    }
+]

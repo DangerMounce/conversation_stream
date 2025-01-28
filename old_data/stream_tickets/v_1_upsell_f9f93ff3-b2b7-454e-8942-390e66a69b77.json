@@ -1,0 +1,155 @@
+[
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg001",
+      "message": "Hello, my name is Jessica. How can I help you today?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:00:00Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg002",
+      "message": "Hi Jessica, I wanted to check if there are any additional coverages I can add to my policy.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:01:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg003",
+      "message": "I'd be happy to help with that. First, can I confirm your full name for security purposes?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:01:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg004",
+      "message": "Sure, it's Olivia Brown.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:02:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg005",
+      "message": "Thanks, Olivia. Can you confirm your email address?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:02:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg006",
+      "message": "olivia.brown@email.com",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:03:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg007",
+      "message": "Can you confirm your date of birth?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:03:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg008",
+      "message": "It's August 22, 1988.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:04:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg009",
+      "message": "Thank you for verifying your details. We offer several optional add-ons to enhance your coverage, including legal protection and personal accident cover. Would you like more information on these?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:04:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg010",
+      "message": "Yes, can you explain what legal protection covers?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:05:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg011",
+      "message": "Legal protection covers the legal costs of pursuing claims related to uninsured losses, such as personal injury or disputes following an accident. It also provides legal advice and assistance.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:05:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg012",
+      "message": "Okay, and what about personal accident cover?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:06:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg013",
+      "message": "Personal accident cover provides financial support in case of serious injury or death resulting from a car accident. It can offer lump-sum payments for injuries such as loss of limbs or permanent disability.",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:06:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg014",
+      "message": "That sounds useful. How much do these add-ons cost?",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:07:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg015",
+      "message": "Legal protection is available for an additional $30 per year, while personal accident cover costs $50 per year. Would you like to add either of these to your policy?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:07:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg016",
+      "message": "I’d like to add personal accident cover to my policy, please.",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:08:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg017",
+      "message": "Great! I've added personal accident cover to your policy. You'll receive an updated policy document via email shortly. Is there anything else I can help you with?",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:08:30Z"
+    },
+    {
+      "speaker_email": "customer@safeguardassurance.com",
+      "response_id": "msg018",
+      "message": "No, that's all for now. Thanks for your help!",
+      "speaker_is_customer": true,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:09:00Z"
+    },
+    {
+      "speaker_email": "agent@safeguardassurance.com",
+      "response_id": "msg019",
+      "message": "You're very welcome, Olivia. If you have any further questions, feel free to reach out. Have a great day!",
+      "speaker_is_customer": false,
+      "channel": "Chat",
+      "message_created_at": "2024-12-23T11:09:30Z"
+    }
+  ]
+  
